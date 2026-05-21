@@ -804,3 +804,75 @@ function openDiscussion(type){
   }
 
 }
+
+// OPEN MODAL
+function openModal(type){
+
+  const modal = document.getElementById("modal");
+  const body = document.getElementById("modalBody");
+
+  if(type === "5g"){
+
+    body.innerHTML = `
+
+      <h2>📡 5G Tower Investigation</h2>
+
+      <p>
+        Your city plans to build a 5G tower near a school.
+      </p>
+
+      <p>
+        Some people support faster internet access,
+        while others worry about radiation safety.
+      </p>
+
+      <h3>🔍 Investigation Questions</h3>
+
+      <ul>
+        <li>What type of wave does 5G use?</li>
+        <li>How does frequency affect wave energy?</li>
+        <li>What are the benefits of 5G?</li>
+        <li>How can technology be used safely?</li>
+      </ul>
+
+    `;
+
+  }
+
+  else if(type === "ultrasound"){
+
+    body.innerHTML = `
+
+      <h2>🏥 Ultrasound Investigation</h2>
+
+      <p>
+        A hospital wants to improve healthcare using ultrasound technology.
+      </p>
+
+      <p>
+        Ultrasound uses sound waves to create images inside the body.
+      </p>
+
+      <h3>🔍 Investigation Questions</h3>
+
+      <ul>
+        <li>How do sound waves travel?</li>
+        <li>Why is ultrasound safer than X-Ray?</li>
+        <li>How do doctors use wave reflections?</li>
+        <li>How does technology improve healthcare?</li>
+      </ul>
+
+    `;
+
+  }
+
+  modal.style.display = "flex";
+
+}
+
+// CLOSE MODAL
+function closeModal(){
+
+  document.getElementById("modal").style.display = "none";
+
+}
