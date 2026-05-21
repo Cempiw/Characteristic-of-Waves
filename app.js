@@ -876,3 +876,13 @@ function closeModal(){
   document.getElementById("modal").style.display = "none";
 
 }
+
+// WORKSHEET SUBMIT
+function submitWorksheet(){
+
+  const message = document.getElementById("submitMessage");
+
+  message.innerHTML =
+    "🎉 Great job! Your stakeholder discussion has been submitted successfully.";
+
+}
