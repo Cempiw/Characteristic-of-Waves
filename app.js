@@ -761,3 +761,46 @@ document.querySelectorAll('.topic-card, .teacher-card, .sim-card, .quiz-box').fo
   el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
   revealObs.observe(el);
 });
+
+// PROBLEM DISCUSSION
+function openDiscussion(type){
+
+  const text = document.getElementById("discussionText");
+
+  if(type === "5g"){
+
+    text.innerHTML = `
+      📡 Stakeholders must discuss:
+      <br><br>
+      • Benefits of fast internet access
+      <br>
+      • Radiation concerns
+      <br>
+      • Student safety
+      <br>
+      • Communication technology needs
+      <br><br>
+      💡 Can technology and safety work together?
+    `;
+
+  }
+
+  else if(type === "ultrasound"){
+
+    text.innerHTML = `
+      🏥 Stakeholders must discuss:
+      <br><br>
+      • Benefits for pregnant women
+      <br>
+      • Healthcare improvement
+      <br>
+      • Equipment cost
+      <br>
+      • Need for trained operators
+      <br><br>
+      💡 How can wave technology improve healthcare?
+    `;
+
+  }
+
+}
