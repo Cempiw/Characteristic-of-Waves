@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Waves & Light for Humans 🌊✨</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ░░ NAVBAR ░░ -->
+<nav class="navbar" id="navbar">
+  <div class="nav-logo">🌊 WavEdu</div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#learn">Learn</a></li>
+    <li><a href="#sim">Simulation</a></li>
+    <li><a href="#quiz">Quiz</a></li>
+    <li><a href="#teacher">About</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger">☰</div>
+</nav>
+
+<!-- ░░ PAGE 1 — HERO ░░ -->
+<section class="hero" id="home">
+  <div class="hero-bg-shapes">
+    <div class="shape s1"></div>
+    <div class="shape s2"></div>
+    <div class="shape s3"></div>
+    <div class="shape s4"></div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-badge">🎓 Science for SMP · Grade VIII</div>
+    <h1 class="hero-title">
+      The Benefits of<br>
+      <span class="highlight">Waves & Light</span><br>
+      for Humans!
+    </h1>
+
+    <!-- INTRODUCTION -->
+    <div class="intro-card">
+      <div class="intro-quote">💡</div>
+      <p class="intro-text">
+        Have you ever thought about how much light and waves actually do for us?
+        From the sunlight that wakes you up in the morning to the Wi-Fi that keeps you connected —
+        they're quietly working <strong>everywhere, every single day.</strong>
+      </p>
+      <p class="intro-text">
+        On this website, we'll break down how waves and light benefit human life in the most interesting
+        way possible. Easy to read, fun to explore. <strong>Let's dive in!</strong> 🚀
+      </p>
+    </div>
+
+    <a href="#learn" class="btn-start">
+      <span>🚀 Start Learning!</span>
+    </a>
+  </div>
+
+  <!-- Animated wave SVG at bottom -->
+  <div class="hero-wave">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+      <path class="wave-path w1" d="M0,60 C360,120 1080,0 1440,60 L1440,120 L0,120 Z"/>
+      <path class="wave-path w2" d="M0,80 C360,20 1080,100 1440,40 L1440,120 L0,120 Z"/>
+    </svg>
+  </div>
+
+  <!-- Floating emoji decorations -->
+  <div class="floaters">
+    <span class="float-emoji" style="--d:0s;--x:8%;--y:20%">🌊</span>
+    <span class="float-emoji" style="--d:0.5s;--x:85%;--y:15%">☀️</span>
+    <span class="float-emoji" style="--d:1s;--x:92%;--y:55%">📡</span>
+    <span class="float-emoji" style="--d:1.5s;--x:5%;--y:70%">💊</span>
+    <span class="float-emoji" style="--d:0.8s;--x:75%;--y:80%">🔬</span>
+    <span class="float-emoji" style="--d:0.3s;--x:45%;--y:10%">⚡</span>
+  </div>
+</section>
+
+<!-- ░░ ABOUT TEACHER ░░ -->
+<section class="teacher-section" id="teacher">
+  <div class="container">
+    <div class="teacher-card">
+      <div class="teacher-avatar">
+        <div class="avatar-circle">
+          <span class="avatar-emoji">👩‍🏫</span>
+        </div>
+        <div class="avatar-badge">UPI</div>
+      </div>
+      <div class="teacher-info">
+        <div class="teacher-tag">👋 About Your Teacher</div>
+        <h2 class="teacher-name">Devi Salsabila</h2>
+        <p class="teacher-title">International Program on Science Education · UPI</p>
+        <p class="teacher-bio">
+          Hi! I am <strong>Devi Salsabila</strong>, an undergraduate student majoring in
+          <strong>International Program on Science Education UPI</strong>. With my strong interest in science,
+          I develop this website to help middle school students understand about
+          <strong>The Benefits of Waves and Light for Humans</strong>.
+          This website provides students with explanations, activities, and small quiz that
+          support them in building their conceptual understanding. I hope this website can become
+          a helpful learning companion for students and a useful resource for teachers who are
+          interested in innovative science learning. <strong>Thank you for visiting</strong>,
+          and I hope you enjoy learning science! 🌟
+        </p>
+        <div class="teacher-badges">
+          <span class="tbadge">🔬 Science Education</span>
+          <span class="tbadge">📚 UPI</span>
+          <span class="tbadge">🌊 Waves & Light</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ LEARNING SECTIONS ░░ -->
+<section class="learn-section" id="learn">
+  <div class="container">
+    <div class="section-header">
+      <h2>📖 What You'll Learn</h2>
+      <p>Click on each topic card to explore!</p>
+    </div>
+
+    <div class="topic-grid">
+      <div class="topic-card" onclick="openLesson('waves')">
+        <div class="tc-icon">🌊</div>
+        <h3>What Are Waves?</h3>
+        <p>Discover how waves carry energy without moving matter!</p>
+        <div class="tc-tag">Phase 1</div>
+        <div class="tc-arrow">→</div>
+      </div>
+      <div class="topic-card" onclick="openLesson('properties')">
+        <div class="tc-icon">📏</div>
+        <h3>Wave Characteristics</h3>
+        <p>Amplitude, frequency, wavelength, and wave speed.</p>
+        <div class="tc-tag">Phase 2</div>
+        <div class="tc-arrow">→</div>
+      </div>
+      <div class="topic-card" onclick="openLesson('types')">
+        <div class="tc-icon">🔊</div>
+        <h3>Types of Waves</h3>
+        <p>Mechanical vs. Electromagnetic — what's the difference?</p>
+        <div class="tc-tag">Phase 3</div>
+        <div class="tc-arrow">→</div>
+      </div>
+      <div class="topic-card" onclick="openLesson('benefits')">
+        <div class="tc-icon">🏥</div>
+        <h3>Benefits for Humans</h3>
+        <p>Medicine, communication, energy — waves power our world!</p>
+        <div class="tc-tag">Phase 4</div>
+        <div class="tc-arrow">→</div>
+      </div>
+      <div class="topic-card" onclick="openLesson('equation')">
+        <div class="tc-icon">🧮</div>
+        <h3>Wave Equation</h3>
+        <p>Master v = fλ with fun practice problems!</p>
+        <div class="tc-tag">Phase 5</div>
+        <div class="tc-arrow">→</div>
+      </div>
+      <div class="topic-card" onclick="openLesson('safety')">
+        <div class="tc-icon">🛡️</div>
+        <h3>Wave Safety</h3>
+        <p>What waves are safe? What should we be careful about?</p>
+        <div class="tc-tag">Phase 6</div>
+        <div class="tc-arrow">→</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ LESSON MODAL ░░ -->
+<div class="modal-overlay" id="lessonModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeLesson()">✕</button>
+    <div id="lessonContent"></div>
+  </div>
+</div>
+
+<!-- ░░ SIMULATION SECTION ░░ -->
+<section class="sim-section" id="sim">
+  <div class="container">
+    <div class="section-header light">
+      <h2>🔬 Interactive Simulations</h2>
+      <p>Play, explore, and understand waves in action!</p>
+    </div>
+
+    <div class="sim-tabs">
+      <button class="sim-tab active" onclick="showSim('ripple')">🌊 Ripple Tank</button>
+      <button class="sim-tab" onclick="showSim('spectrum')">🌈 EM Spectrum</button>
+      <button class="sim-tab" onclick="showSim('equation')">🧮 Wave Calculator</button>
+    </div>
+
+    <!-- Ripple Tank Simulation -->
+    <div class="sim-panel active" id="sim-ripple">
+      <div class="sim-card">
+        <h3>🌊 Ripple Tank Experiment</h3>
+        <p>Adjust the frequency and amplitude of your wave source and watch the ripples spread!</p>
+        <div class="controls">
+          <label>Frequency: <span id="freqVal">5</span> Hz
+            <input type="range" min="1" max="15" value="5" id="freqSlider" oninput="updateRipple()">
+          </label>
+          <label>Amplitude: <span id="ampVal">30</span>
+            <input type="range" min="10" max="60" value="30" id="ampSlider" oninput="updateRipple()">
+          </label>
+          <button class="btn-sim" onclick="toggleRipple()">⏸ Pause / ▶ Play</button>
+        </div>
+        <canvas id="rippleCanvas" width="700" height="300"></canvas>
+        <div class="sim-info">
+          <span>💡 <strong>Tip:</strong> Higher frequency = more waves packed together = shorter wavelength!</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- EM Spectrum -->
+    <div class="sim-panel" id="sim-spectrum">
+      <div class="sim-card">
+        <h3>🌈 Electromagnetic Spectrum Explorer</h3>
+        <p>Click on each wave type to learn about its use!</p>
+        <div class="spectrum-bar" id="spectrumBar"></div>
+        <div class="spectrum-info-box" id="spectrumInfo">
+          <p>👆 Click a wave type above to learn more!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wave Calculator -->
+    <div class="sim-panel" id="sim-equation">
+      <div class="sim-card">
+        <h3>🧮 Wave Equation Calculator</h3>
+        <p>Use <strong>v = f × λ</strong> to solve wave problems!</p>
+        <div class="calc-grid">
+          <div class="calc-field">
+            <label>Wave Speed (v) m/s</label>
+            <input type="number" id="calcV" placeholder="e.g. 1500" oninput="calcWave('v')">
+          </div>
+          <div class="calc-equals">=</div>
+          <div class="calc-field">
+            <label>Frequency (f) Hz</label>
+            <input type="number" id="calcF" placeholder="e.g. 2000000" oninput="calcWave('f')">
+          </div>
+          <div class="calc-times">×</div>
+          <div class="calc-field">
+            <label>Wavelength (λ) m</label>
+            <input type="number" id="calcL" placeholder="e.g. 0.00075" oninput="calcWave('l')">
+          </div>
+        </div>
+        <div class="calc-result" id="calcResult">Enter any two values to solve for the third!</div>
+        <div class="calc-examples">
+          <p><strong>Try these examples:</strong></p>
+          <button class="btn-example" onclick="loadExample(1)">🏥 Ultrasound in tissue</button>
+          <button class="btn-example" onclick="loadExample(2)">📡 Wi-Fi signal</button>
+          <button class="btn-example" onclick="loadExample(3)">🎵 Sound in air</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ QUIZ SECTION ░░ -->
+<section class="quiz-section" id="quiz">
+  <div class="container">
+    <div class="section-header">
+      <h2>🎯 Quick Quiz!</h2>
+      <p>Test your knowledge — can you get a perfect score? 🌟</p>
+    </div>
+    <div class="quiz-box" id="quizBox">
+      <div id="quizContent"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ FOOTER ░░ -->
+<footer class="footer">
+  <div class="footer-wave">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#fff" opacity="0.15"/>
+    </svg>
+  </div>
+  <div class="footer-content">
+    <div class="footer-logo">🌊 WavEdu</div>
+    <p>Made with ❤️ by Devi Salsabila · IPSE UPI</p>
+    <p>Benefit of Waves and Light for Humans · Grade VIII Science</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
