@@ -3,13 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Waves & Light for Humans 🌊✨</title>
+  <title>Characteristic of Waves🌊✨</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<!-- MODAL -->
+<div class="modal" id="modal">
+
+  <div class="modal-content">
+
+    <span class="close-btn" onclick="closeModal()">
+      ✖
+    </span>
+
+    <div id="modalBody">
+
+    </div>
+
+  </div>
+
+</div>
+  
+  <body>
 
 <!-- ░░ NAVBAR ░░ -->
 <nav class="navbar" id="navbar">
@@ -171,7 +188,7 @@
 
           </div>
 
-          <button class="problem-btn" onclick="openDiscussion('5g')">
+         <button class="card-btn" onclick="openModal('5g')">
 
             🔍 Investigate Problem
 
@@ -212,11 +229,9 @@
 
           </div>
 
-          <button class="problem-btn" onclick="openDiscussion('ultrasound')">
-
-            🔬 Analyze Technology
-
-          </button>
+         <button class="card-btn" onclick="openModal('ultrasound')">
+  Investigate Technology
+</button>
 
         </div>
 
