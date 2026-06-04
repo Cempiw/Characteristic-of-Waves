@@ -559,6 +559,32 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+function showSim(id, button){
+
+  document
+    .querySelectorAll('.sim-panel')
+    .forEach(panel=>{
+
+      panel.classList.remove('active');
+
+    });
+
+  document
+    .querySelectorAll('.sim-tab')
+    .forEach(tab=>{
+
+      tab.classList.remove('active');
+
+    });
+
+  document
+    .getElementById('sim-' + id)
+    .classList.add('active');
+
+  button.classList.add('active');
+
+}
+
 // ════════════════════════════════════════════
 // QUIZ
 // ════════════════════════════════════════════
