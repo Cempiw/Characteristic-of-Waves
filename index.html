@@ -613,41 +613,41 @@ alt="5G Tower">
 
   <div class="container">
 
-    <div class="section-header">
+    <div class="section-header light">
 
-      <h2>🔬 Interactive Wave Laboratory</h2>
+      <h2>🔬 Interactive Simulations</h2>
 
       <p>
-        Explore wave behavior through simulations,
-        experiments, and virtual investigations!
+        Play, explore, and understand waves in action!
       </p>
 
     </div>
 
-    <!-- ░░ PHET SECTION ░░ -->
+    <!-- PHET -->
     <div class="phet-card">
 
       <div class="phet-text">
 
         <div class="mini-tag">
-          🌊 Main Investigation Lab
+          🌊 Interactive PhET Simulation
         </div>
 
-        <h3>
-          PhET: Wave on a String
-        </h3>
+        <h3>Wave on a String</h3>
 
         <p>
-          Explore how frequency, amplitude,
-          and tension affect wave motion.
+          Explore how waves behave by changing frequency,
+          amplitude, and tension.
         </p>
 
         <ul>
 
           <li>📏 Observe wavelength changes</li>
-          <li>⚡ Investigate energy transfer</li>
-          <li>🎵 Change frequency & amplitude</li>
-          <li>🌊 Explore standing waves</li>
+
+          <li>⚡ Explore wave energy</li>
+
+          <li>🎵 Change frequency and amplitude</li>
+
+          <li>🌊 Understand standing waves</li>
 
         </ul>
 
@@ -656,7 +656,7 @@ alt="5G Tower">
           target="_blank"
           class="open-btn">
 
-          🚀 Open Full Simulation
+          🔗 Open Full Simulation
 
         </a>
 
@@ -673,27 +673,28 @@ alt="5G Tower">
 
     </div>
 
-    <!-- ░░ MINI SIMULATION TABS ░░ -->
-  <div class="sim-panel active"
-     id="sim-ripple">
-      <button class="sim-tab active"
-              onclick="showSim('ripple', this)"
+    <!-- SIMULATION TABS -->
+    <div class="sim-tabs">
+
+      <button
+        class="sim-tab active"
+        onclick="showSim('ripple', this)">
 
         🌊 Ripple Tank
 
       </button>
-<div class="sim-panel"
-     id="sim-spectrum">
-      <button class="sim-tab"
-              onclick="showSim('spectrum', this)">
+
+      <button
+        class="sim-tab"
+        onclick="showSim('spectrum', this)">
 
         🌈 EM Spectrum
 
       </button>
-<div class="sim-panel"
-     id="sim-equation">
-      <button class="sim-tab"
-              onclick="showSim('equation', this)">
+
+      <button
+        class="sim-tab"
+        onclick="showSim('equation', this)">
 
         🧮 Wave Calculator
 
@@ -713,9 +714,10 @@ alt="5G Tower">
           Observe how waves move through water.
         </p>
 
-        <canvas id="rippleCanvas"
-                width="700"
-                height="300">
+        <canvas
+          id="rippleCanvas"
+          width="700"
+          height="300">
         </canvas>
 
       </div>
@@ -733,27 +735,27 @@ alt="5G Tower">
         <div class="spectrum-grid">
 
           <div class="wave-box red">
-            Radio
+            📻 Radio
           </div>
 
           <div class="wave-box orange">
-            Microwave
+            📡 Microwave
           </div>
 
           <div class="wave-box yellow">
-            Infrared
+            🌡️ Infrared
           </div>
 
           <div class="wave-box green">
-            Visible
+            🌈 Visible
           </div>
 
           <div class="wave-box blue">
-            UV
+            ☀️ UV
           </div>
 
           <div class="wave-box purple">
-            X-Ray
+            🩻 X-Ray
           </div>
 
         </div>
@@ -778,29 +780,34 @@ alt="5G Tower">
 
         <div class="calc-grid">
 
-          <input type="number"
-                 id="calcV"
-                 placeholder="Wave Speed">
+          <input
+            type="number"
+            id="calcV"
+            placeholder="Wave Speed">
 
-          <input type="number"
-                 id="calcF"
-                 placeholder="Frequency">
+          <input
+            type="number"
+            id="calcF"
+            placeholder="Frequency">
 
-          <input type="number"
-                 id="calcL"
-                 placeholder="Wavelength">
+          <input
+            type="number"
+            id="calcL"
+            placeholder="Wavelength">
 
         </div>
 
-        <button class="btn-sim"
-                onclick="calculateWave()">
+        <button
+          class="btn-sim"
+          onclick="calculateWave()">
 
           Calculate
 
         </button>
 
-        <div class="calc-result"
-             id="calcResult">
+        <div
+          class="calc-result"
+          id="calcResult">
 
           Result will appear here.
 
