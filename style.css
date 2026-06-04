@@ -1721,3 +1721,92 @@ td{
   color:white;
 
 }
+/* STAKEHOLDER */
+.stakeholder-section{
+
+  padding:100px 8%;
+
+  background:linear-gradient(
+    135deg,
+    #dbeafe,
+    #fce7f3,
+    #fef9c3
+  );
+
+}
+
+.stakeholder-grid{
+
+  display:grid;
+
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+  gap:25px;
+
+  margin-top:50px;
+
+}
+
+.stakeholder-card{
+
+  background:white;
+
+  padding:30px;
+
+  border-radius:30px;
+
+  text-align:center;
+
+  cursor:pointer;
+
+  transition:0.3s;
+
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
+}
+
+.stakeholder-card:hover{
+
+  transform:translateY(-10px);
+
+}
+
+.stake-icon{
+
+  font-size:4rem;
+
+  margin-bottom:20px;
+
+}
+
+.stakeholder-card h3{
+
+  color:#0ea5e9;
+
+  margin-bottom:15px;
+
+}
+
+.stakeholder-card p{
+
+  line-height:1.7;
+
+}
+
+.selected-role{
+
+  margin-top:40px;
+
+  background:white;
+
+  padding:20px;
+
+  border-radius:20px;
+
+  text-align:center;
+
+  font-weight:800;
+
+  color:#7c3aed;
+
+}
