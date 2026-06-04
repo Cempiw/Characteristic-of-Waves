@@ -897,3 +897,66 @@ function scrollToTop(){
   });
 
 }
+body.innerHTML = `
+
+<div class="mission-badge">
+  🌍 Real World Investigation
+</div>
+
+<h2>
+  📡 5G Tower Investigation
+</h2>
+
+<p>
+  Your city plans to build a 5G tower near a school.
+</p>
+
+<div class="scenario-box">
+
+  <h3>⚠ Situation</h3>
+
+  <p>
+    Students need fast internet for education,
+    but some parents worry about health effects.
+  </p>
+
+</div>
+
+<div class="stakeholder-mini">
+
+  <div>🎒 Students</div>
+  <div>👨‍👩‍👧 Parents</div>
+  <div>📡 Engineers</div>
+  <div>🏛 Government</div>
+
+</div>
+
+<h3>🔬 Investigation Questions</h3>
+
+<ul class="investigation-list">
+
+  <li>
+    What type of wave does 5G use?
+  </li>
+
+  <li>
+    How does frequency affect energy?
+  </li>
+
+  <li>
+    What are the benefits and risks?
+  </li>
+
+  <li>
+    Should the tower be built?
+  </li>
+
+</ul>
+
+<button class="mission-btn">
+
+  🚀 Start Stakeholder Discussion
+
+</button>
+
+`;
