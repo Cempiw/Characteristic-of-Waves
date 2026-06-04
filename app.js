@@ -647,6 +647,257 @@ const quizData = [
     ans: 1,
     explanation: "✅ High frequency → short wavelength → can detect finer details. v = fλ: higher f means smaller λ!"
   }
+{
+question:
+"Why are electromagnetic waves important for global communication?",
+
+options:[
+"Because they move slowly",
+"Because they require water",
+"Because they can travel through space",
+"Because they only exist in air"
+],
+
+answer:2
+},
+
+{
+question:
+"A doctor uses ultrasound instead of X-Ray for pregnancy checks. Why?",
+
+options:[
+"Ultrasound uses visible light",
+"Ultrasound is safer for soft tissues",
+"X-Ray cannot form images",
+"Ultrasound travels slower"
+],
+
+answer:1
+},
+
+{
+question:
+"A wave has high frequency. What usually happens to its wavelength?",
+
+options:[
+"It becomes longer",
+"It becomes shorter",
+"It disappears",
+"It doubles"
+],
+
+answer:1
+},
+
+{
+question:
+"Why should scientists consider stakeholders before building new technology?",
+
+options:[
+"To avoid using science",
+"To balance benefits and risks",
+"To stop innovation",
+"To reduce communication"
+],
+
+answer:1
+},
+
+{
+question:
+"Which technology uses electromagnetic waves?",
+
+options:[
+"Ultrasound",
+"Drum vibration",
+"Wi-Fi",
+"Tuning fork"
+],
+
+answer:2
+},
+
+{
+question:
+"What could happen if wave amplitude increases?",
+
+options:[
+"The energy may increase",
+"The wave stops moving",
+"The frequency disappears",
+"The wavelength becomes zero"
+],
+
+answer:0
+},
+
+{
+question:
+"Why are waves useful in disaster warning systems?",
+
+options:[
+"They can detect earthquakes and tsunamis",
+"They stop natural disasters",
+"They reduce gravity",
+"They create earthquakes"
+],
+
+answer:0
+},
+
+{
+question:
+"How does wave technology support SDG 3?",
+
+options:[
+"By reducing internet access",
+"By improving healthcare systems",
+"By increasing pollution",
+"By replacing doctors"
+],
+
+answer:1
+},
+
+{
+question:
+"Which stakeholder is MOST concerned about environmental impacts?",
+
+options:[
+"Engineer",
+"Environmentalist",
+"Doctor",
+"Student"
+],
+
+answer:1
+},
+
+{
+question:
+"Why do astronauts rely on electromagnetic waves?",
+
+options:[
+"Sound cannot travel in space",
+"Water absorbs all waves",
+"Mechanical waves travel faster",
+"Gravity blocks communication"
+],
+
+answer:0
+},
+
+{
+question:
+"What is the relationship between frequency and energy?",
+
+options:[
+"Higher frequency usually means higher energy",
+"Higher frequency lowers energy",
+"No relationship exists",
+"Energy disappears completely"
+],
+
+answer:0
+},
+
+{
+question:
+"Why can light travel through vacuum?",
+
+options:[
+"It is a mechanical wave",
+"It is an electromagnetic wave",
+"It requires particles",
+"It only travels in liquids"
+],
+
+answer:1
+},
+
+{
+question:
+"What is one ethical issue related to communication towers?",
+
+options:[
+"Internet speed only",
+"Balancing public safety and technology",
+"Wave color",
+"Sound quality"
+],
+
+answer:1
+},
+
+{
+question:
+"How does wave reflection help doctors?",
+
+options:[
+"It creates ultrasound images",
+"It changes blood type",
+"It removes diseases",
+"It creates oxygen"
+],
+
+answer:0
+},
+
+{
+question:
+"What happens if frequency decreases while speed stays constant?",
+
+options:[
+"Wavelength increases",
+"Wavelength decreases",
+"Amplitude disappears",
+"Energy becomes zero"
+],
+
+answer:0
+},
+
+{
+question:
+"Why is collaboration important in solving technology issues?",
+
+options:[
+"One person knows everything",
+"Different stakeholders provide perspectives",
+"Technology never affects society",
+"Science has no risks"
+],
+
+answer:1
+},
+
+{
+question:
+"What is the BEST solution for safe technology development?",
+
+options:[
+"Ignore stakeholders",
+"Stop all technology",
+"Use scientific evidence and collaboration",
+"Only focus on profit"
+],
+
+answer:2
+},
+
+{
+question:
+"How do waves transfer energy?",
+
+options:[
+"By moving all matter permanently",
+"By transferring disturbances",
+"By destroying particles",
+"By removing energy"
+],
+
+answer:1
+}
 ];
 
 let quizCurrent = 0;
