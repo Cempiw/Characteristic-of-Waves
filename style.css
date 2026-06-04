@@ -1810,3 +1810,304 @@ td{
   color:#7c3aed;
 
 }
+/* SIM PANEL */
+.sim-panel{
+
+  display:none;
+
+  margin-top:40px;
+
+}
+
+.sim-panel.active{
+
+  display:block;
+
+}
+
+/* SIM CARD */
+.sim-card{
+
+  background:white;
+
+  border-radius:35px;
+
+  padding:40px;
+
+  box-shadow:
+    0 15px 40px rgba(0,0,0,0.08);
+
+  text-align:center;
+
+}
+
+/* TITLE */
+.sim-card h3{
+
+  font-size:2rem;
+
+  color:#7c3aed;
+
+  margin-bottom:15px;
+
+}
+
+.sim-card p{
+
+  color:#334155;
+
+  margin-bottom:30px;
+
+  line-height:1.8;
+
+}
+
+/* CONTROLS */
+.controls{
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:20px;
+
+  justify-content:center;
+
+  align-items:center;
+
+  margin-bottom:30px;
+
+}
+
+.control-box{
+
+  background:#f8fafc;
+
+  padding:20px;
+
+  border-radius:20px;
+
+  min-width:220px;
+
+}
+
+.control-box label{
+
+  display:block;
+
+  margin-bottom:12px;
+
+  font-weight:700;
+
+}
+
+/* RANGE */
+input[type="range"]{
+
+  width:100%;
+
+}
+
+/* BUTTON */
+.btn-sim{
+
+  padding:16px 28px;
+
+  border:none;
+
+  border-radius:50px;
+
+  background:linear-gradient(
+    135deg,
+    #06b6d4,
+    #7c3aed
+  );
+
+  color:white;
+
+  font-weight:800;
+
+  cursor:pointer;
+
+  transition:0.3s;
+
+}
+
+.btn-sim:hover{
+
+  transform:translateY(-5px);
+
+}
+
+/* CANVAS */
+#rippleCanvas{
+
+  width:100%;
+
+  max-width:100%;
+
+  background:#eff6ff;
+
+  border-radius:25px;
+
+  margin-top:20px;
+
+}
+
+/* SPECTRUM */
+.spectrum-bar{
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  overflow:hidden;
+
+  border-radius:25px;
+
+  margin-top:30px;
+
+}
+
+/* INFO BOX */
+.spectrum-info-box{
+
+  margin-top:30px;
+
+  padding:25px;
+
+  border-radius:25px;
+
+  background:#f8fafc;
+
+  line-height:1.8;
+
+}
+
+/* FORMULA */
+.formula-box{
+
+  margin:25px auto;
+
+  width:220px;
+
+  padding:18px;
+
+  border-radius:20px;
+
+  background:#ede9fe;
+
+  font-size:2rem;
+
+  font-weight:800;
+
+  color:#7c3aed;
+
+}
+
+/* CALC */
+.calc-grid{
+
+  display:grid;
+
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+  gap:25px;
+
+  margin-top:30px;
+
+}
+
+.calc-field{
+
+  background:#f8fafc;
+
+  padding:25px;
+
+  border-radius:25px;
+
+}
+
+.calc-field label{
+
+  display:block;
+
+  margin-bottom:15px;
+
+  font-weight:700;
+
+}
+
+.calc-field input{
+
+  width:100%;
+
+  padding:15px;
+
+  border:none;
+
+  border-radius:15px;
+
+  background:white;
+
+  font-size:1rem;
+
+}
+
+/* RESULT */
+.calc-result{
+
+  margin-top:30px;
+
+  padding:20px;
+
+  border-radius:20px;
+
+  background:#ecfeff;
+
+  color:#0f172a;
+
+  font-weight:700;
+
+}
+
+/* EXAMPLES */
+.example-grid{
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:15px;
+
+  justify-content:center;
+
+  margin-top:30px;
+
+}
+
+.example-btn{
+
+  padding:14px 22px;
+
+  border:none;
+
+  border-radius:50px;
+
+  background:#f1f5f9;
+
+  cursor:pointer;
+
+  font-weight:700;
+
+  transition:0.3s;
+
+}
+
+.example-btn:hover{
+
+  background:#7c3aed;
+
+  color:white;
+
+}
