@@ -1319,3 +1319,32 @@ td{
   }
 
 }
+#backTop{
+
+  position:fixed;
+
+  bottom:25px;
+
+  right:25px;
+
+  width:55px;
+
+  height:55px;
+
+  border:none;
+
+  border-radius:50%;
+
+  background:#ff70a6;
+
+  color:white;
+
+  font-size:1.3rem;
+
+  cursor:pointer;
+
+  box-shadow:0 8px 20px rgba(0,0,0,0.2);
+
+  z-index:999;
+
+}
