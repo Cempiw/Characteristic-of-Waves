@@ -481,11 +481,35 @@ if (simSection) simObs.observe(simSection);
 // ════════════════════════════════════════════
 // SIM TABS
 // ════════════════════════════════════════════
-function showSim(id) {
-  document.querySelectorAll('.sim-panel').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.sim-tab').forEach(t => t.classList.remove('active'));
-  document.getElementById('sim-' + id).classList.add('active');
-  event.target.classList.add('active');
+function showSim(id, button){
+
+  // HIDE ALL PANELS
+  document
+    .querySelectorAll('.sim-panel')
+    .forEach(panel=>{
+
+      panel.classList.remove('active');
+
+    });
+
+  // REMOVE ACTIVE TAB
+  document
+    .querySelectorAll('.sim-tab')
+    .forEach(tab=>{
+
+      tab.classList.remove('active');
+
+    });
+
+  // SHOW SELECTED PANEL
+  document
+    .getElementById('sim-' + id)
+    .classList.add('active');
+
+  // ACTIVE BUTTON
+  button.classList.add('active');
+
+}
 
   if (id === 'ripple' && !rippleRunning) {
     rippleRunning = true;
