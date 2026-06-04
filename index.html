@@ -657,77 +657,226 @@ alt="5G Tower">
 
   </div>
 
-    <div class="sim-tabs">
-      <button class="sim-tab active" onclick="showSim('ripple')">🌊 Ripple Tank</button>
-      <button class="sim-tab" onclick="showSim('spectrum')">🌈 EM Spectrum</button>
-      <button class="sim-tab" onclick="showSim('equation')">🧮 Wave Calculator</button>
+    <!-- SIMULATION TABS -->
+<div class="sim-tabs">
+
+  <button class="sim-tab active"
+          onclick="showSim('ripple')">
+
+    🌊 Ripple Tank
+
+  </button>
+
+  <button class="sim-tab"
+          onclick="showSim('spectrum')">
+
+    🌈 EM Spectrum
+
+  </button>
+
+  <button class="sim-tab"
+          onclick="showSim('equation')">
+
+    🧮 Wave Calculator
+
+  </button>
+
+</div>
+
+<!-- RIPPLE -->
+<div class="sim-panel active"
+     id="sim-ripple">
+
+  <div class="sim-card">
+
+    <h3>🌊 Ripple Tank Simulation</h3>
+
+    <p>
+      Explore how frequency and amplitude
+      affect wave motion.
+    </p>
+
+    <div class="controls">
+
+      <div class="control-box">
+
+        <label>
+          Frequency:
+          <span id="freqVal">5</span> Hz
+        </label>
+
+        <input
+          type="range"
+          min="1"
+          max="15"
+          value="5"
+          id="freqSlider"
+          oninput="updateRipple()"
+        >
+
+      </div>
+
+      <div class="control-box">
+
+        <label>
+          Amplitude:
+          <span id="ampVal">30</span>
+        </label>
+
+        <input
+          type="range"
+          min="10"
+          max="60"
+          value="30"
+          id="ampSlider"
+          oninput="updateRipple()"
+        >
+
+      </div>
+
+      <button class="btn-sim"
+              onclick="toggleRipple()">
+
+        ⏯ Play / Pause
+
+      </button>
+
     </div>
 
-    <!-- Ripple Tank Simulation -->
-    <div class="sim-panel active" id="sim-ripple">
-      <div class="sim-card">
-        <h3>🌊 Ripple Tank Experiment</h3>
-        <p>Adjust the frequency and amplitude of your wave source and watch the ripples spread!</p>
-        <div class="controls">
-          <label>Frequency: <span id="freqVal">5</span> Hz
-            <input type="range" min="1" max="15" value="5" id="freqSlider" oninput="updateRipple()">
-          </label>
-          <label>Amplitude: <span id="ampVal">30</span>
-            <input type="range" min="10" max="60" value="30" id="ampSlider" oninput="updateRipple()">
-          </label>
-          <button class="btn-sim" onclick="toggleRipple()">⏸ Pause / ▶ Play</button>
-        </div>
-        <canvas id="rippleCanvas" width="700" height="300"></canvas>
-        <div class="sim-info">
-          <span>💡 <strong>Tip:</strong> Higher frequency = more waves packed together = shorter wavelength!</span>
-        </div>
-      </div>
-    </div>
+    <canvas id="rippleCanvas"
+            width="700"
+            height="300">
+    </canvas>
 
-    <!-- EM Spectrum -->
-    <div class="sim-panel" id="sim-spectrum">
-      <div class="sim-card">
-        <h3>🌈 Electromagnetic Spectrum Explorer</h3>
-        <p>Click on each wave type to learn about its use!</p>
-        <div class="spectrum-bar" id="spectrumBar"></div>
-        <div class="spectrum-info-box" id="spectrumInfo">
-          <p>👆 Click a wave type above to learn more!</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Wave Calculator -->
-    <div class="sim-panel" id="sim-equation">
-      <div class="sim-card">
-        <h3>🧮 Wave Equation Calculator</h3>
-        <p>Use <strong>v = f × λ</strong> to solve wave problems!</p>
-        <div class="calc-grid">
-          <div class="calc-field">
-            <label>Wave Speed (v) m/s</label>
-            <input type="number" id="calcV" placeholder="e.g. 1500" oninput="calcWave('v')">
-          </div>
-          <div class="calc-equals">=</div>
-          <div class="calc-field">
-            <label>Frequency (f) Hz</label>
-            <input type="number" id="calcF" placeholder="e.g. 2000000" oninput="calcWave('f')">
-          </div>
-          <div class="calc-times">×</div>
-          <div class="calc-field">
-            <label>Wavelength (λ) m</label>
-            <input type="number" id="calcL" placeholder="e.g. 0.00075" oninput="calcWave('l')">
-          </div>
-        </div>
-        <div class="calc-result" id="calcResult">Enter any two values to solve for the third!</div>
-        <div class="calc-examples">
-          <p><strong>Try these examples:</strong></p>
-          <button class="btn-example" onclick="loadExample(1)">🏥 Ultrasound in tissue</button>
-          <button class="btn-example" onclick="loadExample(2)">📡 Wi-Fi signal</button>
-          <button class="btn-example" onclick="loadExample(3)">🎵 Sound in air</button>
-        </div>
-      </div>
-    </div>
   </div>
-</section>
+
+</div>
+
+<!-- EM SPECTRUM -->
+<div class="sim-panel"
+     id="sim-spectrum">
+
+  <div class="sim-card">
+
+    <h3>🌈 Electromagnetic Spectrum</h3>
+
+    <p>
+      Click each wave type to learn
+      about its function.
+    </p>
+
+    <div class="spectrum-bar"
+         id="spectrumBar">
+    </div>
+
+    <div class="spectrum-info-box"
+         id="spectrumInfo">
+
+      👆 Click a wave type above!
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- CALCULATOR -->
+<div class="sim-panel"
+     id="sim-equation">
+
+  <div class="sim-card">
+
+    <h3>🧮 Wave Equation Calculator</h3>
+
+    <p>
+      Use the equation:
+      <strong>v = f × λ</strong>
+    </p>
+
+    <div class="formula-box">
+
+      v = f × λ
+
+    </div>
+
+    <div class="calc-grid">
+
+      <div class="calc-field">
+
+        <label>Wave Speed (v)</label>
+
+        <input
+          type="number"
+          id="calcV"
+          placeholder="m/s"
+          oninput="calcWave('v')"
+        >
+
+      </div>
+
+      <div class="calc-field">
+
+        <label>Frequency (f)</label>
+
+        <input
+          type="number"
+          id="calcF"
+          placeholder="Hz"
+          oninput="calcWave('f')"
+        >
+
+      </div>
+
+      <div class="calc-field">
+
+        <label>Wavelength (λ)</label>
+
+        <input
+          type="number"
+          id="calcL"
+          placeholder="meter"
+          oninput="calcWave('l')"
+        >
+
+      </div>
+
+    </div>
+
+    <div class="calc-result"
+         id="calcResult">
+
+      Enter two values first.
+
+    </div>
+
+    <div class="example-grid">
+
+      <button class="example-btn"
+              onclick="loadExample(1)">
+
+        🏥 Ultrasound
+
+      </button>
+
+      <button class="example-btn"
+              onclick="loadExample(2)">
+
+        📡 Wi-Fi
+
+      </button>
+
+      <button class="example-btn"
+              onclick="loadExample(3)">
+
+        🔊 Sound Wave
+
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
 
 <!-- ░░ SDGS CARDS SECTION ░░ -->
 <section class="sdgs-section" id="sdgs">
