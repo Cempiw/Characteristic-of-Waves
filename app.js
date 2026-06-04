@@ -42,7 +42,7 @@ const lessons = {
         <h2>What Are Waves?</h2>
       </div>
       <div class="lesson-body">
-        <p>A <strong>wave</strong> is a disturbance that transfers <strong>energy</strong> from one place to another — without transporting matter!</p>
+        <p>A <strong>wave</strong> is a disturbance that transfers <strong>energy</strong> from one place to another, without transporting matter!</p>
         <div class="fact-box">
           <strong>🤯 Mind-blowing fact:</strong> When you listen to music from your phone, the air molecules don't travel from the speaker to your ear. Instead, energy is passed from one molecule to the next — like a Mexican wave in a stadium!
         </div>
@@ -91,14 +91,14 @@ const lessons = {
         <h4>🔑 Key Idea: Wave vs. Trolley</h4>
         <p>Imagine a trolley carrying boxes from point A to B — the trolley (matter) actually moves! A wave is different: the medium (air, water, rope) just vibrates up and down while energy travels forward.</p>
         <ul>
-          <li>🌊 Ocean wave — water moves up/down, wave moves forward</li>
-          <li>🔊 Sound wave — air molecules vibrate, sound travels</li>
-          <li>☀️ Light wave — no medium needed at all!</li>
+          <li>🌊 Ocean wave: water moves up/down, wave moves forward</li>
+          <li>🔊 Sound wave: air molecules vibrate, sound travels</li>
+          <li>☀️ Light wave: no medium needed at all!</li>
         </ul>
         <h4>🌍 Why Does This Matter?</h4>
-        <p>This is the technological "holy grail" — it's why we can send HD video from a satellite 36,000 km away without launching physical matter into space to deliver the message!</p>
+        <p>This is the technological "holy grail". It's why we can send HD video from a satellite 36,000 km away without launching physical matter into space to deliver the message!</p>
         <div class="fact-box">
-          <strong>🚀 Amazing:</strong> Radio waves sent by NASA travel 300,000 km every second — that's how we communicate with spacecraft billions of kilometres away!
+          <strong>🚀 Amazing:</strong> Radio waves sent by NASA travel 300,000 km every second, that's how we communicate with spacecraft billions of kilometres away!
         </div>
       </div>
     `
@@ -154,7 +154,7 @@ const lessons = {
         <p>The <strong>number of complete waves per second</strong>, measured in Hertz (Hz). A high-pitched sound has high frequency. Formula: <code>f = 1/T</code></p>
 
         <h4>3️⃣ Wavelength (λ)</h4>
-        <p>The <strong>distance of one complete wave</strong> — from crest to crest or trough to trough. Pro tip: measure 5 waves and divide by 5 for accuracy!</p>
+        <p>The <strong>distance of one complete wave</strong>, from crest to crest or trough to trough. Pro tip: measure 5 waves and divide by 5 for accuracy!</p>
 
         <h4>4️⃣ Wave Speed (v)</h4>
         <p>How fast the wave travels through a medium. Sound travels at ~340 m/s in air. Light travels at 300,000,000 m/s!</p>
@@ -180,16 +180,16 @@ const lessons = {
       <div class="lesson-body">
         <p>Waves come in two main families. Let's meet them!</p>
 
-        <h4>🟦 Mechanical Waves — Need a Medium!</h4>
+        <h4>🟦 Mechanical Waves: Need a Medium!</h4>
         <p>These waves need matter (solid, liquid, or gas) to travel through. They <strong>cannot</strong> travel through a vacuum.</p>
         <ul>
-          <li>🔊 <strong>Sound waves</strong> — compression waves through air</li>
-          <li>🌊 <strong>Water waves</strong> — surface waves on liquid</li>
-          <li>🪨 <strong>Seismic waves</strong> — through the Earth's rock</li>
+          <li>🔊 <strong>Sound waves</strong>: compression waves through air</li>
+          <li>🌊 <strong>Water waves</strong>: surface waves on liquid</li>
+          <li>🪨 <strong>Seismic waves</strong>: through the Earth's rock</li>
         </ul>
 
         <div class="fact-box">
-          <strong>🚀 In space, no one can hear you scream!</strong> This is literally true — sound cannot travel through the vacuum of space because there's no medium!
+          <strong>🚀 In space, no one can hear you scream!</strong> This is literally true, sound cannot travel through the vacuum of space because there's no medium!
         </div>
 
         <h4>⚡ Electromagnetic (EM) Waves — No Medium Needed!</h4>
@@ -234,10 +234,10 @@ const lessons = {
 
         <h4>🏥 Medicine</h4>
         <ul>
-          <li>🔬 <strong>Ultrasound (f = 1–20 MHz)</strong> — Doctors use high-frequency sound waves to see inside the body. Pregnant mothers use it to see their babies! No radiation involved.</li>
-          <li>🩻 <strong>X-rays</strong> — High-energy EM waves that pass through soft tissue but are blocked by bone. Essential for detecting fractures and disease.</li>
-          <li>👁️ <strong>Laser Surgery</strong> — Controlled amplitude laser beams reshape the cornea in LASIK eye surgery. Precise to micrometres!</li>
-          <li>☢️ <strong>Radiotherapy</strong> — Gamma rays are focused on tumour cells to destroy cancer.</li>
+          <li>🔬 <strong>Ultrasound (f = 1–20 MHz)</strong>: Doctors use high-frequency sound waves to see inside the body. Pregnant mothers use it to see their babies! No radiation involved.</li>
+          <li>🩻 <strong>X-rays</strong>: High-energy EM waves that pass through soft tissue but are blocked by bone. Essential for detecting fractures and disease.</li>
+          <li>👁️ <strong>Laser Surgery</strong>: Controlled amplitude laser beams reshape the cornea in LASIK eye surgery. Precise to micrometres!</li>
+          <li>☢️ <strong>Radiotherapy</strong>: Gamma rays are focused on tumour cells to destroy cancer.</li>
         </ul>
 
         <div class="fact-box">
@@ -254,9 +254,9 @@ const lessons = {
 
         <h4>⚡ Energy</h4>
         <ul>
-          <li>☀️ <strong>Solar panels</strong> — Convert light (EM radiation) directly into electricity.</li>
-          <li>🌊 <strong>Wave power converters</strong> — Use ocean wave energy to generate electricity.</li>
-          <li>🔥 <strong>Microwave ovens</strong> — 2.45 GHz microwaves cause water molecules in food to vibrate, generating heat.</li>
+          <li>☀️ <strong>Solar panels</strong>: Convert light (EM radiation) directly into electricity.</li>
+          <li>🌊 <strong>Wave power converters</strong>: Use ocean wave energy to generate electricity.</li>
+          <li>🔥 <strong>Microwave ovens</strong>: 2.45 GHz microwaves cause water molecules in food to vibrate, generating heat.</li>
         </ul>
       </div>
     `
@@ -382,243 +382,183 @@ document.getElementById('lessonModal').addEventListener('click', function(e) {
   if (e.target === this) closeLesson();
 });
 
-// ════════════════════════════════════════════
-// RIPPLE TANK SIMULATION
-// ════════════════════════════════════════════
-let rippleRunning = true;
-let rippleT = 0;
-let rippleAnimId;
-let rippleFreq = 5;
-let rippleAmp  = 30;
+// ═══════════════════════════════
+// WAIT UNTIL HTML LOADED
+// ═══════════════════════════════
 
-function updateRipple() {
-  rippleFreq = parseInt(document.getElementById('freqSlider').value);
-  rippleAmp  = parseInt(document.getElementById('ampSlider').value);
-  document.getElementById('freqVal').textContent = rippleFreq;
-  document.getElementById('ampVal').textContent  = rippleAmp;
-}
+document.addEventListener("DOMContentLoaded", () => {
 
-function drawRipple() {
-  const canvas = document.getElementById('rippleCanvas');
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
-  const W = canvas.width, H = canvas.height;
+  // ═══════════════════════════════
+  // SIMULATION TAB
+  // ═══════════════════════════════
 
-  ctx.clearRect(0, 0, W, H);
-  ctx.fillStyle = '#0a1628';
-  ctx.fillRect(0, 0, W, H);
+  window.showSim = function(id, button){
 
-  // Draw multiple wave rings from center
-  const cx = W / 2, cy = H / 2;
+    document
+      .querySelectorAll(".sim-panel")
+      .forEach(panel=>{
 
-  for (let ring = 0; ring < 6; ring++) {
-    const phase = rippleT - ring * (80 / rippleFreq);
-    const maxR = Math.min(cx, cy) * 0.95;
-    const r = (phase % (maxR / rippleFreq * rippleFreq)) * (maxR / 150);
+        panel.classList.remove("active");
 
-    if (r > 0 && r < maxR) {
-      const alpha = 1 - r / maxR;
-      ctx.beginPath();
-      ctx.arc(cx, cy, r, 0, Math.PI * 2);
-      ctx.strokeStyle = `rgba(78, 205, 196, ${alpha * 0.8})`;
-      ctx.lineWidth = 2;
-      ctx.stroke();
+      });
+
+    document
+      .querySelectorAll(".sim-tab")
+      .forEach(tab=>{
+
+        tab.classList.remove("active");
+
+      });
+
+    document
+      .getElementById("sim-" + id)
+      .classList.add("active");
+
+    button.classList.add("active");
+
+  }
+
+  // ═══════════════════════════════
+  // RIPPLE TANK
+  // ═══════════════════════════════
+
+  const canvas =
+    document.getElementById("rippleCanvas");
+
+  if(canvas){
+
+    const ctx = canvas.getContext("2d");
+
+    let time = 0;
+
+    function animateRipple(){
+
+      ctx.clearRect(
+        0,
+        0,
+        canvas.width,
+        canvas.height
+      );
+
+      for(let i=0;i<6;i++){
+
+        ctx.beginPath();
+
+        ctx.arc(
+          canvas.width/2,
+          canvas.height/2,
+          (time*2 + i*40)%300,
+          0,
+          Math.PI*2
+        );
+
+        ctx.strokeStyle =
+          `rgba(59,130,246,${
+            1 - i*0.15
+          })`;
+
+        ctx.lineWidth = 4;
+
+        ctx.stroke();
+
+      }
+
+      time++;
+
+      requestAnimationFrame(
+        animateRipple
+      );
+
     }
+
+    animateRipple();
+
   }
 
-  // Draw wave profile at bottom
-  ctx.beginPath();
-  for (let x = 0; x < W; x++) {
-    const y = H - 55 + rippleAmp * 0.5 * Math.sin((x / W) * rippleFreq * 2 * Math.PI - rippleT * 0.15);
-    if (x === 0) ctx.moveTo(x, y);
-    else ctx.lineTo(x, y);
-  }
-  ctx.strokeStyle = 'rgba(255, 217, 61, 0.8)';
-  ctx.lineWidth = 2;
-  ctx.stroke();
+  // ═══════════════════════════════
+  // EM SPECTRUM
+  // ═══════════════════════════════
 
-  // Source dot
-  ctx.beginPath();
-  ctx.arc(cx, cy, 6, 0, Math.PI * 2);
-  ctx.fillStyle = '#FF6B6B';
-  ctx.fill();
-  ctx.beginPath();
-  ctx.arc(cx, cy, 12 + 4*Math.sin(rippleT*0.3), 0, Math.PI * 2);
-  ctx.strokeStyle = 'rgba(255,107,107,0.5)';
-  ctx.lineWidth = 2;
-  ctx.stroke();
+  const waveBoxes =
+    document.querySelectorAll(".wave-box");
 
-  // Labels
-  ctx.fillStyle = 'rgba(255,255,255,0.6)';
-  ctx.font = '12px Nunito';
-  ctx.fillText(`f = ${rippleFreq} Hz`, 12, 20);
-  ctx.fillText(`A = ${rippleAmp}`, 12, 36);
+  waveBoxes.forEach(box=>{
 
-  if (rippleRunning) {
-    rippleT += rippleFreq * 0.05;
-    rippleAnimId = requestAnimationFrame(drawRipple);
-  }
-}
+    box.addEventListener("click", ()=>{
 
-function toggleRipple() {
-  rippleRunning = !rippleRunning;
-  if (rippleRunning) drawRipple();
-}
-
-// Auto-start ripple when sim section visible
-const simObs = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting && !rippleAnimId) {
-      rippleRunning = true;
-      drawRipple();
-    }
-  });
-}, { threshold: 0.3 });
-
-const simSection = document.getElementById('sim');
-if (simSection) simObs.observe(simSection);
-
-// ════════════════════════════════════════════
-// SIM TABS
-// ════════════════════════════════════════════
-function showSim(id, button){
-
-  // HIDE ALL PANELS
-  document
-    .querySelectorAll('.sim-panel')
-    .forEach(panel=>{
-
-      panel.classList.remove('active');
+      alert(
+        "You selected: " +
+        box.innerText
+      );
 
     });
 
-  // REMOVE ACTIVE TAB
-  document
-    .querySelectorAll('.sim-tab')
-    .forEach(tab=>{
-
-      tab.classList.remove('active');
-
-    });
-
-  // SHOW SELECTED PANEL
-  document
-    .getElementById('sim-' + id)
-    .classList.add('active');
-
-  // ACTIVE BUTTON
-  button.classList.add('active');
-
-}
-
-  if (id === 'ripple' && !rippleRunning) {
-    rippleRunning = true;
-    drawRipple();
-  }
-}
-
-// ════════════════════════════════════════════
-// EM SPECTRUM
-// ════════════════════════════════════════════
-const specData = [
-  { name: 'Radio', emoji: '📻', color: '#8B0000', freq: '< 1 GHz',
-    use: 'Radio broadcasting, TV signals, MRI machines in hospitals',
-    fun: 'Radio waves can travel through walls and even mountains! AM radio can bounce off the ionosphere and travel thousands of km!' },
-  { name: 'Microwave', emoji: '📡', color: '#FF4500', freq: '1 GHz – 300 GHz',
-    use: 'Wi-Fi, mobile phones, satellite TV, microwave ovens',
-    fun: 'Your microwave oven uses 2.45 GHz microwaves — they cause water molecules to vibrate rapidly, generating heat in food! Genius!' },
-  { name: 'Infrared', emoji: '🌡️', color: '#FF8C00', freq: '300 GHz – 400 THz',
-    use: 'TV remote controls, thermal cameras, night vision goggles, heat therapy',
-    fun: 'Snakes can "see" infrared! Special pit organs detect heat radiation from prey even in total darkness. 🐍' },
-  { name: 'Visible Light', emoji: '🌈', color: '#22CC44', freq: '400–700 THz',
-    use: 'Human vision, photography, laser surgery, fiber optics',
-    fun: 'Visible light is only a tiny sliver of the entire EM spectrum — yet it\'s the only part we can see! Red has the lowest frequency, violet the highest.' },
-  { name: 'Ultraviolet', emoji: '🕶️', color: '#4444FF', freq: '700 THz – 30 PHz',
-    use: 'Vitamin D production, sterilisation, fluorescent lights, detecting forgeries',
-    fun: 'Bees can see UV light! Flowers have secret UV patterns on their petals that guide bees to the nectar — invisible to human eyes! 🐝' },
-  { name: 'X-rays', emoji: '🩻', color: '#9400D3', freq: '30 PHz – 3 EHz',
-    use: 'Medical imaging, airport security scanners, detecting structural defects',
-    fun: 'Wilhelm Röntgen discovered X-rays in 1895 by accident! He took an X-ray of his wife\'s hand — she reportedly said it reminded her of her death! 😬' },
-  { name: 'Gamma rays', emoji: '☢️', color: '#4B0082', freq: '> 3 EHz',
-    use: 'Cancer radiotherapy, sterilising medical equipment, nuclear power',
-    fun: 'Gamma rays have the shortest wavelength — some are smaller than an atomic nucleus! They come from radioactive decay and supernovae explosions.' },
-];
-
-function buildSpectrum() {
-  const bar = document.getElementById('spectrumBar');
-  if (!bar) return;
-  specData.forEach((s, i) => {
-    const div = document.createElement('div');
-    div.className = 'spec-item';
-    div.style.background = s.color;
-    div.innerHTML = `<span>${s.emoji}</span>${s.name}`;
-    div.onclick = () => showSpecInfo(i);
-    bar.appendChild(div);
   });
-}
 
-function showSpecInfo(i) {
-  const s = specData[i];
-  const box = document.getElementById('spectrumInfo');
-  box.innerHTML = `
-    <h4>${s.emoji} ${s.name} Waves</h4>
-    <p><strong>Frequency range:</strong> ${s.freq}</p>
-    <p><strong>Used for:</strong> ${s.use}</p>
-    <p>💡 <em>${s.fun}</em></p>
-  `;
-  box.style.borderColor = s.color;
-}
+  // ═══════════════════════════════
+  // WAVE CALCULATOR
+  // ═══════════════════════════════
 
-buildSpectrum();
+  window.calculateWave = function(){
 
-// ════════════════════════════════════════════
-// WAVE CALCULATOR
-// ════════════════════════════════════════════
-function calcWave(changed) {
-  const vEl = document.getElementById('calcV');
-  const fEl = document.getElementById('calcF');
-  const lEl = document.getElementById('calcL');
-  const res = document.getElementById('calcResult');
+    const v =
+      parseFloat(
+        document.getElementById("calcV").value
+      );
 
-  const v = parseFloat(vEl.value);
-  const f = parseFloat(fEl.value);
-  const l = parseFloat(lEl.value);
+    const f =
+      parseFloat(
+        document.getElementById("calcF").value
+      );
 
-  let result = '';
+    const l =
+      parseFloat(
+        document.getElementById("calcL").value
+      );
 
-  if (changed === 'v' && !isNaN(f) && !isNaN(l)) {
-    // already have all three — just show
+    let result = "";
+
+    if(!isNaN(f) && !isNaN(l)){
+
+      result =
+        "Wave Speed = " +
+        (f*l).toFixed(2) +
+        " m/s";
+
+    }
+
+    else if(!isNaN(v) && !isNaN(f)){
+
+      result =
+        "Wavelength = " +
+        (v/f).toFixed(2) +
+        " m";
+
+    }
+
+    else if(!isNaN(v) && !isNaN(l)){
+
+      result =
+        "Frequency = " +
+        (v/l).toFixed(2) +
+        " Hz";
+
+    }
+
+    else{
+
+      result =
+        "Please enter two values.";
+
+    }
+
+    document
+      .getElementById("calcResult")
+      .innerHTML = result;
+
   }
-  if (changed !== 'v' && !isNaN(f) && !isNaN(l)) {
-    const calc = f * l;
-    vEl.value = calc.toExponential(3);
-    result = `✅ Wave Speed v = ${f} × ${l} = <strong>${calc.toExponential(3)} m/s</strong>`;
-  } else if (changed !== 'f' && !isNaN(v) && !isNaN(l)) {
-    const calc = v / l;
-    fEl.value = calc.toExponential(3);
-    result = `✅ Frequency f = ${v} / ${l} = <strong>${calc.toExponential(3)} Hz</strong>`;
-  } else if (changed !== 'l' && !isNaN(v) && !isNaN(f)) {
-    const calc = v / f;
-    lEl.value = calc.toExponential(3);
-    result = `✅ Wavelength λ = ${v} / ${f} = <strong>${calc.toExponential(3)} m</strong>`;
-  } else {
-    result = 'Enter any two values to solve for the third!';
-  }
 
-  res.innerHTML = result;
-}
-
-function loadExample(n) {
-  const vEl = document.getElementById('calcV');
-  const fEl = document.getElementById('calcF');
-  const lEl = document.getElementById('calcL');
-  const res = document.getElementById('calcResult');
-  vEl.value = ''; fEl.value = ''; lEl.value = '';
-  if (n === 1) { vEl.value = 1500; fEl.value = 2000000; calcWave('f'); }
-  if (n === 2) { vEl.value = 3e8; fEl.value = 2.4e9; calcWave('f'); }
-  if (n === 3) { vEl.value = 340; fEl.value = 440; calcWave('f'); }
-}
-
+});
 // ════════════════════════════════════════════
 // QUIZ
 // ════════════════════════════════════════════
