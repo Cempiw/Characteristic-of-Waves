@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════
-   WavEdu — Cheerful SMP E-Learning Stylesheet
-   ═══════════════════════════════════════════ */
+   Lumina Wave — Cheerful SMP E-Learning
+═══════════════════════════════════════════ */
 
 :root {
   --sun:    #FFD93D;
@@ -552,8 +552,10 @@ body {
 
   font-weight:800;
 
-  transition:0.3s;
-
+ transition:
+  transform 0.3s,
+  box-shadow 0.3s,
+  background 0.3s;
 }
 
 .open-btn:hover{
@@ -586,7 +588,15 @@ body {
   border-radius:25px;
 
 }
+@media(max-width:768px){
 
+  .phet-frame iframe{
+
+    height:400px;
+
+  }
+
+}
 /* SIM TABS */
 .sim-tabs{
 
@@ -810,7 +820,22 @@ input[type="range"]{
 .green{background:#22c55e;}
 .blue{background:#3b82f6;}
 .purple{background:#8b5cf6;}
+.wave-box{
 
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+
+}
+
+.wave-box:hover{
+
+  transform:translateY(-8px);
+
+  box-shadow:
+    0 12px 25px rgba(0,0,0,0.15);
+
+}
 /* FORMULA */
 .formula-box{
 
