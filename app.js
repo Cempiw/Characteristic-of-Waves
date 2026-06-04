@@ -886,3 +886,14 @@ function submitWorksheet(){
     "🎉 Great job! Your stakeholder discussion has been submitted successfully.";
 
 }
+
+function scrollToTop(){
+
+  window.scrollTo({
+
+    top:0,
+    behavior:"smooth"
+
+  });
+
+}
