@@ -609,42 +609,59 @@ alt="5G Tower">
 
 <!-- ░░ SIMULATION SECTION ░░ -->
 <section class="sim-section" id="sim">
+
   <div class="container">
-    <div class="section-header light">
-      <h2>🔬 Interactive Simulations</h2>
-      <p>Play, explore, and understand waves in action!</p>
+
+    <div class="section-header">
+
+      <h2>🔬 Interactive Wave Laboratory</h2>
+
+      <p>
+        Explore wave behavior through simulations,
+        experiments, and virtual investigations!
+      </p>
+
     </div>
 
-    <div class="phet-container">
+    <!-- ░░ PHET SECTION ░░ -->
+    <div class="phet-card">
 
-      <div class="phet-info">
+      <div class="phet-text">
 
-        <h3>🌊 Wave on a String</h3>
+        <div class="mini-tag">
+          🌊 Main Investigation Lab
+        </div>
+
+        <h3>
+          PhET: Wave on a String
+        </h3>
 
         <p>
-          Investigate how amplitude, frequency, tension,
-          and damping affect wave motion.
+          Explore how frequency, amplitude,
+          and tension affect wave motion.
         </p>
 
         <ul>
+
           <li>📏 Observe wavelength changes</li>
-          <li>⚡ Explore wave energy</li>
-          <li>🎵 Change frequency and amplitude</li>
-          <li>🌊 Understand standing waves</li>
+          <li>⚡ Investigate energy transfer</li>
+          <li>🎵 Change frequency & amplitude</li>
+          <li>🌊 Explore standing waves</li>
+
         </ul>
 
         <a
           href="https://phet.colorado.edu/en/simulations/wave-on-a-string"
           target="_blank"
-          class="open-btn"
-        >
-          🔗 Open Full Simulation
+          class="open-btn">
+
+          🚀 Open Full Simulation
+
         </a>
 
       </div>
 
-      <!-- PHET EMBED -->
-      <div class="iframe-wrapper">
+      <div class="phet-frame">
 
         <iframe
           src="https://phet.colorado.edu/sims/html/wave-on-a-string/latest/wave-on-a-string_en.html"
@@ -655,229 +672,144 @@ alt="5G Tower">
 
     </div>
 
-  </div>
+    <!-- ░░ MINI SIMULATION TABS ░░ -->
+    <div class="sim-tabs">
 
-    <!-- SIMULATION TABS -->
-<div class="sim-tabs">
+      <button class="sim-tab active"
+              onclick="showSim('ripple', this)">
 
-  <button class="sim-tab active"
-          onclick="showSim('ripple')">
+        🌊 Ripple Tank
 
-    🌊 Ripple Tank
+      </button>
 
-  </button>
+      <button class="sim-tab"
+              onclick="showSim('spectrum', this)">
 
-  <button class="sim-tab"
-          onclick="showSim('spectrum')">
+        🌈 EM Spectrum
 
-    🌈 EM Spectrum
+      </button>
 
-  </button>
+      <button class="sim-tab"
+              onclick="showSim('equation', this)">
 
-  <button class="sim-tab"
-          onclick="showSim('equation')">
-
-    🧮 Wave Calculator
-
-  </button>
-
-</div>
-
-<!-- RIPPLE -->
-<div class="sim-panel active"
-     id="sim-ripple">
-
-  <div class="sim-card">
-
-    <h3>🌊 Ripple Tank Simulation</h3>
-
-    <p>
-      Explore how frequency and amplitude
-      affect wave motion.
-    </p>
-
-    <div class="controls">
-
-      <div class="control-box">
-
-        <label>
-          Frequency:
-          <span id="freqVal">5</span> Hz
-        </label>
-
-        <input
-          type="range"
-          min="1"
-          max="15"
-          value="5"
-          id="freqSlider"
-          oninput="updateRipple()"
-        >
-
-      </div>
-
-      <div class="control-box">
-
-        <label>
-          Amplitude:
-          <span id="ampVal">30</span>
-        </label>
-
-        <input
-          type="range"
-          min="10"
-          max="60"
-          value="30"
-          id="ampSlider"
-          oninput="updateRipple()"
-        >
-
-      </div>
-
-      <button class="btn-sim"
-              onclick="toggleRipple()">
-
-        ⏯ Play / Pause
+        🧮 Wave Calculator
 
       </button>
 
     </div>
 
-    <canvas id="rippleCanvas"
-            width="700"
-            height="300">
-    </canvas>
+    <!-- RIPPLE -->
+    <div class="sim-panel active"
+         id="sim-ripple">
 
-  </div>
+      <div class="sim-card">
 
-</div>
+        <h3>🌊 Ripple Tank</h3>
 
-<!-- EM SPECTRUM -->
-<div class="sim-panel"
-     id="sim-spectrum">
+        <p>
+          Observe how waves move through water.
+        </p>
 
-  <div class="sim-card">
-
-    <h3>🌈 Electromagnetic Spectrum</h3>
-
-    <p>
-      Click each wave type to learn
-      about its function.
-    </p>
-
-    <div class="spectrum-bar"
-         id="spectrumBar">
-    </div>
-
-    <div class="spectrum-info-box"
-         id="spectrumInfo">
-
-      👆 Click a wave type above!
-
-    </div>
-
-  </div>
-
-</div>
-
-<!-- CALCULATOR -->
-<div class="sim-panel"
-     id="sim-equation">
-
-  <div class="sim-card">
-
-    <h3>🧮 Wave Equation Calculator</h3>
-
-    <p>
-      Use the equation:
-      <strong>v = f × λ</strong>
-    </p>
-
-    <div class="formula-box">
-
-      v = f × λ
-
-    </div>
-
-    <div class="calc-grid">
-
-      <div class="calc-field">
-
-        <label>Wave Speed (v)</label>
-
-        <input
-          type="number"
-          id="calcV"
-          placeholder="m/s"
-          oninput="calcWave('v')"
-        >
-
-      </div>
-
-      <div class="calc-field">
-
-        <label>Frequency (f)</label>
-
-        <input
-          type="number"
-          id="calcF"
-          placeholder="Hz"
-          oninput="calcWave('f')"
-        >
-
-      </div>
-
-      <div class="calc-field">
-
-        <label>Wavelength (λ)</label>
-
-        <input
-          type="number"
-          id="calcL"
-          placeholder="meter"
-          oninput="calcWave('l')"
-        >
+        <canvas id="rippleCanvas"
+                width="700"
+                height="300">
+        </canvas>
 
       </div>
 
     </div>
 
-    <div class="calc-result"
-         id="calcResult">
+    <!-- SPECTRUM -->
+    <div class="sim-panel"
+         id="sim-spectrum">
 
-      Enter two values first.
+      <div class="sim-card">
+
+        <h3>🌈 Electromagnetic Spectrum</h3>
+
+        <div class="spectrum-grid">
+
+          <div class="wave-box red">
+            Radio
+          </div>
+
+          <div class="wave-box orange">
+            Microwave
+          </div>
+
+          <div class="wave-box yellow">
+            Infrared
+          </div>
+
+          <div class="wave-box green">
+            Visible
+          </div>
+
+          <div class="wave-box blue">
+            UV
+          </div>
+
+          <div class="wave-box purple">
+            X-Ray
+          </div>
+
+        </div>
+
+      </div>
 
     </div>
 
-    <div class="example-grid">
+    <!-- CALCULATOR -->
+    <div class="sim-panel"
+         id="sim-equation">
 
-      <button class="example-btn"
-              onclick="loadExample(1)">
+      <div class="sim-card">
 
-        🏥 Ultrasound
+        <h3>🧮 Wave Equation Calculator</h3>
 
-      </button>
+        <div class="formula-box">
 
-      <button class="example-btn"
-              onclick="loadExample(2)">
+          v = f × λ
 
-        📡 Wi-Fi
+        </div>
 
-      </button>
+        <div class="calc-grid">
 
-      <button class="example-btn"
-              onclick="loadExample(3)">
+          <input type="number"
+                 id="calcV"
+                 placeholder="Wave Speed">
 
-        🔊 Sound Wave
+          <input type="number"
+                 id="calcF"
+                 placeholder="Frequency">
 
-      </button>
+          <input type="number"
+                 id="calcL"
+                 placeholder="Wavelength">
+
+        </div>
+
+        <button class="btn-sim"
+                onclick="calculateWave()">
+
+          Calculate
+
+        </button>
+
+        <div class="calc-result"
+             id="calcResult">
+
+          Result will appear here.
+
+        </div>
+
+      </div>
 
     </div>
 
   </div>
 
-</div>
-
+</section>
 <!-- ░░ SDGS CARDS SECTION ░░ -->
 <section class="sdgs-section" id="sdgs">
 
