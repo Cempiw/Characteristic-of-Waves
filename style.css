@@ -2521,16 +2521,3 @@ input[type="range"]{
     transform:scale(1);
 
   }
-
-}
-.sim-panel{
-
-  display:none;
-
-}
-
-.sim-panel.active{
-
-  display:block;
-
-}
