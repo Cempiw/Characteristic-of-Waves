@@ -994,7 +994,6 @@ function scrollToTop(){
   });
 
 }
-`;
 function calculateWave(){
 
   const v =
