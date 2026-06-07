@@ -2521,3 +2521,160 @@ input[type="range"]{
     transform:scale(1);
 
   }
+/* ═══════════════════════════════════════
+   BLUE & GREEN CURRICULUM SECTION
+═══════════════════════════════════════ */
+
+.curriculum-section{
+  padding:100px 20px;
+  background:linear-gradient(
+    180deg,
+    #f0fbff 0%,
+    #ffffff 100%
+  );
+  position:relative;
+  overflow:hidden;
+}
+
+.curriculum-wrapper{
+  max-width:1200px;
+  margin:auto;
+}
+
+.curriculum-title{
+  text-align:center;
+  margin-bottom:60px;
+}
+
+.curriculum-title h2{
+  font-size:3rem;
+  color:#1A1A2E;
+  font-family:'Fredoka One', cursive;
+  margin-bottom:15px;
+}
+
+.curriculum-title p{
+  font-size:1.1rem;
+  color:#555;
+  max-width:700px;
+  margin:auto;
+  line-height:1.8;
+}
+
+/* GRID */
+.curriculum-grid{
+  display:grid;
+  grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+  gap:35px;
+}
+
+/* CARD */
+.curriculum-card{
+  background:white;
+  border-radius:30px;
+  overflow:hidden;
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+  transition:0.4s;
+  position:relative;
+}
+
+.curriculum-card:hover{
+  transform:translateY(-10px);
+}
+
+/* TOP AREA */
+.curriculum-top{
+  padding:40px 30px;
+  color:white;
+}
+
+.blue-top{
+  background:linear-gradient(
+    135deg,
+    #38BDF8,
+    #2563EB
+  );
+}
+
+.green-top{
+  background:linear-gradient(
+    135deg,
+    #22C55E,
+    #16A34A
+  );
+}
+
+.curriculum-top h3{
+  font-size:2rem;
+  margin-bottom:10px;
+}
+
+.curriculum-top p{
+  line-height:1.7;
+  opacity:0.95;
+}
+
+/* BODY */
+.curriculum-body{
+  padding:30px;
+}
+
+.curriculum-feature{
+  display:flex;
+  align-items:flex-start;
+  gap:15px;
+  margin-bottom:25px;
+}
+
+.curriculum-feature i{
+  font-size:1.8rem;
+}
+
+.curriculum-feature h4{
+  font-size:1.1rem;
+  margin-bottom:5px;
+  color:#1A1A2E;
+}
+
+.curriculum-feature p{
+  color:#555;
+  line-height:1.6;
+}
+
+/* BUTTON */
+.curriculum-btn{
+  margin-top:15px;
+  display:inline-block;
+  padding:14px 24px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:700;
+  transition:0.3s;
+  color:white;
+}
+
+.blue-btn{
+  background:#2563EB;
+}
+
+.green-btn{
+  background:#16A34A;
+}
+
+.curriculum-btn:hover{
+  transform:scale(1.05);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  .curriculum-title h2{
+    font-size:2.2rem;
+  }
+
+  .curriculum-grid{
+    grid-template-columns:1fr;
+  }
+
+}
