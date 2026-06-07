@@ -902,7 +902,7 @@ function openDiscussion(type){
 
   const text = document.getElementById("discussionText");
 
-  if(type === "5g"){
+ if(type === "5g"){
 
     text.innerHTML = `
       📡 Stakeholders must discuss:
