@@ -8,11 +8,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <body>
 <button id="backTop" onclick="scrollToTop()">
   ⬆
 </button>
-  <body>
-
 <!-- MODAL -->
 <div class="modal" id="modal">
 
@@ -95,7 +94,32 @@
     <span class="float-emoji" style="--d:0.3s;--x:45%;--y:10%">⚡</span>
   </div>
 </section>
+<section class="campaign-section">
 
+  <div class="campaign-card">
+
+    <div class="campaign-badge">
+      🌍 Blue & Green Mission
+    </div>
+
+    <h2>
+      Use Science to Build a Better Future
+    </h2>
+
+    <p>
+      Waves and light technologies help humans communicate,
+      improve healthcare, and protect the environment.
+      Through this project, students become young scientists
+      who investigate real-world problems.
+    </p>
+
+    <button class="campaign-btn">
+      🚀 Join The Mission
+    </button>
+
+  </div>
+
+</section>
 <!-- ░░ ABOUT TEACHER ░░ -->
 <section class="teacher-section" id="teacher">
   <div class="container">
@@ -613,41 +637,41 @@ alt="5G Tower">
 
   <div class="container">
 
-    <div class="section-header">
+    <div class="section-header light">
 
-      <h2>🔬 Interactive Wave Laboratory</h2>
+      <h2>🔬 Interactive Simulations</h2>
 
       <p>
-        Explore wave behavior through simulations,
-        experiments, and virtual investigations!
+        Play, explore, and understand waves in action!
       </p>
 
     </div>
 
-    <!-- ░░ PHET SECTION ░░ -->
+    <!-- PHET -->
     <div class="phet-card">
 
       <div class="phet-text">
 
         <div class="mini-tag">
-          🌊 Main Investigation Lab
+          🌊 Interactive PhET Simulation
         </div>
 
-        <h3>
-          PhET: Wave on a String
-        </h3>
+        <h3>Wave on a String</h3>
 
         <p>
-          Explore how frequency, amplitude,
-          and tension affect wave motion.
+          Explore how waves behave by changing frequency,
+          amplitude, and tension.
         </p>
 
         <ul>
 
           <li>📏 Observe wavelength changes</li>
-          <li>⚡ Investigate energy transfer</li>
-          <li>🎵 Change frequency & amplitude</li>
-          <li>🌊 Explore standing waves</li>
+
+          <li>⚡ Explore wave energy</li>
+
+          <li>🎵 Change frequency and amplitude</li>
+
+          <li>🌊 Understand standing waves</li>
 
         </ul>
 
@@ -656,7 +680,7 @@ alt="5G Tower">
           target="_blank"
           class="open-btn">
 
-          🚀 Open Full Simulation
+          🔗 Open Full Simulation
 
         </a>
 
@@ -673,27 +697,28 @@ alt="5G Tower">
 
     </div>
 
-    <!-- ░░ MINI SIMULATION TABS ░░ -->
-  <div class="sim-panel active"
-     id="sim-ripple">
-      <button class="sim-tab active"
-              onclick="showSim('ripple', this)"
+    <!-- SIMULATION TABS -->
+    <div class="sim-tabs">
+
+      <button
+        class="sim-tab active"
+        onclick="showSim('ripple', this)">
 
         🌊 Ripple Tank
 
       </button>
-<div class="sim-panel"
-     id="sim-spectrum">
-      <button class="sim-tab"
-              onclick="showSim('spectrum', this)">
+
+      <button
+        class="sim-tab"
+        onclick="showSim('spectrum', this)">
 
         🌈 EM Spectrum
 
       </button>
-<div class="sim-panel"
-     id="sim-equation">
-      <button class="sim-tab"
-              onclick="showSim('equation', this)">
+
+      <button
+        class="sim-tab"
+        onclick="showSim('equation', this)">
 
         🧮 Wave Calculator
 
@@ -713,9 +738,10 @@ alt="5G Tower">
           Observe how waves move through water.
         </p>
 
-        <canvas id="rippleCanvas"
-                width="700"
-                height="300">
+        <canvas
+          id="rippleCanvas"
+          width="700"
+          height="300">
         </canvas>
 
       </div>
@@ -733,27 +759,27 @@ alt="5G Tower">
         <div class="spectrum-grid">
 
           <div class="wave-box red">
-            Radio
+            📻 Radio
           </div>
 
           <div class="wave-box orange">
-            Microwave
+            📡 Microwave
           </div>
 
           <div class="wave-box yellow">
-            Infrared
+            🌡️ Infrared
           </div>
 
           <div class="wave-box green">
-            Visible
+            🌈 Visible
           </div>
 
           <div class="wave-box blue">
-            UV
+            ☀️ UV
           </div>
 
           <div class="wave-box purple">
-            X-Ray
+            🩻 X-Ray
           </div>
 
         </div>
@@ -778,29 +804,34 @@ alt="5G Tower">
 
         <div class="calc-grid">
 
-          <input type="number"
-                 id="calcV"
-                 placeholder="Wave Speed">
+          <input
+            type="number"
+            id="calcV"
+            placeholder="Wave Speed">
 
-          <input type="number"
-                 id="calcF"
-                 placeholder="Frequency">
+          <input
+            type="number"
+            id="calcF"
+            placeholder="Frequency">
 
-          <input type="number"
-                 id="calcL"
-                 placeholder="Wavelength">
+          <input
+            type="number"
+            id="calcL"
+            placeholder="Wavelength">
 
         </div>
 
-        <button class="btn-sim"
-                onclick="calculateWave()">
+        <button
+          class="btn-sim"
+          onclick="calculateWave()">
 
           Calculate
 
         </button>
 
-        <div class="calc-result"
-             id="calcResult">
+        <div
+          class="calc-result"
+          id="calcResult">
 
           Result will appear here.
 
@@ -965,6 +996,163 @@ alt="5G Tower">
       </div>
 
     </div>
+
+  </div>
+
+</section>
+    <section class="blue-section">
+
+  <h2>🌊 Blue Curriculum</h2>
+
+  <div class="blue-grid">
+
+    <div class="blue-card">
+      <h3>🌊 Ocean Waves</h3>
+      <p>
+        Learn how ocean waves transfer energy
+        and affect coastal ecosystems.
+      </p>
+    </div>
+
+    <div class="blue-card">
+      <h3>🚨 Tsunami Detection</h3>
+      <p>
+        Scientists use wave technology
+        to detect earthquakes and tsunami risks.
+      </p>
+    </div>
+
+    <div class="blue-card">
+      <h3>⚡ Wave Energy</h3>
+      <p>
+        Ocean waves can generate renewable electricity.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+    <!-- ░░ GREEN CURRICULUM SECTION ░░ -->
+<section class="green-section">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <h2>🌱 Green Curriculum</h2>
+
+      <p>
+        Discover how science and wave technology
+        can help protect the Earth and create
+        a sustainable future.
+      </p>
+
+    </div>
+
+    <div class="green-grid">
+
+      <!-- CARD 1 -->
+      <div class="green-card">
+
+        <div class="green-icon">
+          ☀️
+        </div>
+
+        <h3>Solar Energy</h3>
+
+        <p>
+          Solar panels use electromagnetic waves
+          from sunlight to generate clean electricity.
+        </p>
+
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="green-card">
+
+        <div class="green-icon">
+          🌊
+        </div>
+
+        <h3>Wave Energy</h3>
+
+        <p>
+          Ocean waves can be converted into renewable
+          energy to reduce fossil fuel use.
+        </p>
+
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="green-card">
+
+        <div class="green-icon">
+          📡
+        </div>
+
+        <h3>Smart Technology</h3>
+
+        <p>
+          Modern communication systems help people
+          work and learn efficiently while reducing waste.
+        </p>
+
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="green-card">
+
+        <div class="green-icon">
+          🌍
+        </div>
+
+        <h3>Environmental Awareness</h3>
+
+        <p>
+          Scientists use wave technology to monitor
+          climate change, pollution, and disasters.
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- MINI MISSION -->
+    <div class="green-mission">
+
+      <h3>💡 Green Mission Challenge</h3>
+
+      <p>
+        Imagine you are a young scientist.
+        How can wave technology help solve
+        environmental problems in your community?
+      </p>
+
+      <button class="green-btn">
+        🚀 Start Your Mission
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+    <section class="challenge-section">
+
+  <h2>🎯 Student Challenge</h2>
+
+  <div class="challenge-card">
+
+    <p>
+      Design a safer and more sustainable
+      wave technology for your community.
+    </p>
+
+    <ul>
+      <li>📡 Improve communication</li>
+      <li>🏥 Help healthcare systems</li>
+      <li>🌱 Protect the environment</li>
+    </ul>
 
   </div>
 
