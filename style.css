@@ -383,6 +383,220 @@ body {
   margin: 20px 0;
 }
 
+/* ═══════════════════════════════════════
+   SIMULATION SECTION
+═══════════════════════════════════════ */
+
+.sim-section{
+
+  padding:100px 8%;
+
+  background:linear-gradient(
+    135deg,
+    #6ee7ff,
+    #a78bfa,
+    #ff90bc
+  );
+
+  position:relative;
+
+  overflow:hidden;
+
+}
+
+/* FLOATING EFFECT */
+.sim-section::before{
+
+  content:"";
+
+  position:absolute;
+
+  width:300px;
+  height:300px;
+
+  background:rgba(255,255,255,0.12);
+
+  border-radius:50%;
+
+  top:-80px;
+  right:-80px;
+
+}
+
+.sim-section::after{
+
+  content:"";
+
+  position:absolute;
+
+  width:220px;
+  height:220px;
+
+  background:rgba(255,255,255,0.1);
+
+  border-radius:50%;
+
+  bottom:-50px;
+  left:-50px;
+
+}
+
+/* HEADER */
+.sim-section .section-header h2{
+
+  color:white;
+
+}
+
+.sim-section .section-header p{
+
+  color:white;
+
+  opacity:0.95;
+
+}
+
+/* PHET */
+.phet-card{
+
+  display:grid;
+
+  grid-template-columns:1fr 1.5fr;
+
+  gap:35px;
+
+  margin-top:60px;
+
+  margin-bottom:70px;
+
+  align-items:center;
+
+}
+
+.phet-text{
+
+  background:white;
+
+  padding:35px;
+
+  border-radius:35px;
+
+  box-shadow:
+    0 15px 35px rgba(0,0,0,0.08);
+
+}
+
+.phet-text h3{
+
+  font-size:2rem;
+
+  color:#7c3aed;
+
+  margin-bottom:20px;
+
+}
+
+.phet-text p{
+
+  line-height:1.9;
+
+  margin-bottom:20px;
+
+}
+
+.phet-text ul{
+
+  margin-left:20px;
+
+  line-height:2;
+
+}
+
+.mini-tag{
+
+  display:inline-block;
+
+  padding:10px 18px;
+
+  background:#ede9fe;
+
+  color:#7c3aed;
+
+  border-radius:30px;
+
+  font-weight:700;
+
+  margin-bottom:20px;
+
+}
+
+.open-btn{
+
+  display:inline-block;
+
+  margin-top:25px;
+
+  padding:16px 28px;
+
+  border-radius:50px;
+
+  text-decoration:none;
+
+  background:linear-gradient(
+    135deg,
+    #06b6d4,
+    #7c3aed
+  );
+
+  color:white;
+
+  font-weight:800;
+
+ transition:
+  transform 0.3s,
+  box-shadow 0.3s,
+  background 0.3s;
+}
+
+.open-btn:hover{
+
+  transform:translateY(-5px);
+
+}
+
+.phet-frame{
+
+  background:white;
+
+  padding:15px;
+
+  border-radius:35px;
+
+  box-shadow:
+    0 15px 35px rgba(0,0,0,0.08);
+
+}
+
+.phet-frame iframe{
+
+  width:100%;
+
+  height:650px;
+
+  border:none;
+
+  border-radius:25px;
+
+}
+@media(max-width:768px){
+
+  .phet-frame iframe{
+
+    height:400px;
+
+  }
+
+}
 /* SIM TABS */
 .sim-tabs{
 
@@ -1045,13 +1259,13 @@ input[type="range"]{
 @keyframes popup{
 
   from{
+    transform:scale(0.7);
     opacity:0;
-    transform:scale(0.8);
   }
 
   to{
-    opacity:1;
     transform:scale(1);
+    opacity:1;
   }
 
 }
@@ -1203,6 +1417,229 @@ td{
   color:#22c55e;
 
 }
+
+/* SDGS SECTION */
+.sdgs-section{
+
+  padding:100px 8%;
+
+  background:linear-gradient(
+    135deg,
+    #dff7ff,
+    #fff4b5,
+    #d7ffe5
+  );
+
+}
+
+/* GRID */
+.sdgs-grid{
+
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:30px;
+
+  margin-top:60px;
+
+}
+
+/* CARD */
+.sdg-card{
+
+  background:white;
+
+  border-radius:35px;
+
+  overflow:hidden;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+  transition:0.3s;
+
+}
+
+.sdg-card:hover{
+
+  transform:translateY(-10px);
+
+}
+
+/* TOP */
+.sdg-top{
+
+  padding:35px;
+
+  color:white;
+
+  text-align:center;
+
+}
+
+.sdg-top h1{
+
+  font-size:5rem;
+
+  font-weight:900;
+
+}
+
+.sdg-top h3{
+
+  margin-top:10px;
+
+  line-height:1.5;
+
+}
+
+/* COLORS */
+.green{
+
+  background:#22c55e;
+
+}
+
+.orange{
+
+  background:#f97316;
+
+}
+
+.blue{
+
+  background:#2563eb;
+
+}
+
+/* CONTENT */
+.sdg-content{
+
+  padding:30px;
+
+}
+
+.sdg-content p{
+
+  line-height:1.8;
+
+  margin-bottom:20px;
+
+}
+
+.sdg-content ul{
+
+  margin-left:20px;
+
+  line-height:2;
+
+}
+
+/* BLUE GREEN */
+.blue-green-wrapper{
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:30px;
+
+  margin-top:70px;
+
+}
+
+.curriculum-card{
+
+  padding:35px;
+
+  border-radius:35px;
+
+  color:white;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+}
+
+.blue-card{
+
+  background:#0ea5e9;
+
+}
+
+.green-card{
+
+  background:#22c55e;
+
+}
+
+.curriculum-card h2{
+
+  margin-bottom:20px;
+
+}
+
+.curriculum-card p{
+
+  line-height:1.8;
+
+  margin-bottom:20px;
+
+}
+
+.curriculum-card ul{
+
+  margin-left:20px;
+
+  line-height:2;
+
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+
+  .sdgs-grid{
+
+    grid-template-columns:1fr;
+
+  }
+
+  .blue-green-wrapper{
+
+    grid-template-columns:1fr;
+
+  }
+
+}
+#backTop{
+
+  position:fixed;
+
+  bottom:25px;
+
+  right:25px;
+
+  width:55px;
+
+  height:55px;
+
+  border:none;
+
+  border-radius:50%;
+
+  background:#ff70a6;
+
+  color:white;
+
+  font-size:1.3rem;
+
+  cursor:pointer;
+
+  box-shadow:0 8px 20px rgba(0,0,0,0.2);
+
+  z-index:999;
+
+}
+
 /* INVESTIGATE BUTTON */
 .investigate-btn{
 
@@ -1421,6 +1858,25 @@ td{
   transform:rotate(90deg);
 
 }
+/* MISSION BADGE */
+.mission-badge{
+
+  display:inline-block;
+
+  padding:10px 18px;
+
+  background:#ede9fe;
+
+  color:#7c3aed;
+
+  border-radius:30px;
+
+  font-weight:700;
+
+  margin-bottom:20px;
+
+}
+
 /* SCENARIO */
 .scenario-box{
 
@@ -2051,668 +2507,17 @@ input[type="range"]{
 @keyframes popup{
 
   from{
+
     opacity:0;
+
     transform:scale(0.8);
+
   }
 
   to{
+
     opacity:1;
+
     transform:scale(1);
+
   }
-
-}
-/* ═══════════════════════════════════════
-   BLUE & GREEN CURRICULUM SECTION
-═══════════════════════════════════════ */
-
-.curriculum-section{
-  padding:100px 20px;
-  background:linear-gradient(
-    180deg,
-    #f0fbff 0%,
-    #ffffff 100%
-  );
-  position:relative;
-  overflow:hidden;
-}
-
-.curriculum-wrapper{
-  max-width:1200px;
-  margin:auto;
-}
-
-.curriculum-title{
-  text-align:center;
-  margin-bottom:60px;
-}
-
-.curriculum-title h2{
-  font-size:3rem;
-  color:#1A1A2E;
-  font-family:'Fredoka One', cursive;
-  margin-bottom:15px;
-}
-
-.curriculum-title p{
-  font-size:1.1rem;
-  color:#555;
-  max-width:700px;
-  margin:auto;
-  line-height:1.8;
-}
-
-/* GRID */
-.curriculum-grid{
-  display:grid;
-  grid-template-columns:
-    repeat(auto-fit,minmax(320px,1fr));
-  gap:35px;
-}
-
-/* CARD */
-.curriculum-card{
-  background:white;
-  border-radius:30px;
-  overflow:hidden;
-  box-shadow:0 15px 40px rgba(0,0,0,0.08);
-  transition:0.4s;
-  position:relative;
-}
-
-.curriculum-card:hover{
-  transform:translateY(-10px);
-}
-/* BUTTON */
-.curriculum-btn{
-  margin-top:15px;
-  display:inline-block;
-  padding:14px 24px;
-  border-radius:50px;
-  text-decoration:none;
-  font-weight:700;
-  transition:0.3s;
-  color:white;
-}
-
-.blue-btn{
-  background:#2563EB;
-}
-
-.green-btn{
-  background:#16A34A;
-}
-
-.curriculum-btn:hover{
-  transform:scale(1.05);
-}
-
-/* MOBILE */
-@media(max-width:768px){
-
-  .curriculum-title h2{
-    font-size:2.2rem;
-  }
-
-  .curriculum-grid{
-    grid-template-columns:1fr;
-  }
-
-}
-/* ═══════════════════════════════════
-   BLUE & GREEN CURRICULUM
-═══════════════════════════════════ */
-
-.curriculum-section{
-  padding:80px 8%;
-  background:linear-gradient(
-    180deg,
-    #f5fbff,
-    #eef8ff
-  );
-}
-
-.curriculum-title{
-  text-align:center;
-  font-size:2.6rem;
-  font-weight:800;
-  margin-bottom:16px;
-  color:#1A1A2E;
-}
-
-.curriculum-subtitle{
-  text-align:center;
-  max-width:750px;
-  margin:auto;
-  color:#555;
-  line-height:1.7;
-  margin-bottom:60px;
-}
-
-/* GRID */
-.curriculum-grid{
-  display:grid;
-  grid-template-columns:
-    repeat(auto-fit,minmax(280px,1fr));
-  gap:28px;
-}
-
-/* CARD */
-.curriculum-card{
-  background:white;
-  border-radius:24px;
-  padding:30px;
-  box-shadow:
-    0 10px 30px rgba(0,0,0,0.08);
-  transition:0.35s ease;
-  position:relative;
-  overflow:hidden;
-}
-
-.curriculum-card:hover{
-  transform:translateY(-8px);
-  box-shadow:
-    0 18px 40px rgba(0,0,0,0.12);
-}
-
-/* BLUE */
-.blue-card{
-  border-top:8px solid #38BDF8;
-}
-
-.blue-card::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:
-    linear-gradient(
-      135deg,
-      rgba(56,189,248,0.08),
-      transparent
-    );
-  pointer-events:none;
-}
-
-/* GREEN */
-.green-card{
-  border-top:8px solid #22C55E;
-}
-
-.green-card::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:
-    linear-gradient(
-      135deg,
-      rgba(34,197,94,0.08),
-      transparent
-    );
-  pointer-events:none;
-}
-
-/* ICON */
-.curriculum-icon{
-  font-size:2.5rem;
-  margin-bottom:16px;
-}
-
-/* TITLE */
-.curriculum-card h3{
-  font-size:1.4rem;
-  margin-bottom:12px;
-  color:#1A1A2E;
-}
-
-/* TEXT */
-.curriculum-card p{
-  color:#555;
-  line-height:1.7;
-  font-size:0.98rem;
-}
-
-/* TAG */
-.curriculum-tag{
-  display:inline-block;
-  margin-top:18px;
-  padding:8px 16px;
-  border-radius:999px;
-  font-size:0.85rem;
-  font-weight:700;
-}
-
-.blue-tag{
-  background:#E0F2FE;
-  color:#0284C7;
-}
-
-.green-tag{
-  background:#DCFCE7;
-  color:#15803D;
-}
-
-/* RESPONSIVE */
-@media(max-width:768px){
-
-  .curriculum-title{
-    font-size:2rem;
-  }
-
-  .curriculum-section{
-    padding:60px 6%;
-  }
-
-}
-/* ═══════════════════════════════
-   SDGs SECTION
-═══════════════════════════════ */
-
-.sdg-section{
-  padding:90px 8%;
-  background:
-    linear-gradient(
-      180deg,
-      #f8fbff,
-      #eef7ff
-    );
-}
-
-.sdg-title{
-  text-align:center;
-  font-size:2.7rem;
-  font-weight:800;
-  color:#1A1A2E;
-  margin-bottom:16px;
-}
-
-.sdg-subtitle{
-  max-width:760px;
-  margin:auto;
-  text-align:center;
-  color:#666;
-  line-height:1.8;
-  margin-bottom:60px;
-}
-
-/* GRID */
-
-.sdg-grid{
-  display:grid;
-  grid-template-columns:
-    repeat(auto-fit,minmax(280px,1fr));
-  gap:28px;
-}
-
-/* CARD */
-
-.sdg-card{
-  position:relative;
-  background:white;
-  border-radius:24px;
-  padding:32px;
-  overflow:hidden;
-
-  box-shadow:
-    0 10px 30px rgba(0,0,0,0.08);
-
-  transition:0.35s ease;
-}
-
-.sdg-card:hover{
-  transform:
-    translateY(-10px)
-    scale(1.02);
-
-  box-shadow:
-    0 18px 40px rgba(0,0,0,0.14);
-}
-
-/* TOP BORDER COLORS */
-
-.sdg-card:nth-child(1){
-  border-top:8px solid #E53935;
-}
-
-.sdg-card:nth-child(2){
-  border-top:8px solid #C62828;
-}
-
-.sdg-card:nth-child(3){
-  border-top:8px solid #F9A825;
-}
-
-.sdg-card:nth-child(4){
-  border-top:8px solid #F57C00;
-}
-
-.sdg-card:nth-child(5){
-  border-top:8px solid #43A047;
-}
-
-.sdg-card:nth-child(6){
-  border-top:8px solid #0288D1;
-}
-
-/* SDG NUMBER */
-
-.sdg-number{
-  position:absolute;
-  top:18px;
-  right:18px;
-
-  width:42px;
-  height:42px;
-
-  border-radius:50%;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  background:#1A1A2E;
-  color:white;
-
-  font-weight:800;
-  font-size:1rem;
-}
-
-/* ICON */
-
-.sdg-icon{
-  font-size:2.8rem;
-  margin-bottom:18px;
-}
-
-/* TITLE */
-
-.sdg-card h3{
-  font-size:1.3rem;
-  margin-bottom:14px;
-  color:#1A1A2E;
-}
-
-/* TEXT */
-
-.sdg-card p{
-  color:#555;
-  line-height:1.7;
-  font-size:0.97rem;
-}
-
-/* TAG */
-
-.sdg-tag{
-  display:inline-block;
-
-  margin-top:20px;
-
-  padding:8px 16px;
-
-  border-radius:999px;
-
-  background:#eef5ff;
-
-  color:#2563EB;
-
-  font-size:0.82rem;
-  font-weight:700;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:768px){
-
-  .sdg-section{
-    padding:70px 6%;
-  }
-
-  .sdg-title{
-    font-size:2rem;
-  }
-
-}
-/* ═══════════════════════════════
-   MISSION SECTION
-═══════════════════════════════ */
-
-.mission-section{
-  padding:100px 8%;
-  background:linear-gradient(
-    180deg,
-    #f5fbff,
-    #eef7ff
-  );
-}
-
-.mission-header{
-  text-align:center;
-  margin-bottom:60px;
-}
-
-.mission-header h2{
-  font-size:2.8rem;
-  color:#1A1A2E;
-  margin-bottom:18px;
-}
-
-.mission-header p{
-  max-width:760px;
-  margin:auto;
-  line-height:1.8;
-  color:#555;
-}
-
-.mission-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-  gap:32px;
-}
-
-.mission-card{
-  background:white;
-  padding:36px;
-  border-radius:28px;
-  box-shadow:
-    0 15px 40px rgba(0,0,0,0.08);
-
-  transition:0.4s;
-}
-
-.mission-card:hover{
-  transform:translateY(-10px);
-}
-
-.blue-mission{
-  border-top:10px solid #38BDF8;
-}
-
-.green-mission{
-  border-top:10px solid #22C55E;
-}
-
-.mission-icon{
-  font-size:3rem;
-  margin-bottom:20px;
-}
-
-.mission-card h3{
-  font-size:1.6rem;
-  margin-bottom:18px;
-}
-
-.mission-card p{
-  line-height:1.8;
-  color:#555;
-}
-
-.mission-points{
-  margin-top:24px;
-  display:grid;
-  gap:14px;
-}
-
-.mission-points div{
-  background:#f5faff;
-  padding:14px;
-  border-radius:14px;
-  font-weight:600;
-}
-
-/* ═══════════════════════════════
-   CHALLENGE SECTION
-═══════════════════════════════ */
-
-.challenge-section{
-  padding:100px 8%;
-  background:white;
-}
-
-.challenge-content{
-  display:grid;
-  grid-template-columns:1.2fr 0.8fr;
-  gap:40px;
-  align-items:center;
-}
-
-.challenge-text h2{
-  font-size:2.6rem;
-  margin-bottom:24px;
-}
-
-.challenge-text p{
-  line-height:1.9;
-  color:#555;
-  margin-bottom:28px;
-}
-
-.challenge-list{
-  display:grid;
-  gap:16px;
-}
-
-.challenge-list div{
-  background:#eef7ff;
-  padding:18px;
-  border-radius:16px;
-  font-weight:600;
-}
-
-.challenge-box{
-  background:
-    linear-gradient(
-      135deg,
-      #38BDF8,
-      #2563EB
-    );
-
-  color:white;
-  padding:36px;
-  border-radius:30px;
-}
-
-.challenge-box ul{
-  margin-top:20px;
-  line-height:2;
-}
-
-.challenge-btn{
-  margin-top:24px;
-  border:none;
-  background:white;
-  color:#2563EB;
-  padding:14px 22px;
-  border-radius:999px;
-  font-weight:700;
-  cursor:pointer;
-}
-
-/* ═══════════════════════════════
-   SDG MODERN
-═══════════════════════════════ */
-
-.sdg-modern{
-  padding:100px 8%;
-  background:#f8fbff;
-}
-
-.sdg-modern-header{
-  text-align:center;
-  margin-bottom:60px;
-}
-
-.sdg-modern-grid{
-  display:grid;
-  grid-template-columns:
-    repeat(auto-fit,minmax(260px,1fr));
-
-  gap:28px;
-}
-
-.sdg-modern-card{
-  background:white;
-  padding:32px;
-  border-radius:24px;
-  box-shadow:
-    0 10px 30px rgba(0,0,0,0.08);
-
-  transition:0.4s;
-}
-
-.sdg-modern-card:hover{
-  transform:translateY(-10px);
-}
-
-.sdg-num{
-  width:50px;
-  height:50px;
-  border-radius:50%;
-  background:#2563EB;
-  color:white;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-weight:800;
-  margin-bottom:20px;
-}
-section{
-  position:relative;
-}
-
-section::before{
-  content:"";
-  position:absolute;
-  width:300px;
-  height:300px;
-  border-radius:50%;
-  background:rgba(255,255,255,0.15);
-  top:-100px;
-  right:-100px;
-  pointer-events:none;
-}
-
-section::after{
-  content:"";
-  position:absolute;
-  width:220px;
-  height:220px;
-  border-radius:50%;
-  background:rgba(255,255,255,0.1);
-  bottom:-80px;
-  left:-80px;
-  pointer-events:none;
-}
-.curriculum-card,
-.sdg-modern-card,
-.mission-card,
-.problem-card,
-.stakeholder-card,
-.topic-card{
-  transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease;
-}
