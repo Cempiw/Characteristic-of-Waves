@@ -383,220 +383,6 @@ body {
   margin: 20px 0;
 }
 
-/* ═══════════════════════════════════════
-   SIMULATION SECTION
-═══════════════════════════════════════ */
-
-.sim-section{
-
-  padding:100px 8%;
-
-  background:linear-gradient(
-    135deg,
-    #6ee7ff,
-    #a78bfa,
-    #ff90bc
-  );
-
-  position:relative;
-
-  overflow:hidden;
-
-}
-
-/* FLOATING EFFECT */
-.sim-section::before{
-
-  content:"";
-
-  position:absolute;
-
-  width:300px;
-  height:300px;
-
-  background:rgba(255,255,255,0.12);
-
-  border-radius:50%;
-
-  top:-80px;
-  right:-80px;
-
-}
-
-.sim-section::after{
-
-  content:"";
-
-  position:absolute;
-
-  width:220px;
-  height:220px;
-
-  background:rgba(255,255,255,0.1);
-
-  border-radius:50%;
-
-  bottom:-50px;
-  left:-50px;
-
-}
-
-/* HEADER */
-.sim-section .section-header h2{
-
-  color:white;
-
-}
-
-.sim-section .section-header p{
-
-  color:white;
-
-  opacity:0.95;
-
-}
-
-/* PHET */
-.phet-card{
-
-  display:grid;
-
-  grid-template-columns:1fr 1.5fr;
-
-  gap:35px;
-
-  margin-top:60px;
-
-  margin-bottom:70px;
-
-  align-items:center;
-
-}
-
-.phet-text{
-
-  background:white;
-
-  padding:35px;
-
-  border-radius:35px;
-
-  box-shadow:
-    0 15px 35px rgba(0,0,0,0.08);
-
-}
-
-.phet-text h3{
-
-  font-size:2rem;
-
-  color:#7c3aed;
-
-  margin-bottom:20px;
-
-}
-
-.phet-text p{
-
-  line-height:1.9;
-
-  margin-bottom:20px;
-
-}
-
-.phet-text ul{
-
-  margin-left:20px;
-
-  line-height:2;
-
-}
-
-.mini-tag{
-
-  display:inline-block;
-
-  padding:10px 18px;
-
-  background:#ede9fe;
-
-  color:#7c3aed;
-
-  border-radius:30px;
-
-  font-weight:700;
-
-  margin-bottom:20px;
-
-}
-
-.open-btn{
-
-  display:inline-block;
-
-  margin-top:25px;
-
-  padding:16px 28px;
-
-  border-radius:50px;
-
-  text-decoration:none;
-
-  background:linear-gradient(
-    135deg,
-    #06b6d4,
-    #7c3aed
-  );
-
-  color:white;
-
-  font-weight:800;
-
- transition:
-  transform 0.3s,
-  box-shadow 0.3s,
-  background 0.3s;
-}
-
-.open-btn:hover{
-
-  transform:translateY(-5px);
-
-}
-
-.phet-frame{
-
-  background:white;
-
-  padding:15px;
-
-  border-radius:35px;
-
-  box-shadow:
-    0 15px 35px rgba(0,0,0,0.08);
-
-}
-
-.phet-frame iframe{
-
-  width:100%;
-
-  height:650px;
-
-  border:none;
-
-  border-radius:25px;
-
-}
-@media(max-width:768px){
-
-  .phet-frame iframe{
-
-    height:400px;
-
-  }
-
-}
 /* SIM TABS */
 .sim-tabs{
 
@@ -2265,20 +2051,16 @@ input[type="range"]{
 @keyframes popup{
 
   from{
-
     opacity:0;
-
     transform:scale(0.8);
-
   }
 
   to{
-
     opacity:1;
-
     transform:scale(1);
-
   }
+
+}
 /* ═══════════════════════════════════════
    BLUE & GREEN CURRICULUM SECTION
 ═══════════════════════════════════════ */
@@ -2899,7 +2681,6 @@ input[type="range"]{
 }
 section{
   position:relative;
-  overflow:hidden;
 }
 
 section::before{
