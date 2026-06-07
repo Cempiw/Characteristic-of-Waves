@@ -11,12 +11,8 @@ window.addEventListener('scroll', () => {
 });
 
 // ── HAMBURGER (mobile) ────────────────────
-document.getElementById('hamburger')
-.addEventListener('click', () => {
-
-  document
-    .querySelector('.nav-links')
-    .classList.toggle('show');
+document.getElementById('hamburger').onclick = function () {
+  document.querySelector('.nav-links').classList.toggle('show');
   if (nl.style.display === 'flex') {
     nl.style.display = '';
   } else {
@@ -1038,9 +1034,8 @@ modal.classList.add("open");
 // CLOSE MODAL
 function closeModal(){
 
- document
-  .getElementById("modal")
-  .classList.remove("open");
+  document.getElementById("modal").style.display = "none";
+
 }
 
 // WORKSHEET SUBMIT
@@ -1059,33 +1054,10 @@ function scrollToTop(){
 
 // ── BLUE & GREEN CURRICULUM TAB SWITCH ─────
 function switchBGTab(tab, btn){
-
-  // reset tab
-  document.querySelectorAll('.bg-tab')
-    .forEach(b => {
-      b.classList.remove('active');
-    });
-
-  // hide semua panel
-  document.querySelectorAll('.bg-panel')
-    .forEach(p => {
-      p.classList.remove('active');
-      p.style.display = "none";
-    });
-
-  // active button
-  if(btn){
-    btn.classList.add('active');
-  }
-
-  // show panel
-  const target =
-    document.getElementById('bg-' + tab);
-
-  if(target){
-    target.style.display = "block";
-    target.classList.add('active');
-  }
+  document.querySelectorAll('.bg-tab').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.bg-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('bg-' + tab).classList.add('active');
 }
 
 // ── FLIP CARD TOGGLE ────────────────────────
@@ -1166,24 +1138,32 @@ counters.forEach(counter => {
 // CURRICULUM TAB SWITCH
 function showCurriculum(type){
 
-  // remove active panel
   document
     .querySelectorAll('.curriculum-panel')
     .forEach(panel => {
       panel.classList.remove('active');
-      panel.style.display = "none";
     });
 
-  // show target
-  const target =
-    document.getElementById(type);
+  const target = document.getElementById(type);
 
   if(target){
     target.classList.add('active');
-    target.style.display = "block";
   }
-
 }
+document.querySelectorAll('.stakeholder-btn')
+.forEach(btn => {
+
+  btn.addEventListener('click', () => {
+
+    document
+      .querySelectorAll('.stakeholder-btn')
+      .forEach(b => b.classList.remove('active'));
+
+    btn.classList.add('active');
+
+  });
+
+});
 function selectStakeholder(role) {
 
   // ambil semua card
