@@ -964,12 +964,6 @@ function openModal(type){
         "How does distance from the tower affect the intensity of the electromagnetic field?",
         "What evidence would you need to decide if the tower is safe to build near a school?",
         "Which stakeholders benefit and which stakeholders are at risk?"
-      ],
-      perspectives: [
-        { role:"🎒 Student", view:"Wants fast internet for research, but worries about daily radiation exposure during school hours." },
-        { role:"📡 Engineer", view:"States the tower meets all ICNIRP safety standards. Power levels are thousands of times below harmful thresholds." },
-        { role:"🏛️ Government", view:"Wants to improve city connectivity and attract economic investment, but must protect public welfare." },
-        { role:"🌱 Environmentalist", view:"Concerned about effects on local wildlife (birds, bees) that may be sensitive to EM fields." }
       ]
     },
     "ultrasound": {
@@ -989,12 +983,6 @@ function openModal(type){
         "Why is ultrasound safer than X-rays for monitoring pregnancies?",
         "What would happen to image quality if the frequency was lowered?",
         "How do you weigh the cost of equipment against the number of lives it could improve?"
-      ],
-      perspectives: [
-        { role:"🩺 Doctor", view:"Strongly supports the purchase — early detection of complications can save lives and reduce emergency cases." },
-        { role:"🏛️ Government", view:"Concerned about budget — $80,000 is a significant investment. Could the money help more people if spent differently?" },
-        { role:"🤱 Patient", view:"A pregnant woman in the village: 'I missed my last two checkups because the journey is too far and too expensive.'" },
-        { role:"📚 Health Educator", view:"Wants to train local staff to operate the machine sustainably, not rely on outside experts." }
       ]
     }
   };
