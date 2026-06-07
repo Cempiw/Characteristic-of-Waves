@@ -1259,13 +1259,13 @@ input[type="range"]{
 @keyframes popup{
 
   from{
-    transform:scale(0.7);
     opacity:0;
+    transform:scale(0.8);
   }
 
   to{
-    transform:scale(1);
     opacity:1;
+    transform:scale(1);
   }
 
 }
@@ -1417,229 +1417,6 @@ td{
   color:#22c55e;
 
 }
-
-/* SDGS SECTION */
-.sdgs-section{
-
-  padding:100px 8%;
-
-  background:linear-gradient(
-    135deg,
-    #dff7ff,
-    #fff4b5,
-    #d7ffe5
-  );
-
-}
-
-/* GRID */
-.sdgs-grid{
-
-  display:grid;
-
-  grid-template-columns:repeat(3,1fr);
-
-  gap:30px;
-
-  margin-top:60px;
-
-}
-
-/* CARD */
-.sdg-card{
-
-  background:white;
-
-  border-radius:35px;
-
-  overflow:hidden;
-
-  box-shadow:0 10px 30px rgba(0,0,0,0.08);
-
-  transition:0.3s;
-
-}
-
-.sdg-card:hover{
-
-  transform:translateY(-10px);
-
-}
-
-/* TOP */
-.sdg-top{
-
-  padding:35px;
-
-  color:white;
-
-  text-align:center;
-
-}
-
-.sdg-top h1{
-
-  font-size:5rem;
-
-  font-weight:900;
-
-}
-
-.sdg-top h3{
-
-  margin-top:10px;
-
-  line-height:1.5;
-
-}
-
-/* COLORS */
-.green{
-
-  background:#22c55e;
-
-}
-
-.orange{
-
-  background:#f97316;
-
-}
-
-.blue{
-
-  background:#2563eb;
-
-}
-
-/* CONTENT */
-.sdg-content{
-
-  padding:30px;
-
-}
-
-.sdg-content p{
-
-  line-height:1.8;
-
-  margin-bottom:20px;
-
-}
-
-.sdg-content ul{
-
-  margin-left:20px;
-
-  line-height:2;
-
-}
-
-/* BLUE GREEN */
-.blue-green-wrapper{
-
-  display:grid;
-
-  grid-template-columns:1fr 1fr;
-
-  gap:30px;
-
-  margin-top:70px;
-
-}
-
-.curriculum-card{
-
-  padding:35px;
-
-  border-radius:35px;
-
-  color:white;
-
-  box-shadow:0 10px 30px rgba(0,0,0,0.08);
-
-}
-
-.blue-card{
-
-  background:#0ea5e9;
-
-}
-
-.green-card{
-
-  background:#22c55e;
-
-}
-
-.curriculum-card h2{
-
-  margin-bottom:20px;
-
-}
-
-.curriculum-card p{
-
-  line-height:1.8;
-
-  margin-bottom:20px;
-
-}
-
-.curriculum-card ul{
-
-  margin-left:20px;
-
-  line-height:2;
-
-}
-
-/* RESPONSIVE */
-@media(max-width:900px){
-
-  .sdgs-grid{
-
-    grid-template-columns:1fr;
-
-  }
-
-  .blue-green-wrapper{
-
-    grid-template-columns:1fr;
-
-  }
-
-}
-#backTop{
-
-  position:fixed;
-
-  bottom:25px;
-
-  right:25px;
-
-  width:55px;
-
-  height:55px;
-
-  border:none;
-
-  border-radius:50%;
-
-  background:#ff70a6;
-
-  color:white;
-
-  font-size:1.3rem;
-
-  cursor:pointer;
-
-  box-shadow:0 8px 20px rgba(0,0,0,0.2);
-
-  z-index:999;
-
-}
-
 /* INVESTIGATE BUTTON */
 .investigate-btn{
 
@@ -1858,25 +1635,6 @@ td{
   transform:rotate(90deg);
 
 }
-/* MISSION BADGE */
-.mission-badge{
-
-  display:inline-block;
-
-  padding:10px 18px;
-
-  background:#ede9fe;
-
-  color:#7c3aed;
-
-  border-radius:30px;
-
-  font-weight:700;
-
-  margin-bottom:20px;
-
-}
-
 /* SCENARIO */
 .scenario-box{
 
@@ -2582,66 +2340,6 @@ input[type="range"]{
 .curriculum-card:hover{
   transform:translateY(-10px);
 }
-
-/* TOP AREA */
-.curriculum-top{
-  padding:40px 30px;
-  color:white;
-}
-
-.blue-top{
-  background:linear-gradient(
-    135deg,
-    #38BDF8,
-    #2563EB
-  );
-}
-
-.green-top{
-  background:linear-gradient(
-    135deg,
-    #22C55E,
-    #16A34A
-  );
-}
-
-.curriculum-top h3{
-  font-size:2rem;
-  margin-bottom:10px;
-}
-
-.curriculum-top p{
-  line-height:1.7;
-  opacity:0.95;
-}
-
-/* BODY */
-.curriculum-body{
-  padding:30px;
-}
-
-.curriculum-feature{
-  display:flex;
-  align-items:flex-start;
-  gap:15px;
-  margin-bottom:25px;
-}
-
-.curriculum-feature i{
-  font-size:1.8rem;
-}
-
-.curriculum-feature h4{
-  font-size:1.1rem;
-  margin-bottom:5px;
-  color:#1A1A2E;
-}
-
-.curriculum-feature p{
-  color:#555;
-  line-height:1.6;
-}
-
 /* BUTTON */
 .curriculum-btn{
   margin-top:15px;
@@ -3198,4 +2896,45 @@ input[type="range"]{
   justify-content:center;
   font-weight:800;
   margin-bottom:20px;
+}
+section{
+  position:relative;
+  overflow:hidden;
+}
+
+section::before{
+  content:"";
+  position:absolute;
+  width:300px;
+  height:300px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.15);
+  top:-100px;
+  right:-100px;
+  pointer-events:none;
+}
+
+section::after{
+  content:"";
+  position:absolute;
+  width:220px;
+  height:220px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.1);
+  bottom:-80px;
+  left:-80px;
+  pointer-events:none;
+}
+.curriculum-card,
+.sdg-modern-card,
+.mission-card,
+.problem-card,
+.stakeholder-card,
+.topic-card{
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+p{
+  line-height:1.8;
 }
