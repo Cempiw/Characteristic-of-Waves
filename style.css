@@ -2828,3 +2828,171 @@ input[type="range"]{
   }
 
 }
+/* ═══════════════════════════════
+   SDGs SECTION
+═══════════════════════════════ */
+
+.sdg-section{
+  padding:90px 8%;
+  background:
+    linear-gradient(
+      180deg,
+      #f8fbff,
+      #eef7ff
+    );
+}
+
+.sdg-title{
+  text-align:center;
+  font-size:2.7rem;
+  font-weight:800;
+  color:#1A1A2E;
+  margin-bottom:16px;
+}
+
+.sdg-subtitle{
+  max-width:760px;
+  margin:auto;
+  text-align:center;
+  color:#666;
+  line-height:1.8;
+  margin-bottom:60px;
+}
+
+/* GRID */
+
+.sdg-grid{
+  display:grid;
+  grid-template-columns:
+    repeat(auto-fit,minmax(280px,1fr));
+  gap:28px;
+}
+
+/* CARD */
+
+.sdg-card{
+  position:relative;
+  background:white;
+  border-radius:24px;
+  padding:32px;
+  overflow:hidden;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.08);
+
+  transition:0.35s ease;
+}
+
+.sdg-card:hover{
+  transform:
+    translateY(-10px)
+    scale(1.02);
+
+  box-shadow:
+    0 18px 40px rgba(0,0,0,0.14);
+}
+
+/* TOP BORDER COLORS */
+
+.sdg-card:nth-child(1){
+  border-top:8px solid #E53935;
+}
+
+.sdg-card:nth-child(2){
+  border-top:8px solid #C62828;
+}
+
+.sdg-card:nth-child(3){
+  border-top:8px solid #F9A825;
+}
+
+.sdg-card:nth-child(4){
+  border-top:8px solid #F57C00;
+}
+
+.sdg-card:nth-child(5){
+  border-top:8px solid #43A047;
+}
+
+.sdg-card:nth-child(6){
+  border-top:8px solid #0288D1;
+}
+
+/* SDG NUMBER */
+
+.sdg-number{
+  position:absolute;
+  top:18px;
+  right:18px;
+
+  width:42px;
+  height:42px;
+
+  border-radius:50%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:#1A1A2E;
+  color:white;
+
+  font-weight:800;
+  font-size:1rem;
+}
+
+/* ICON */
+
+.sdg-icon{
+  font-size:2.8rem;
+  margin-bottom:18px;
+}
+
+/* TITLE */
+
+.sdg-card h3{
+  font-size:1.3rem;
+  margin-bottom:14px;
+  color:#1A1A2E;
+}
+
+/* TEXT */
+
+.sdg-card p{
+  color:#555;
+  line-height:1.7;
+  font-size:0.97rem;
+}
+
+/* TAG */
+
+.sdg-tag{
+  display:inline-block;
+
+  margin-top:20px;
+
+  padding:8px 16px;
+
+  border-radius:999px;
+
+  background:#eef5ff;
+
+  color:#2563EB;
+
+  font-size:0.82rem;
+  font-weight:700;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+  .sdg-section{
+    padding:70px 6%;
+  }
+
+  .sdg-title{
+    font-size:2rem;
+  }
+
+}
