@@ -1161,3 +1161,27 @@ document.querySelectorAll('.stakeholder-btn')
   });
 
 });
+function selectStakeholder(role) {
+
+  // ambil semua card
+  const cards = document.querySelectorAll('.stakeholder-card');
+
+  // hapus active semua
+  cards.forEach(card => {
+    card.classList.remove('active');
+  });
+
+  // cari card yang diklik
+  const selectedCard = [...cards].find(card =>
+    card.innerText.includes(role)
+  );
+
+  // tambahkan active
+  if (selectedCard) {
+    selectedCard.classList.add('active');
+  }
+
+  // update text
+  document.getElementById('selectedRole').innerHTML =
+    `✅ Selected Stakeholder: <strong>${role}</strong>`;
+}
