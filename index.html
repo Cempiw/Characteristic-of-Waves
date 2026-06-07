@@ -8,11 +8,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <body>
 <button id="backTop" onclick="scrollToTop()">
   ⬆
 </button>
-  <body>
-
 <!-- MODAL -->
 <div class="modal" id="modal">
 
@@ -94,32 +93,6 @@
     <span class="float-emoji" style="--d:0.8s;--x:75%;--y:80%">🔬</span>
     <span class="float-emoji" style="--d:0.3s;--x:45%;--y:10%">⚡</span>
   </div>
-</section>
-<section class="campaign-section">
-
-  <div class="campaign-card">
-
-    <div class="campaign-badge">
-      🌍 Blue & Green Mission
-    </div>
-
-    <h2>
-      Use Science to Build a Better Future
-    </h2>
-
-    <p>
-      Waves and light technologies help humans communicate,
-      improve healthcare, and protect the environment.
-      Through this project, students become young scientists
-      who investigate real-world problems.
-    </p>
-
-    <button class="campaign-btn">
-      🚀 Join The Mission
-    </button>
-
-  </div>
-
 </section>
 <!-- ░░ ABOUT TEACHER ░░ -->
 <section class="teacher-section" id="teacher">
@@ -725,65 +698,91 @@ alt="5G Tower">
     </div>
 
     <!-- RIPPLE -->
-    <div class="sim-panel active"
-         id="sim-ripple">
-
+    <div class="sim-panel active" id="sim-ripple">
       <div class="sim-card">
-
         <h3>🌊 Ripple Tank</h3>
+        <p>Observe how circular waves spread out from a source. Adjust the controls to see how frequency and amplitude affect wave behaviour!</p>
 
-        <p>
-          Observe how waves move through water.
-        </p>
+        <div class="ripple-controls">
+          <div class="ripple-control-box">
+            <label>🔁 Frequency: <span id="rippleFreqVal">2 Hz</span></label>
+            <input type="range" id="rippleFreq" min="1" max="8" step="0.5" value="2">
+            <div class="ripple-hint">Higher frequency → waves closer together</div>
+          </div>
+          <div class="ripple-control-box">
+            <label>📶 Amplitude: <span id="rippleAmpVal">1.0x</span></label>
+            <input type="range" id="rippleAmp" min="0.3" max="2.0" step="0.1" value="1.0">
+            <div class="ripple-hint">Higher amplitude → stronger / louder wave</div>
+          </div>
+          <div class="ripple-control-box ripple-btn-box">
+            <button id="rippleDual" class="btn-sim">⚪ Dual Source: OFF</button>
+            <div class="ripple-hint">Two sources create interference patterns!</div>
+          </div>
+        </div>
 
-        <canvas
-          id="rippleCanvas"
-          width="700"
-          height="300">
-        </canvas>
+        <canvas id="rippleCanvas" width="800" height="320"></canvas>
 
+        <div class="ripple-facts">
+          <div class="ripple-fact">📌 <strong>Wavelength decreases</strong> when frequency increases (v = fλ)</div>
+          <div class="ripple-fact">📌 <strong>Interference</strong> occurs when two waves meet — they can add up (constructive) or cancel (destructive)</div>
+        </div>
       </div>
-
     </div>
 
     <!-- SPECTRUM -->
-    <div class="sim-panel"
-         id="sim-spectrum">
-
+    <div class="sim-panel" id="sim-spectrum">
       <div class="sim-card">
-
         <h3>🌈 Electromagnetic Spectrum</h3>
+        <p>Click on any wave type to learn about its frequency, wavelength, uses, and safety!</p>
 
         <div class="spectrum-grid">
-
-          <div class="wave-box red">
-            📻 Radio
+          <div class="wave-box red"   data-wave="radio">
+            <div class="wave-icon">📻</div>
+            <div class="wave-name">Radio</div>
+            <div class="wave-sub">Longest λ</div>
           </div>
-
-          <div class="wave-box orange">
-            📡 Microwave
+          <div class="wave-box orange" data-wave="microwave">
+            <div class="wave-icon">📡</div>
+            <div class="wave-name">Microwave</div>
+            <div class="wave-sub">Wi-Fi / Cooking</div>
           </div>
-
-          <div class="wave-box yellow">
-            🌡️ Infrared
+          <div class="wave-box yellow" data-wave="infrared">
+            <div class="wave-icon">🌡️</div>
+            <div class="wave-name">Infrared</div>
+            <div class="wave-sub">Heat / Remote</div>
           </div>
-
-          <div class="wave-box green">
-            🌈 Visible
+          <div class="wave-box green" data-wave="visible">
+            <div class="wave-icon">🌈</div>
+            <div class="wave-name">Visible</div>
+            <div class="wave-sub">Human vision</div>
           </div>
-
-          <div class="wave-box blue">
-            ☀️ UV
+          <div class="wave-box blue" data-wave="uv">
+            <div class="wave-icon">☀️</div>
+            <div class="wave-name">UV</div>
+            <div class="wave-sub">Vitamin D</div>
           </div>
-
-          <div class="wave-box purple">
-            🩻 X-Ray
+          <div class="wave-box indigo" data-wave="xray">
+            <div class="wave-icon">🩻</div>
+            <div class="wave-name">X-Ray</div>
+            <div class="wave-sub">Medical imaging</div>
           </div>
-
+          <div class="wave-box purple" data-wave="gamma">
+            <div class="wave-icon">☢️</div>
+            <div class="wave-name">Gamma</div>
+            <div class="wave-sub">Shortest λ</div>
+          </div>
         </div>
 
-      </div>
+        <div class="spectrum-arrow">
+          <div class="arrow-label left">← Longer wavelength · Lower frequency · Lower energy</div>
+          <div class="arrow-bar"></div>
+          <div class="arrow-label right">Higher energy · Higher frequency · Shorter wavelength →</div>
+        </div>
 
+        <div id="spectrumInfo" class="spectrum-info-panel">
+          <div class="spec-placeholder">👆 Click on a wave type above to see details</div>
+        </div>
+      </div>
     </div>
 
     <!-- CALCULATOR -->
@@ -998,163 +997,194 @@ alt="5G Tower">
   </div>
 
 </section>
-    <section class="blue-section">
-
-  <h2>🌊 Blue Curriculum</h2>
-
-  <div class="blue-grid">
-
-    <div class="blue-card">
-      <h3>🌊 Ocean Waves</h3>
-      <p>
-        Learn how ocean waves transfer energy
-        and affect coastal ecosystems.
-      </p>
-    </div>
-
-    <div class="blue-card">
-      <h3>🚨 Tsunami Detection</h3>
-      <p>
-        Scientists use wave technology
-        to detect earthquakes and tsunami risks.
-      </p>
-    </div>
-
-    <div class="blue-card">
-      <h3>⚡ Wave Energy</h3>
-      <p>
-        Ocean waves can generate renewable electricity.
-      </p>
-    </div>
-
-  </div>
-
-</section>
-    <!-- ░░ GREEN CURRICULUM SECTION ░░ -->
-<section class="green-section">
-
+    <!-- ░░ BLUE & GREEN CURRICULUM — REDESIGNED ░░ -->
+<section class="bg-curriculum-section" id="curriculum">
   <div class="container">
 
     <div class="section-header">
-
-      <h2>🌱 Green Curriculum</h2>
-
-      <p>
-        Discover how science and wave technology
-        can help protect the Earth and create
-        a sustainable future.
-      </p>
-
+      <h2>🌊🌱 Blue &amp; Green Curriculum</h2>
+      <p>Explore how wave science connects to ocean sustainability and green innovation.</p>
     </div>
 
-    <div class="green-grid">
-
-      <!-- CARD 1 -->
-      <div class="green-card">
-
-        <div class="green-icon">
-          ☀️
-        </div>
-
-        <h3>Solar Energy</h3>
-
-        <p>
-          Solar panels use electromagnetic waves
-          from sunlight to generate clean electricity.
-        </p>
-
-      </div>
-
-      <!-- CARD 2 -->
-      <div class="green-card">
-
-        <div class="green-icon">
-          🌊
-        </div>
-
-        <h3>Wave Energy</h3>
-
-        <p>
-          Ocean waves can be converted into renewable
-          energy to reduce fossil fuel use.
-        </p>
-
-      </div>
-
-      <!-- CARD 3 -->
-      <div class="green-card">
-
-        <div class="green-icon">
-          📡
-        </div>
-
-        <h3>Smart Technology</h3>
-
-        <p>
-          Modern communication systems help people
-          work and learn efficiently while reducing waste.
-        </p>
-
-      </div>
-
-      <!-- CARD 4 -->
-      <div class="green-card">
-
-        <div class="green-icon">
-          🌍
-        </div>
-
-        <h3>Environmental Awareness</h3>
-
-        <p>
-          Scientists use wave technology to monitor
-          climate change, pollution, and disasters.
-        </p>
-
-      </div>
-
-    </div>
-
-    <!-- MINI MISSION -->
-    <div class="green-mission">
-
-      <h3>💡 Green Mission Challenge</h3>
-
-      <p>
-        Imagine you are a young scientist.
-        How can wave technology help solve
-        environmental problems in your community?
-      </p>
-
-      <button class="green-btn">
-        🚀 Start Your Mission
+    <!-- TAB SWITCHER -->
+    <div class="bg-tabs">
+      <button class="bg-tab blue-tab active" onclick="switchBGTab('blue', this)">
+        🌊 Blue Curriculum
       </button>
+      <button class="bg-tab green-tab" onclick="switchBGTab('green', this)">
+        🌱 Green Curriculum
+      </button>
+    </div>
 
+    <!-- BLUE PANEL -->
+    <div class="bg-panel active" id="bg-blue">
+      <div class="bg-panel-hero blue-hero">
+        <div class="bg-panel-text">
+          <div class="bg-badge blue-badge">🌊 Ocean Science</div>
+          <h3>Waves, Oceans & Our Planet</h3>
+          <p>The ocean covers 71% of Earth's surface and its waves are powered by wind, gravity, and energy transfer. Understanding ocean waves helps us protect coastal communities and harness renewable energy.</p>
+        </div>
+        <div class="bg-panel-visual">🌊</div>
+      </div>
+
+      <div class="bg-cards-grid">
+        <div class="bg-card blue-bg-card" onclick="toggleBGCard(this)">
+          <div class="bg-card-front">
+            <div class="bg-card-icon">🌊</div>
+            <h4>Ocean Waves</h4>
+            <p>How do waves carry energy across thousands of kilometres of ocean?</p>
+            <span class="bg-tap">Tap to explore →</span>
+          </div>
+          <div class="bg-card-back">
+            <h4>Ocean Wave Science</h4>
+            <p>Ocean waves are formed by wind transferring energy to the water surface. The water molecules move in circles — they don't travel with the wave! Only the energy moves forward. A wave's speed depends on water depth: <strong>v = √(g × d)</strong> in shallow water.</p>
+            <div class="bg-card-fact">🌍 Tsunamis can travel at 800 km/h in deep ocean — as fast as a jet plane!</div>
+          </div>
+        </div>
+
+        <div class="bg-card blue-bg-card" onclick="toggleBGCard(this)">
+          <div class="bg-card-front">
+            <div class="bg-card-icon">🚨</div>
+            <h4>Tsunami Detection</h4>
+            <p>How do scientists use wave technology to warn communities in time?</p>
+            <span class="bg-tap">Tap to explore →</span>
+          </div>
+          <div class="bg-card-back">
+            <h4>Early Warning Systems</h4>
+            <p>Seismographs detect the seismic waves from undersea earthquakes. Ocean buoys measure sudden changes in sea level caused by tsunami waves. This data is sent via <strong>satellite radio waves</strong> to warning centres, triggering alerts within minutes.</p>
+            <div class="bg-card-fact">⚡ The 2004 Indian Ocean tsunami killed 230,000 people. Modern detection systems can now warn communities in under 3 minutes!</div>
+          </div>
+        </div>
+
+        <div class="bg-card blue-bg-card" onclick="toggleBGCard(this)">
+          <div class="bg-card-front">
+            <div class="bg-card-icon">⚡</div>
+            <h4>Wave Energy</h4>
+            <p>Can we use ocean waves to generate clean electricity?</p>
+            <span class="bg-tap">Tap to explore →</span>
+          </div>
+          <div class="bg-card-back">
+            <h4>Wave Power Converters</h4>
+            <p>Wave energy converters (WECs) capture the up-and-down motion of ocean waves. A buoy rises and falls with each wave, driving a generator. The power output depends on wave <strong>amplitude</strong> and <strong>frequency</strong>: larger, more frequent waves = more energy!</p>
+            <div class="bg-card-fact">🔋 Wave energy could provide up to 10% of global electricity needs if fully harnessed!</div>
+          </div>
+        </div>
+
+        <div class="bg-card blue-bg-card" onclick="toggleBGCard(this)">
+          <div class="bg-card-front">
+            <div class="bg-card-icon">🐳</div>
+            <h4>Marine Ecosystems</h4>
+            <p>How do waves and light affect life in the ocean?</p>
+            <span class="bg-tap">Tap to explore →</span>
+          </div>
+          <div class="bg-card-back">
+            <h4>Light &amp; Life Underwater</h4>
+            <p>Sunlight (visible EM waves) only penetrates the top 200 m of the ocean — the "photic zone." This is where 90% of marine life exists. Coral reefs depend on light for photosynthesis. Sound waves also play a role: whales communicate using low-frequency waves that travel thousands of kilometres!</p>
+            <div class="bg-card-fact">🐋 Blue whales' calls at 10–40 Hz can be heard 1,600 km away underwater!</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-mission blue-mission">
+        <h4>🧪 Blue Mission Challenge</h4>
+        <p>Design a wave-powered early warning system for your coastal community. Which wave properties would you monitor? What technology would you use to transmit alerts?</p>
+        <button class="bg-mission-btn blue-mission-btn" onclick="this.textContent='✅ Mission Accepted! Check your worksheet.'">🌊 Accept the Challenge</button>
+      </div>
+    </div>
+
+    <!-- GREEN PANEL -->
+    <div class="bg-panel" id="bg-green">
+      <div class="bg-panel-hero green-hero">
+        <div class="bg-panel-text">
+          <div class="bg-badge green-badge">🌱 Sustainable Science</div>
+          <h3>Wave Technology for a Greener Future</h3>
+          <p>Wave and light technologies are at the heart of sustainable development. From solar panels to smart cities, electromagnetic waves are helping humans reduce their environmental footprint.</p>
+        </div>
+        <div class="bg-panel-visual">🌱</div>
+      </div>
+
+      <div class="bg-cards-grid">
+        <div class="bg-card green-bg-card" onclick="toggleBGCard(this)">
+          <div class="bg-card-front">
+            <div class="bg-card-icon">☀️</div>
+            <h4>Solar Energy</h4>
+            <p>How do solar panels convert light waves directly into electricity?</p>
+            <span class="bg-tap">Tap to explore →</span>
+          </div>
+          <div class="bg-card-back">
+            <h4>The Photovoltaic Effect</h4>
+            <p>Solar panels use the <strong>photoelectric effect</strong>: photons (light particles) from sunlight hit silicon atoms and knock electrons loose, creating an electric current. Higher frequency (blue) light carries more energy per photon than lower frequency (red) light.</p>
+            <div class="bg-card-fact">☀️ Solar energy is growing 25% per year. One hour of sunlight could power the world for a year!</div>
+          </div>
+        </div>
+
+        <div class="bg-card green-bg-card" onclick="toggleBGCard(this)">
+          <div class="bg-card-front">
+            <div class="bg-card-icon">📡</div>
+            <h4>Smart Technology</h4>
+            <p>How do EM waves make cities more efficient and sustainable?</p>
+            <span class="bg-tap">Tap to explore →</span>
+          </div>
+          <div class="bg-card-back">
+            <h4>IoT &amp; Smart Grids</h4>
+            <p>Smart cities use microwave and radio wave networks (IoT sensors) to monitor energy use, traffic, and pollution in real time. Smart grids use these signals to balance electricity supply and demand, reducing waste by up to 30%. Less energy waste = less CO₂ emissions!</p>
+            <div class="bg-card-fact">🏙️ Smart city technology could reduce energy consumption by 30% and CO₂ emissions by 15%!</div>
+          </div>
+        </div>
+
+        <div class="bg-card green-bg-card" onclick="toggleBGCard(this)">
+          <div class="bg-card-front">
+            <div class="bg-card-icon">🌍</div>
+            <h4>Environmental Monitoring</h4>
+            <p>How do scientists use waves to track climate change from space?</p>
+            <span class="bg-tap">Tap to explore →</span>
+          </div>
+          <div class="bg-card-back">
+            <h4>Satellites &amp; Remote Sensing</h4>
+            <p>Earth observation satellites use microwave and infrared waves to measure sea surface temperature, ice coverage, deforestation, and air pollution. The data is sent back via <strong>radio waves</strong>, helping scientists track climate change with incredible precision.</p>
+            <div class="bg-card-fact">🛰️ NASA's satellites have tracked a 4mm/year rise in sea levels since 1993 using microwave altimeters!</div>
+          </div>
+        </div>
+
+        <div class="bg-card green-bg-card" onclick="toggleBGCard(this)">
+          <div class="bg-card-front">
+            <div class="bg-card-icon">🌬️</div>
+            <h4>Renewable Energy</h4>
+            <p>Beyond solar — how else are waves used in clean energy?</p>
+            <span class="bg-tap">Tap to explore →</span>
+          </div>
+          <div class="bg-card-back">
+            <h4>Wind + Wave Synergy</h4>
+            <p>Wind turbines convert mechanical wave energy (air pressure waves) into electricity. Offshore turbines pair well with wave energy converters. Infrared sensors monitor turbine health remotely. The combination of solar, wind, and wave energy could supply all global electricity needs!</p>
+            <div class="bg-card-fact">⚡ Indonesia has 17,000+ islands — wave and solar energy could power remote communities without fossil fuels!</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-mission green-mission-box">
+        <h4>🌱 Green Mission Challenge</h4>
+        <p>You are a young scientist advising your school. Propose ONE wave technology solution that could reduce your school's carbon footprint. Explain the science behind it!</p>
+        <button class="bg-mission-btn green-mission-btn" onclick="this.textContent='✅ Mission Accepted! Check your worksheet.'">🌱 Accept the Challenge</button>
+      </div>
     </div>
 
   </div>
-
 </section>
-    <section class="challenge-section">
 
-  <h2>🎯 Student Challenge</h2>
-
-  <div class="challenge-card">
-
+<!-- ░░ BLUE & GREEN MISSION CAMPAIGN (moved here) ░░ -->
+<section class="campaign-section">
+  <div class="campaign-card">
+    <div class="campaign-badge">🌍 Blue &amp; Green Mission</div>
+    <h2>Use Science to Build a Better Future</h2>
     <p>
-      Design a safer and more sustainable
-      wave technology for your community.
+      Waves and light technologies help humans communicate,
+      improve healthcare, and protect the environment.
+      Through this project, students become young scientists
+      who investigate real-world problems.
     </p>
-
-    <ul>
-      <li>📡 Improve communication</li>
-      <li>🏥 Help healthcare systems</li>
-      <li>🌱 Protect the environment</li>
-    </ul>
-
+    <button class="campaign-btn">🚀 Join The Mission</button>
   </div>
-
-</section>
+  </section>
 <!-- ░░ QUIZ SECTION ░░ -->
 <section class="quiz-section" id="quiz">
   <div class="container">
