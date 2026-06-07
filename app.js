@@ -748,7 +748,7 @@ ans:1
 },
 
 {
-question: "What is one ethical issue related to communication towers?",
+q: "What is one ethical issue related to communication towers?",
 opts:["Internet speed only", "Balancing public safety and technology", "Wave color", "Sound quality"],
 ans:1
 },
@@ -1016,16 +1016,6 @@ function openModal(type){
     <ol class="modal-questions">
       ${d.questions.map(q=>`<li>${q}</li>`).join('')}
     </ol>
-
-    <h4 class="modal-section-title">👥 Stakeholder Perspectives</h4>
-    <div class="modal-perspectives">
-      ${d.perspectives.map(p=>`
-        <div class="modal-perspective-card">
-          <div class="modal-perspective-role">${p.role}</div>
-          <p>${p.view}</p>
-        </div>
-      `).join('')}
-    </div>
 
     <div class="modal-cta">
       💡 <strong>Your Mission:</strong> Discuss with your group and write a recommendation 
