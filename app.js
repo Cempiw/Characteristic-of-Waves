@@ -868,16 +868,14 @@ function selectAnswer(i) {
 
 function nextQuestion() {
   quizCurrent++;
- document.addEventListener("DOMContentLoaded", () => {
   renderQuiz();
-});
+}
 function restartQuiz() {
   quizCurrent = 0;
   quizScore   = 0;
   quizAnswered = false;
- document.addEventListener("DOMContentLoaded", () => {
   renderQuiz();
-});
+}
 
 // Init quiz on load
 document.addEventListener("DOMContentLoaded", () => {
@@ -1028,7 +1026,7 @@ function openModal(type){
     </div>
   `;
 
-modal.classList.add("open");
+modal.style.display = "flex";
 }
 
 // CLOSE MODAL
