@@ -760,8 +760,6 @@ input[type="range"]{
     display:flex;
     flex-direction:column;
   }
-}
-  .hamburger { display: block; }
   .hero { padding: 90px 20px 60px; }
   .hero-title { font-size: 2rem; }
   .intro-card { padding: 20px; }
@@ -1261,11 +1259,6 @@ td{
 .curriculum-body p{
 
   color:#475569;
-
-}
-  box-shadow:0 10px 30px rgba(0,0,0,0.08);
-
-}
 
 .blue-card{
 
@@ -2412,4 +2405,121 @@ input[type="range"]{
   border:3px solid #06b6d4;
   transform:translateY(-5px);
   box-shadow:0 10px 30px rgba(6,182,212,0.2);
+}
+/* ═══════════════════════════════════════
+   SAFE PATCH FIX
+═══════════════════════════════════════ */
+
+/* Fix unclickable layers */
+.hero-bg-shapes,
+.floaters,
+.shape,
+.hero-wave,
+.wave-path{
+  pointer-events:none;
+}
+
+/* Ensure clickable items */
+button,
+a,
+.sim-tab,
+.topic-card,
+.problem-btn,
+.investigate-btn,
+.btn-sim,
+.curriculum-btn,
+.quiz-option,
+.stakeholder-card,
+.open-btn,
+.btn-start{
+  position:relative;
+  z-index:5;
+  pointer-events:auto;
+}
+
+/* Navbar */
+.navbar{
+  z-index:10001;
+}
+
+.nav-links a{
+  position:relative;
+  z-index:10002;
+}
+
+.hamburger{
+  display:none;
+  cursor:pointer;
+}
+
+/* MOBILE NAV FIX */
+@media(max-width:768px){
+
+  .hamburger{
+    display:block;
+    z-index:10005;
+  }
+
+  .nav-links{
+    display:none;
+    flex-direction:column;
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    background:white;
+    padding:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+    z-index:10000;
+  }
+
+  .nav-links.show{
+    display:flex;
+  }
+
+}
+
+/* Modal fix */
+.modal,
+.modal-overlay,
+#modal{
+  z-index:9999;
+}
+
+.modal-content,
+.modal-box{
+  position:relative;
+  z-index:10000;
+}
+
+/* Panels */
+.sim-panel,
+.bg-panel,
+.curriculum-panel{
+  display:none;
+}
+
+.sim-panel.active,
+.bg-panel.active,
+.curriculum-panel.active{
+  display:block;
+}
+
+/* Stakeholder active */
+.stakeholder-card.active{
+  border:3px solid #06b6d4;
+  transform:translateY(-5px);
+  box-shadow:0 10px 30px rgba(6,182,212,0.2);
+}
+
+/* Prevent iframe blocking */
+iframe{
+  position:relative;
+  z-index:1;
+}
+
+/* Prevent random overlay bugs */
+body::before,
+body::after{
+  pointer-events:none;
 }
