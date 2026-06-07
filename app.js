@@ -1157,3 +1157,17 @@ function showCurriculum(type){
     .classList.add('active');
 
 }
+document.querySelectorAll('.stakeholder-btn')
+.forEach(btn => {
+
+  btn.addEventListener('click', () => {
+
+    document
+      .querySelectorAll('.stakeholder-btn')
+      .forEach(b => b.classList.remove('active'));
+
+    btn.classList.add('active');
+
+  });
+
+});
