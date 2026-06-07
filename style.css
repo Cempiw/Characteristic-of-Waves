@@ -387,74 +387,6 @@ body {
    SIMULATION SECTION
 ═══════════════════════════════════════ */
 
-.sim-section{
-
-  padding:100px 8%;
-
-  background:linear-gradient(
-    135deg,
-    #6ee7ff,
-    #a78bfa,
-    #ff90bc
-  );
-
-  position:relative;
-
-  overflow:hidden;
-
-}
-
-/* FLOATING EFFECT */
-.sim-section::before{
-
-  content:"";
-
-  position:absolute;
-
-  width:300px;
-  height:300px;
-
-  background:rgba(255,255,255,0.12);
-
-  border-radius:50%;
-
-  top:-80px;
-  right:-80px;
-
-}
-
-.sim-section::after{
-
-  content:"";
-
-  position:absolute;
-
-  width:220px;
-  height:220px;
-
-  background:rgba(255,255,255,0.1);
-
-  border-radius:50%;
-
-  bottom:-50px;
-  left:-50px;
-
-}
-
-/* HEADER */
-.sim-section .section-header h2{
-
-  color:white;
-
-}
-
-.sim-section .section-header p{
-
-  color:white;
-
-  opacity:0.95;
-
-}
 
 /* PHET */
 .phet-card{
@@ -530,39 +462,6 @@ body {
 
 }
 
-.open-btn{
-
-  display:inline-block;
-
-  margin-top:25px;
-
-  padding:16px 28px;
-
-  border-radius:50px;
-
-  text-decoration:none;
-
-  background:linear-gradient(
-    135deg,
-    #06b6d4,
-    #7c3aed
-  );
-
-  color:white;
-
-  font-weight:800;
-
- transition:
-  transform 0.3s,
-  box-shadow 0.3s,
-  background 0.3s;
-}
-
-.open-btn:hover{
-
-  transform:translateY(-5px);
-
-}
 
 .phet-frame{
 
@@ -577,92 +476,10 @@ body {
 
 }
 
-.phet-frame iframe{
-
-  width:100%;
-
-  height:650px;
-
-  border:none;
-
-  border-radius:25px;
-
-}
-@media(max-width:768px){
-
-  .phet-frame iframe{
-
-    height:400px;
-
-  }
-
-}
 /* SIM TABS */
-.sim-tabs{
 
-  display:flex;
-
-  flex-wrap:wrap;
-
-  gap:15px;
-
-  justify-content:center;
-
-  margin-bottom:40px;
-
-}
-
-.sim-tab{
-
-  padding:15px 28px;
-
-  border:none;
-
-  border-radius:50px;
-
-  background:white;
-
-  font-weight:800;
-
-  cursor:pointer;
-
-  transition:0.3s;
-
-  box-shadow:
-    0 8px 20px rgba(0,0,0,0.08);
-
-}
-
-.sim-tab:hover{
-
-  transform:translateY(-5px);
-
-}
-
-.sim-tab.active{
-
-  background:linear-gradient(
-    135deg,
-    #06b6d4,
-    #7c3aed
-  );
-
-  color:white;
-
-}
 
 /* PANEL */
-.sim-panel{
-
-  display:none;
-
-}
-
-.sim-panel.active{
-
-  display:block;
-
-}
 
 /* CARD */
 .sim-card{
@@ -701,31 +518,7 @@ body {
 }
 
 /* CONTROLS */
-.controls{
 
-  display:flex;
-
-  flex-wrap:wrap;
-
-  gap:20px;
-
-  justify-content:center;
-
-  margin-bottom:30px;
-
-}
-
-.control-box{
-
-  background:#f8fafc;
-
-  padding:20px;
-
-  border-radius:20px;
-
-  min-width:220px;
-
-}
 
 .control-box label{
 
@@ -745,48 +538,8 @@ input[type="range"]{
 }
 
 /* BUTTON */
-.btn-sim{
-
-  padding:16px 28px;
-
-  border:none;
-
-  border-radius:50px;
-
-  background:linear-gradient(
-    135deg,
-    #06b6d4,
-    #7c3aed
-  );
-
-  color:white;
-
-  font-weight:800;
-
-  cursor:pointer;
-
-  transition:0.3s;
-
-}
-
-.btn-sim:hover{
-
-  transform:translateY(-5px);
-
-}
 
 /* RIPPLE */
-#rippleCanvas{
-
-  width:100%;
-
-  border-radius:25px;
-
-  background:#eff6ff;
-
-  margin-top:20px;
-
-}
 
 /* SPECTRUM */
 .spectrum-grid{
@@ -837,25 +590,6 @@ input[type="range"]{
 
 }
 /* FORMULA */
-.formula-box{
-
-  width:220px;
-
-  margin:20px auto;
-
-  padding:20px;
-
-  border-radius:20px;
-
-  background:#ede9fe;
-
-  color:#7c3aed;
-
-  font-size:2rem;
-
-  font-weight:800;
-
-}
 
 /* CALC */
 .calc-grid{
@@ -885,19 +619,6 @@ input[type="range"]{
 
 }
 
-.calc-result{
-
-  margin-top:20px;
-
-  padding:20px;
-
-  border-radius:20px;
-
-  background:#ecfeff;
-
-  font-weight:700;
-
-}
 
 /* RESPONSIVE */
 @media(max-width:900px){
@@ -1226,49 +947,8 @@ input[type="range"]{
 
 }
 
-/* MODAL */
-.modal{
 
-  display:none;
-  position:fixed;
-  z-index:9999;
-  left:0;
-  top:0;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.6);
 
-  justify-content:center;
-  align-items:center;
-
-}
-
-.modal-content{
-
-  background:white;
-  width:80%;
-  max-width:700px;
-  padding:40px;
-  border-radius:30px;
-  position:relative;
-
-  animation:popup 0.4s ease;
-
-}
-
-@keyframes popup{
-
-  from{
-    transform:scale(0.7);
-    opacity:0;
-  }
-
-  to{
-    transform:scale(1);
-    opacity:1;
-  }
-
-}
 
 .close-btn{
 
@@ -1640,142 +1320,8 @@ td{
 
 }
 
-/* INVESTIGATE BUTTON */
-.investigate-btn{
-
-  position:relative;
-
-  overflow:hidden;
-
-  width:100%;
-
-  margin-top:25px;
-
-  padding:18px 25px;
-
-  border:none;
-
-  border-radius:60px;
-
-  background:linear-gradient(
-    135deg,
-    #7c3aed,
-    #06b6d4
-  );
-
-  color:white;
-
-  font-size:1rem;
-
-  font-weight:800;
-
-  cursor:pointer;
-
-  transition:0.4s;
-
-  box-shadow:
-    0 10px 25px rgba(124,58,237,0.3);
-
-}
-
-.investigate-btn span{
-
-  position:relative;
-
-  z-index:2;
-
-}
-
-.investigate-btn:hover{
-
-  transform:
-    translateY(-5px)
-    scale(1.03);
-
-  box-shadow:
-    0 20px 35px rgba(124,58,237,0.4);
-
-}
-
-/* GLOW EFFECT */
-.btn-glow{
-
-  position:absolute;
-
-  width:120px;
-
-  height:120px;
-
-  background:rgba(255,255,255,0.3);
-
-  border-radius:50%;
-
-  top:-30px;
-
-  left:-30px;
-
-  transition:0.5s;
-
-}
-
-.investigate-btn:hover .btn-glow{
-
-  transform:scale(2);
-
-  opacity:0;
-
-}
-/* MODAL */
-.modal{
-
-  display:none;
-
-  position:fixed;
-
-  z-index:99999;
-
-  left:0;
-  top:0;
-
-  width:100%;
-  height:100%;
-
-  background:rgba(15,23,42,0.55);
-
-  backdrop-filter:blur(8px);
-
-  justify-content:center;
-  align-items:center;
-
-  padding:20px;
-
-}
 
 /* MODAL CONTENT */
-.modal-content{
-
-  background:rgba(255,255,255,0.85);
-
-  backdrop-filter:blur(15px);
-
-  width:100%;
-
-  max-width:750px;
-
-  border-radius:35px;
-
-  padding:45px;
-
-  position:relative;
-
-  animation:modalPop 0.5s ease;
-
-  box-shadow:
-    0 25px 50px rgba(0,0,0,0.2);
-
-  overflow:hidden;
-
-}
 
 /* TOP GRADIENT */
 .modal-content::before{
@@ -2099,20 +1645,6 @@ td{
   font-weight:800;
 
   color:#7c3aed;
-
-}
-/* SIM PANEL */
-.sim-panel{
-
-  display:none;
-
-  margin-top:40px;
-
-}
-
-.sim-panel.active{
-
-  display:block;
 
 }
 
@@ -2521,6 +2053,8 @@ input[type="range"]{
     transform:scale(1);
 
   }
+}
+
 /* ═══════════════════════════════════════
    BLUE & GREEN CURRICULUM SECTION
 ═══════════════════════════════════════ */
