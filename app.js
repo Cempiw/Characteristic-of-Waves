@@ -909,58 +909,6 @@ function openModal(type){
   const body = document.getElementById("modalBody");
 
   if(type === "5g"){
-
-    body.innerHTML = `
-
-      <h2>📡 5G Tower Investigation</h2>
-
-      <p>
-        Your city plans to build a 5G tower near a school.
-      </p>
-
-      <p>
-        Some people support faster internet access,
-        while others worry about radiation safety.
-      </p>
-
-      <h3>🔍 Investigation Questions</h3>
-
-      <ul>
-        <li>What type of wave does 5G use?</li>
-        <li>How does frequency affect wave energy?</li>
-        <li>What are the benefits of 5G?</li>
-        <li>How can technology be used safely?</li>
-      </ul>
-
-    `;
-
-  }
-
-  else if(type === "ultrasound"){
-
-    body.innerHTML = `
-
-      <h2>🏥 Ultrasound Investigation</h2>
-
-      <p>
-        A hospital wants to improve healthcare using ultrasound technology.
-      </p>
-
-      <p>
-        Ultrasound uses sound waves to create images inside the body.
-      </p>
-
-      <h3>🔍 Investigation Questions</h3>
-
-      <ul>
-        <li>How do sound waves travel?</li>
-        <li>Why is ultrasound safer than X-Ray?</li>
-        <li>How do doctors use wave reflections?</li>
-        <li>How does technology improve healthcare?</li>
-      </ul>
-
-    `;
-
   }
 
   modal.style.display = "flex";
@@ -1044,5 +992,92 @@ function calculateWave(){
   document
     .getElementById("calcResult")
     .innerHTML = result;
+
+}
+/* ═══════════════════════════════════════
+   BLUE & GREEN CURRICULUM CAMPAIGN
+═══════════════════════════════════════ */
+
+// SECTION REVEAL ANIMATION
+const campaignCards = document.querySelectorAll(
+  '.ocean-card, .green-card, .campaign-card'
+);
+
+campaignCards.forEach(card => {
+
+  card.style.opacity = '0';
+  card.style.transform = 'translateY(40px)';
+  card.style.transition =
+    'all 0.8s ease';
+
+  revealObs.observe(card);
+
+});
+
+// BUTTON INTERACTION
+document.querySelectorAll('.campaign-btn')
+.forEach(btn => {
+
+  btn.addEventListener('click', () => {
+
+    btn.innerHTML = '✅ Joined Campaign!';
+
+    btn.style.background =
+      'linear-gradient(135deg,#22c55e,#16a34a)';
+
+  });
+
+});
+
+// SIMPLE COUNTER ANIMATION
+const counters =
+  document.querySelectorAll('.campaign-number');
+
+counters.forEach(counter => {
+
+  const target =
+    +counter.getAttribute('data-target');
+
+  let current = 0;
+
+  const updateCounter = () => {
+
+    const increment = target / 80;
+
+    if(current < target){
+
+      current += increment;
+
+      counter.innerText =
+        Math.floor(current);
+
+      requestAnimationFrame(updateCounter);
+
+    } else {
+
+      counter.innerText = target;
+
+    }
+
+  };
+
+  updateCounter();
+
+});
+
+// CURRICULUM TAB SWITCH
+function showCurriculum(type){
+
+  document
+    .querySelectorAll('.curriculum-panel')
+    .forEach(panel => {
+
+      panel.classList.remove('active');
+
+    });
+
+  document
+    .getElementById(type)
+    .classList.add('active');
 
 }
