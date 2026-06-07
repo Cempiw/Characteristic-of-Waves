@@ -710,7 +710,7 @@ ans:1
 },
 
 {
-question: "What is one ethical issue related to communication towers?",
+q: "What is one ethical issue related to communication towers?",
 opts:["Internet speed only", "Balancing public safety and technology", "Wave color", "Sound quality"],
 ans:1
 },
@@ -909,6 +909,40 @@ function openModal(type){
   const body = document.getElementById("modalBody");
 
   if(type === "5g"){
+    text.innerHTML = `
+      📡 Stakeholders must discuss:
+      <br><br>
+      • Benefits of fast internet access
+      <br>
+      • Radiation concerns
+      <br>
+      • Student safety
+      <br>
+      • Communication technology needs
+      <br><br>
+      💡 Can technology and safety work together?
+    `;
+
+  }
+
+  else if(type === "ultrasound"){
+
+    text.innerHTML = `
+      🏥 Stakeholders must discuss:
+      <br><br>
+      • Benefits for pregnant women
+      <br>
+      • Healthcare improvement
+      <br>
+      • Equipment cost
+      <br>
+      • Need for trained operators
+      <br><br>
+      💡 How can wave technology improve healthcare?
+    `;
+
+  }
+
   }
 
   modal.style.display = "flex";
@@ -1080,4 +1114,8 @@ function showCurriculum(type){
     .getElementById(type)
     .classList.add('active');
 
+}
+function selectStakeholder(role){
+  const el = document.getElementById("selectedRole");
+  if(el) el.innerHTML = `✅ You selected: <strong>${role}</strong>`;
 }
