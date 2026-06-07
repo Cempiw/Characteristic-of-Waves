@@ -2335,3 +2335,13 @@ input[type="range"]{
     0 15px 35px rgba(124,58,237,0.25);
 
 }
+.stakeholder-card {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.stakeholder-card.active {
+  transform: translateY(-8px);
+  border: 3px solid #00c6ff;
+  box-shadow: 0 10px 30px rgba(0,198,255,0.4);
+}
