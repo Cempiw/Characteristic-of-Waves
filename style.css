@@ -746,9 +746,21 @@ input[type="range"]{
 .footer-content p { color: rgba(255,255,255,0.5); font-size: 0.88rem; margin-bottom: 4px; }
 
 /* ── RESPONSIVE ─────────────────────────── */
-@media (max-width: 768px) {
-  .navbar { padding: 12px 20px; }
-  .nav-links { display: none; }
+.nav-links{
+  display:flex;
+}
+
+@media(max-width:768px){
+
+  .nav-links{
+    display:none;
+  }
+
+  .nav-links.show{
+    display:flex;
+    flex-direction:column;
+  }
+}
   .hamburger { display: block; }
   .hero { padding: 90px 20px 60px; }
   .hero-title { font-size: 2rem; }
