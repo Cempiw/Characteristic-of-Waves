@@ -11,8 +11,7 @@ window.addEventListener('scroll', () => {
 });
 
 // ── HAMBURGER (mobile) ────────────────────
-document.addEventListener("DOMContentLoaded", function() {
-  document.getElementById('hamburger').onclick = function() {
+document.getElementById('hamburger').onclick = function() {
   const nl = document.querySelector('.nav-links');
   if (nl.style.display === 'flex') {
     nl.style.display = '';
@@ -29,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
     nl.style.zIndex = '999';
   }
 };
-};
+
 // ════════════════════════════════════════════
 // LESSON CONTENT DATA
 // ════════════════════════════════════════════
@@ -560,32 +559,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
-function showSim(id, button){
-
-  document
-    .querySelectorAll('.sim-panel')
-    .forEach(panel=>{
-
-      panel.classList.remove('active');
-
-    });
-
-  document
-    .querySelectorAll('.sim-tab')
-    .forEach(tab=>{
-
-      tab.classList.remove('active');
-
-    });
-
-  document
-    .getElementById('sim-' + id)
-    .classList.add('active');
-
-  button.classList.add('active');
-
-}
-
 // ════════════════════════════════════════════
 // QUIZ
 // ════════════════════════════════════════════
@@ -632,118 +605,262 @@ const quizData = [
     ans: 3,
     explanation: "✅ Electromagnetic waves! They don't need a medium — that's how sunlight reaches Earth through space!"
   },
-    {
+  {
     q: "Ultrasound in medicine uses frequencies above 20,000 Hz. What property makes it useful for imaging?",
     opts: ["High amplitude", "Short wavelength (from high frequency)", "Long wavelength", "Low energy"],
     ans: 1,
     explanation: "✅ High frequency → short wavelength → can detect finer details. v = fλ: higher f means smaller λ!"
-  },
+  }
 {
-q: "Why are electromagnetic waves important for global communication?",
-opts:["Because they move slowly", "Because they require water", "Because they can travel through space", "Because they only exist in air"],
-ans:2
+question:
+"Why are electromagnetic waves important for global communication?",
+
+options:[
+"Because they move slowly",
+"Because they require water",
+"Because they can travel through space",
+"Because they only exist in air"
+],
+
+answer:2
 },
 
 {
-q: "A doctor uses ultrasound instead of X-Ray for pregnancy checks. Why?",
-opts:["Ultrasound uses visible light", "Ultrasound is safer for soft tissues", "X-Ray cannot form images", "Ultrasound travels slower"],
-ans:1
+question:
+"A doctor uses ultrasound instead of X-Ray for pregnancy checks. Why?",
+
+options:[
+"Ultrasound uses visible light",
+"Ultrasound is safer for soft tissues",
+"X-Ray cannot form images",
+"Ultrasound travels slower"
+],
+
+answer:1
 },
 
 {
-q: "A wave has high frequency. What usually happens to its wavelength?",
-opts:["It becomes longer", "It becomes shorter", "It disappears", "It doubles"],
-ans:1
+question:
+"A wave has high frequency. What usually happens to its wavelength?",
+
+options:[
+"It becomes longer",
+"It becomes shorter",
+"It disappears",
+"It doubles"
+],
+
+answer:1
 },
 
 {
-q: "Why should scientists consider stakeholders before building new technology?",
-opts:["To avoid using science", "To balance benefits and risks", "To stop innovation", "To reduce communication"],
-ans:1
+question:
+"Why should scientists consider stakeholders before building new technology?",
+
+options:[
+"To avoid using science",
+"To balance benefits and risks",
+"To stop innovation",
+"To reduce communication"
+],
+
+answer:1
 },
 
 {
-q: "Which technology uses electromagnetic waves?",
-opts:["Ultrasound", "Drum vibration", "Wi-Fi", "Tuning fork"],
-ans:2
+question:
+"Which technology uses electromagnetic waves?",
+
+options:[
+"Ultrasound",
+"Drum vibration",
+"Wi-Fi",
+"Tuning fork"
+],
+
+answer:2
 },
 
 {
-q:"What could happen if wave amplitude increases?",
-opts:["The energy may increase", "The wave stops moving", "The frequency disappears", "The wavelength becomes zero"],
-ans:0
+question:
+"What could happen if wave amplitude increases?",
+
+options:[
+"The energy may increase",
+"The wave stops moving",
+"The frequency disappears",
+"The wavelength becomes zero"
+],
+
+answer:0
 },
 
 {
-q:"Why are waves useful in disaster warning systems?",
-opts:["They can detect earthquakes and tsunamis", "They stop natural disasters", "They reduce gravity", "They create earthquakes"],
-ans:0
+question:
+"Why are waves useful in disaster warning systems?",
+
+options:[
+"They can detect earthquakes and tsunamis",
+"They stop natural disasters",
+"They reduce gravity",
+"They create earthquakes"
+],
+
+answer:0
 },
 
 {
-q:"How does wave technology support SDG 3?",
-opts:["By reducing internet access", "By improving healthcare systems", "By increasing pollution", "By replacing doctors"],
-ans:1
+question:
+"How does wave technology support SDG 3?",
+
+options:[
+"By reducing internet access",
+"By improving healthcare systems",
+"By increasing pollution",
+"By replacing doctors"
+],
+
+answer:1
 },
 
 {
-q: "Which stakeholder is MOST concerned about environmental impacts?",
-opts:["Engineer", "Environmentalist", "Doctor", "Student"],
-ans:1
+question:
+"Which stakeholder is MOST concerned about environmental impacts?",
+
+options:[
+"Engineer",
+"Environmentalist",
+"Doctor",
+"Student"
+],
+
+answer:1
 },
 
 {
-q:"Why do astronauts rely on electromagnetic waves?",
-opts:["Sound cannot travel in space", "Water absorbs all waves", "Mechanical waves travel faster", "Gravity blocks communication"],
-ans:0
+question:
+"Why do astronauts rely on electromagnetic waves?",
+
+options:[
+"Sound cannot travel in space",
+"Water absorbs all waves",
+"Mechanical waves travel faster",
+"Gravity blocks communication"
+],
+
+answer:0
 },
 
 {
-q:"What is the relationship between frequency and energy?",
-opts:["Higher frequency usually means higher energy", "Higher frequency lowers energy", "No relationship exists", "Energy disappears completely"],
-ans:0
+question:
+"What is the relationship between frequency and energy?",
+
+options:[
+"Higher frequency usually means higher energy",
+"Higher frequency lowers energy",
+"No relationship exists",
+"Energy disappears completely"
+],
+
+answer:0
 },
 
 {
-q:"Why can light travel through vacuum?",
-opts:["It is a mechanical wave", "It is an electromagnetic wave", "It requires particles", "It only travels in liquids"],
-ans:1
+question:
+"Why can light travel through vacuum?",
+
+options:[
+"It is a mechanical wave",
+"It is an electromagnetic wave",
+"It requires particles",
+"It only travels in liquids"
+],
+
+answer:1
 },
 
 {
-question: "What is one ethical issue related to communication towers?",
-opts:["Internet speed only", "Balancing public safety and technology", "Wave color", "Sound quality"],
-ans:1
+question:
+"What is one ethical issue related to communication towers?",
+
+options:[
+"Internet speed only",
+"Balancing public safety and technology",
+"Wave color",
+"Sound quality"
+],
+
+answer:1
 },
 
 {
-q: "How does wave reflection help doctors?",
-opts:["It creates ultrasound images", "It changes blood type", "It removes diseases", "It creates oxygen"],
-ans:0
+question:
+"How does wave reflection help doctors?",
+
+options:[
+"It creates ultrasound images",
+"It changes blood type",
+"It removes diseases",
+"It creates oxygen"
+],
+
+answer:0
 },
 
 {
-q:"What happens if frequency decreases while speed stays constant?",
-opts:["Wavelength increases", "Wavelength decreases", "Amplitude disappears", "Energy becomes zero"],
-ans:0
+question:
+"What happens if frequency decreases while speed stays constant?",
+
+options:[
+"Wavelength increases",
+"Wavelength decreases",
+"Amplitude disappears",
+"Energy becomes zero"
+],
+
+answer:0
 },
 
 {
-q: "Why is collaboration important in solving technology issues?",
-opts:["One person knows everything", "Different stakeholders provide perspectives", "Technology never affects society", "Science has no risks"],
-ans:1
+question:
+"Why is collaboration important in solving technology issues?",
+
+options:[
+"One person knows everything",
+"Different stakeholders provide perspectives",
+"Technology never affects society",
+"Science has no risks"
+],
+
+answer:1
 },
 
 {
-q: "What is the BEST solution for safe technology development?",
-opts:["Ignore stakeholders", "Stop all technology", "Use scientific evidence and collaboration", "Only focus on profit"],
-ans:2
+question:
+"What is the BEST solution for safe technology development?",
+
+options:[
+"Ignore stakeholders",
+"Stop all technology",
+"Use scientific evidence and collaboration",
+"Only focus on profit"
+],
+
+answer:2
 },
 
 {
-q:"How do waves transfer energy?",
-opts:["By moving all matter permanently", "By transferring disturbances", "By destroying particles", "By removing energy"],
-ans:1
+question:
+"How do waves transfer energy?",
+
+options:[
+"By moving all matter permanently",
+"By transferring disturbances",
+"By destroying particles",
+"By removing energy"
+],
+
+answer:1
 }
 ];
 
@@ -910,6 +1027,58 @@ function openModal(type){
   const body = document.getElementById("modalBody");
 
   if(type === "5g"){
+
+    body.innerHTML = `
+
+      <h2>📡 5G Tower Investigation</h2>
+
+      <p>
+        Your city plans to build a 5G tower near a school.
+      </p>
+
+      <p>
+        Some people support faster internet access,
+        while others worry about radiation safety.
+      </p>
+
+      <h3>🔍 Investigation Questions</h3>
+
+      <ul>
+        <li>What type of wave does 5G use?</li>
+        <li>How does frequency affect wave energy?</li>
+        <li>What are the benefits of 5G?</li>
+        <li>How can technology be used safely?</li>
+      </ul>
+
+    `;
+
+  }
+
+  else if(type === "ultrasound"){
+
+    body.innerHTML = `
+
+      <h2>🏥 Ultrasound Investigation</h2>
+
+      <p>
+        A hospital wants to improve healthcare using ultrasound technology.
+      </p>
+
+      <p>
+        Ultrasound uses sound waves to create images inside the body.
+      </p>
+
+      <h3>🔍 Investigation Questions</h3>
+
+      <ul>
+        <li>How do sound waves travel?</li>
+        <li>Why is ultrasound safer than X-Ray?</li>
+        <li>How do doctors use wave reflections?</li>
+        <li>How does technology improve healthcare?</li>
+      </ul>
+
+    `;
+
   }
 
   modal.style.display = "flex";
@@ -943,6 +1112,69 @@ function scrollToTop(){
   });
 
 }
+body.innerHTML = `
+
+<div class="mission-badge">
+  🌍 Real World Investigation
+</div>
+
+<h2>
+  📡 5G Tower Investigation
+</h2>
+
+<p>
+  Your city plans to build a 5G tower near a school.
+</p>
+
+<div class="scenario-box">
+
+  <h3>⚠ Situation</h3>
+
+  <p>
+    Students need fast internet for education,
+    but some parents worry about health effects.
+  </p>
+
+</div>
+
+<div class="stakeholder-mini">
+
+  <div>🎒 Students</div>
+  <div>👨‍👩‍👧 Parents</div>
+  <div>📡 Engineers</div>
+  <div>🏛 Government</div>
+
+</div>
+
+<h3>🔬 Investigation Questions</h3>
+
+<ul class="investigation-list">
+
+  <li>
+    What type of wave does 5G use?
+  </li>
+
+  <li>
+    How does frequency affect energy?
+  </li>
+
+  <li>
+    What are the benefits and risks?
+  </li>
+
+  <li>
+    Should the tower be built?
+  </li>
+
+</ul>
+
+<button class="mission-btn">
+
+  🚀 Start Stakeholder Discussion
+
+</button>
+
+`;
 function calculateWave(){
 
   const v =
@@ -994,94 +1226,4 @@ function calculateWave(){
     .getElementById("calcResult")
     .innerHTML = result;
 
-}
-/* ═══════════════════════════════════════
-   BLUE & GREEN CURRICULUM CAMPAIGN
-═══════════════════════════════════════ */
-
-// SECTION REVEAL ANIMATION
-const campaignCards = document.querySelectorAll(
-  '.ocean-card, .green-card, .campaign-card'
-);
-
-campaignCards.forEach(card => {
-
-  card.style.opacity = '0';
-  card.style.transform = 'translateY(40px)';
-  card.style.transition =
-    'all 0.8s ease';
-
-  revealObs.observe(card);
-
-});
-
-// BUTTON INTERACTION
-document.querySelectorAll('.campaign-btn')
-.forEach(btn => {
-
-  btn.addEventListener('click', () => {
-
-    btn.innerHTML = '✅ Joined Campaign!';
-
-    btn.style.background =
-      'linear-gradient(135deg,#22c55e,#16a34a)';
-
-  });
-
-});
-
-// SIMPLE COUNTER ANIMATION
-const counters =
-  document.querySelectorAll('.campaign-number');
-
-counters.forEach(counter => {
-
-  const target =
-    +counter.getAttribute('data-target');
-
-  let current = 0;
-
-  const updateCounter = () => {
-
-    const increment = target / 80;
-
-    if(current < target){
-
-      current += increment;
-
-      counter.innerText =
-        Math.floor(current);
-
-      requestAnimationFrame(updateCounter);
-
-    } else {
-
-      counter.innerText = target;
-
-    }
-
-  };
-
-  updateCounter();
-
-});
-
-// CURRICULUM TAB SWITCH
-function showCurriculum(type){
-
-  document
-    .querySelectorAll('.curriculum-panel')
-    .forEach(panel => {
-
-      panel.classList.remove('active');
-
-    });
-
-  document
-    .getElementById(type)
-    .classList.add('active');
-
-}
-function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
