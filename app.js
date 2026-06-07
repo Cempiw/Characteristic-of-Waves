@@ -11,7 +11,8 @@ window.addEventListener('scroll', () => {
 });
 
 // ── HAMBURGER (mobile) ────────────────────
-document.getElementById('hamburger').onclick = function() {
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById('hamburger').onclick = function() {
   const nl = document.querySelector('.nav-links');
   if (nl.style.display === 'flex') {
     nl.style.display = '';
@@ -28,7 +29,7 @@ document.getElementById('hamburger').onclick = function() {
     nl.style.zIndex = '999';
   }
 };
-
+};
 // ════════════════════════════════════════════
 // LESSON CONTENT DATA
 // ════════════════════════════════════════════
