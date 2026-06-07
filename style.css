@@ -514,7 +514,13 @@ td { border:1px solid #ddd; padding:15px; }
 
 /* ── SDGS SECTION ───────────────────────── */
 .sdgs-section { padding:100px 8%; background:linear-gradient(135deg, #dff7ff, #fff4b5, #d7ffe5); }
-.sdgs-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:30px; margin-top:60px; }
+.sdgs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 60px;
+  width: 100%;
+}
 .sdg-card { background:white; border-radius:35px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,0.08); transition:0.3s; }
 .sdg-card:hover { transform:translateY(-10px); }
 .sdg-top { padding:35px; color:white; text-align:center; }
@@ -535,8 +541,28 @@ td { border:1px solid #ddd; padding:15px; }
 
 /* ── STAKEHOLDER SECTION ────────────────── */
 .stakeholder-section { padding:100px 8%; background:linear-gradient(135deg, #dbeafe, #fce7f3, #fef9c3); }
-.stakeholder-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:25px; margin-top:50px; }
-.stakeholder-card { background:white; padding:30px; border-radius:30px; text-align:center; cursor:pointer; transition:0.3s; box-shadow:0 10px 25px rgba(0,0,0,0.08); }
+.stakeholder-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.stakeholder-card {
+  background: white;
+  padding: 35px 25px;
+  border-radius: 30px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 280px; 
+}
 .stakeholder-card:hover { transform:translateY(-10px); }
 .stake-icon { font-size:4rem; margin-bottom:20px; }
 .stakeholder-card h3 { color:#0ea5e9; margin-bottom:15px; }
