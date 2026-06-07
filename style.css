@@ -2357,3 +2357,59 @@ input[type="range"]{
   border: 3px solid #00c6ff;
   box-shadow: 0 10px 30px rgba(0,198,255,0.4);
 }
+#modal{
+  opacity:0;
+  visibility:hidden;
+  display:flex;
+  transition:0.3s ease;
+}
+
+#modal.open{
+  opacity:1;
+  visibility:visible;
+}
+@media(max-width:768px){
+
+  .nav-links{
+    display:none;
+  }
+
+  .nav-links.show{
+    display:flex;
+    flex-direction:column;
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    background:white;
+    padding:20px;
+    z-index:999;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+  }
+
+}
+.quiz-option.correct{
+  background:#22c55e;
+  color:white;
+}
+
+.quiz-option.wrong{
+  background:#ef4444;
+  color:white;
+}
+.sim-panel,
+.bg-panel,
+.curriculum-panel{
+  display:none;
+}
+
+.sim-panel.active,
+.bg-panel.active,
+.curriculum-panel.active{
+  display:block;
+}
+.stakeholder-card.active{
+  border:3px solid #06b6d4;
+  transform:translateY(-5px);
+  box-shadow:0 10px 30px rgba(6,182,212,0.2);
+}
