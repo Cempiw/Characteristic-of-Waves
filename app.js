@@ -11,8 +11,8 @@ window.addEventListener('scroll', () => {
 });
 
 // ── HAMBURGER (mobile) ────────────────────
-document.getElementById('hamburger').onclick = function() {
-  const nl = document.querySelector('.nav-links');
+document.getElementById('hamburger').onclick = function () {
+  document.querySelector('.nav-links').classList.toggle('show');
   if (nl.style.display === 'flex') {
     nl.style.display = '';
   } else {
@@ -865,19 +865,21 @@ function selectAnswer(i) {
 
 function nextQuestion() {
   quizCurrent++;
+ document.addEventListener("DOMContentLoaded", () => {
   renderQuiz();
-}
-
+});
 function restartQuiz() {
   quizCurrent = 0;
   quizScore   = 0;
   quizAnswered = false;
+ document.addEventListener("DOMContentLoaded", () => {
   renderQuiz();
-}
+});
 
 // Init quiz on load
-renderQuiz();
-
+document.addEventListener("DOMContentLoaded", () => {
+  renderQuiz();
+})
 // ════════════════════════════════════════════
 // SCROLL REVEAL — fade in cards
 // ════════════════════════════════════════════
@@ -1023,8 +1025,7 @@ function openModal(type){
     </div>
   `;
 
-  modal.style.display = "flex";
-
+modal.classList.add("open");
 }
 
 // CLOSE MODAL
@@ -1137,15 +1138,14 @@ function showCurriculum(type){
   document
     .querySelectorAll('.curriculum-panel')
     .forEach(panel => {
-
       panel.classList.remove('active');
-
     });
 
-  document
-    .getElementById(type)
-    .classList.add('active');
+  const target = document.getElementById(type);
 
+  if(target){
+    target.classList.add('active');
+  }
 }
 document.querySelectorAll('.stakeholder-btn')
 .forEach(btn => {
