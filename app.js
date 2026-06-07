@@ -559,31 +559,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
-function showSim(id, button){
-
-  document
-    .querySelectorAll('.sim-panel')
-    .forEach(panel=>{
-
-      panel.classList.remove('active');
-
-    });
-
-  document
-    .querySelectorAll('.sim-tab')
-    .forEach(tab=>{
-
-      tab.classList.remove('active');
-
-    });
-
-  document
-    .getElementById('sim-' + id)
-    .classList.add('active');
-
-  button.classList.add('active');
-
-}
 
 // ════════════════════════════════════════════
 // QUIZ
@@ -974,58 +949,6 @@ function scrollToTop(){
     behavior:"smooth"
 
   });
-
-}
-function calculateWave(){
-
-  const v =
-    parseFloat(
-      document.getElementById("calcV").value
-    );
-
-  const f =
-    parseFloat(
-      document.getElementById("calcF").value
-    );
-
-  const l =
-    parseFloat(
-      document.getElementById("calcL").value
-    );
-
-  let result = "";
-
-  if(!isNaN(f) && !isNaN(l)){
-
-    result =
-      "Wave Speed = " + (f*l).toFixed(2) + " m/s";
-
-  }
-
-  else if(!isNaN(v) && !isNaN(f)){
-
-    result =
-      "Wavelength = " + (v/f).toFixed(2) + " m";
-
-  }
-
-  else if(!isNaN(v) && !isNaN(l)){
-
-    result =
-      "Frequency = " + (v/l).toFixed(2) + " Hz";
-
-  }
-
-  else{
-
-    result =
-      "Please enter two values.";
-
-  }
-
-  document
-    .getElementById("calcResult")
-    .innerHTML = result;
 
 }
 /* ═══════════════════════════════════════
