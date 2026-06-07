@@ -419,80 +419,144 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ═══════════════════════════════
-  // RIPPLE TANK
+  // RIPPLE TANK — Interactive
   // ═══════════════════════════════
 
-  const canvas =
-    document.getElementById("rippleCanvas");
+  const canvas = document.getElementById("rippleCanvas");
 
   if(canvas){
-
     const ctx = canvas.getContext("2d");
-
     let time = 0;
+    let rippleFreq = 2;    // waves per second
+    let rippleAmp  = 1.0;  // amplitude scale
+    let dualSource = false;
+    let animId;
+
+    // Hook up sliders
+    const freqSlider = document.getElementById("rippleFreq");
+    const ampSlider  = document.getElementById("rippleAmp");
+    const dualBtn    = document.getElementById("rippleDual");
+    const freqVal    = document.getElementById("rippleFreqVal");
+    const ampVal     = document.getElementById("rippleAmpVal");
+
+    if(freqSlider){
+      freqSlider.addEventListener("input", ()=>{
+        rippleFreq = parseFloat(freqSlider.value);
+        freqVal.textContent = rippleFreq + " Hz";
+      });
+    }
+    if(ampSlider){
+      ampSlider.addEventListener("input", ()=>{
+        rippleAmp = parseFloat(ampSlider.value);
+        ampVal.textContent = rippleAmp.toFixed(1) + "x";
+      });
+    }
+    if(dualBtn){
+      dualBtn.addEventListener("click", ()=>{
+        dualSource = !dualSource;
+        dualBtn.textContent = dualSource ? "🔵 Dual Source: ON" : "⚪ Dual Source: OFF";
+        dualBtn.style.background = dualSource
+          ? "linear-gradient(135deg,#06b6d4,#7c3aed)"
+          : "";
+        dualBtn.style.color = dualSource ? "white" : "";
+      });
+    }
+
+    function drawSource(cx, cy, col){
+      const numRings = Math.floor(6 + rippleFreq);
+      const speed = 60 + rippleFreq * 15;
+      for(let i = 0; i < numRings; i++){
+        const r = ((time * speed * 0.05) + i * (200 / rippleFreq)) % 260;
+        const alpha = rippleAmp * (1 - r / 260) * 0.9;
+        if(alpha <= 0) continue;
+        ctx.beginPath();
+        ctx.arc(cx, cy, r, 0, Math.PI * 2);
+        ctx.strokeStyle = col.replace("1)", `${alpha.toFixed(2)})`);
+        ctx.lineWidth = 2.5 * rippleAmp;
+        ctx.stroke();
+      }
+    }
 
     function animateRipple(){
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      ctx.clearRect(
-        0,
-        0,
-        canvas.width,
-        canvas.height
-      );
+      // Background gradient
+      const grad = ctx.createLinearGradient(0,0,0,canvas.height);
+      grad.addColorStop(0,"#e0f7ff");
+      grad.addColorStop(1,"#b3e8ff");
+      ctx.fillStyle = grad;
+      ctx.fillRect(0,0,canvas.width,canvas.height);
 
-      for(let i=0;i<6;i++){
-
-        ctx.beginPath();
-
-        ctx.arc(
-          canvas.width/2,
-          canvas.height/2,
-          (time*2 + i*40)%300,
-          0,
-          Math.PI*2
-        );
-
-        ctx.strokeStyle =
-          `rgba(59,130,246,${
-            1 - i*0.15
-          })`;
-
-        ctx.lineWidth = 4;
-
-        ctx.stroke();
-
+      if(dualSource){
+        drawSource(canvas.width * 0.33, canvas.height / 2, "rgba(59,130,246,1)");
+        drawSource(canvas.width * 0.67, canvas.height / 2, "rgba(168,85,247,1)");
+        // interference label
+        ctx.fillStyle = "rgba(30,30,80,0.55)";
+        ctx.font = "bold 13px Nunito, sans-serif";
+        ctx.fillText("← Source 1", 24, canvas.height - 16);
+        ctx.fillText("Source 2 →", canvas.width - 110, canvas.height - 16);
+        ctx.fillText("Interference Zone", canvas.width/2 - 62, canvas.height - 16);
+      } else {
+        drawSource(canvas.width / 2, canvas.height / 2, "rgba(59,130,246,1)");
       }
 
+      // Frequency label
+      ctx.fillStyle = "rgba(30,30,80,0.45)";
+      ctx.font = "13px Nunito, sans-serif";
+      ctx.fillText(`f = ${rippleFreq} Hz  |  Amplitude = ${rippleAmp.toFixed(1)}x`, 12, 20);
+
       time++;
-
-      requestAnimationFrame(
-        animateRipple
-      );
-
+      animId = requestAnimationFrame(animateRipple);
     }
 
     animateRipple();
-
   }
 
   // ═══════════════════════════════
-  // EM SPECTRUM
+  // EM SPECTRUM — info on click
   // ═══════════════════════════════
 
-  const waveBoxes =
-    document.querySelectorAll(".wave-box");
+  const emData = {
+    radio:     { emoji:"📻", freq:"< 300 MHz",  lambda:"> 1 m",       energy:"Very Low", use:"Radio/TV broadcasting, WiFi, 5G communication, MRI machines", safe:"✅ Non-ionising — completely safe at normal exposure levels" },
+    microwave: { emoji:"📡", freq:"300 MHz–300 GHz", lambda:"1 mm–1 m", energy:"Low",  use:"Microwave ovens (2.45 GHz), satellite communication, weather radar, 5G", safe:"✅ Non-ionising — microwave ovens are shielded to prevent leakage" },
+    infrared:  { emoji:"🌡️", freq:"300 GHz–430 THz", lambda:"700 nm–1 mm", energy:"Medium-Low", use:"TV remote controls, thermal cameras, night vision, physiotherapy heat treatment", safe:"✅ Non-ionising — felt as heat; excessive exposure can cause burns" },
+    visible:   { emoji:"🌈", freq:"430–770 THz", lambda:"400–700 nm", energy:"Medium", use:"Human vision, photography, laser surgery (LASIK), fibre optic communication", safe:"✅ Non-ionising — safe; very intense lasers can damage eyes" },
+    uv:        { emoji:"☀️", freq:"770 THz–30 PHz", lambda:"10–400 nm", energy:"Medium-High", use:"Vitamin D synthesis in skin, sterilisation, fluorescent lights, counterfeit detection", safe:"⚠️ Borderline ionising — UV-A/B cause sunburn & skin cancer; use sunscreen!" },
+    xray:      { emoji:"🩻", freq:"30 PHz–30 EHz", lambda:"0.01–10 nm", energy:"High",  use:"Medical imaging of bones & organs, airport security scanners, cancer radiotherapy", safe:"⚠️ Ionising — can damage DNA; medical X-rays are carefully minimised" },
+    gamma:     { emoji:"☢️", freq:"> 30 EHz",    lambda:"< 0.01 nm",  energy:"Very High", use:"Cancer radiotherapy (kills tumour cells), sterilising medical equipment, nuclear power", safe:"⚠️ Highly ionising — dangerous in large doses; shielding is required" }
+  };
 
-  waveBoxes.forEach(box=>{
+  document.querySelectorAll(".wave-box").forEach(box => {
+    box.style.cursor = "pointer";
+    box.addEventListener("click", () => {
+      const key = box.getAttribute("data-wave");
+      const d   = emData[key];
+      if(!d) return;
 
-    box.addEventListener("click", ()=>{
+      // Remove active from all
+      document.querySelectorAll(".wave-box").forEach(b => b.classList.remove("wave-active"));
+      box.classList.add("wave-active");
 
-      alert(
-        "You selected: " +
-        box.innerText
-      );
-
+      const panel = document.getElementById("spectrumInfo");
+      if(panel){
+        panel.innerHTML = `
+          <div class="spec-info-header">
+            <span class="spec-emoji">${d.emoji}</span>
+            <div>
+              <strong>${box.querySelector(".wave-name")?.textContent || key}</strong>
+              <div class="spec-badges">
+                <span class="spec-badge">⚡ ${d.freq}</span>
+                <span class="spec-badge">📏 λ = ${d.lambda}</span>
+                <span class="spec-badge">🔋 Energy: ${d.energy}</span>
+              </div>
+            </div>
+          </div>
+          <div class="spec-row"><strong>🛠️ Uses:</strong> ${d.use}</div>
+          <div class="spec-row">${d.safe}</div>
+        `;
+        panel.classList.add("spec-active");
+      }
     });
-
   });
 
   // ═══════════════════════════════
@@ -882,8 +946,104 @@ function openModal(type){
   const modal = document.getElementById("modal");
   const body = document.getElementById("modalBody");
 
-  if(type === "5g"){
-  }
+  const content = {
+    "5g": {
+      badge: "📡 Communication Technology",
+      title: "5G Tower Near School",
+      color: "#06b6d4",
+      scenario: `A city government plans to build a 5G communication tower 150 metres from a middle school. 
+        The tower will provide high-speed internet to thousands of households. However, parents and teachers 
+        have raised concerns about long-term electromagnetic radiation exposure for students.`,
+      science: [
+        { icon:"📶", title:"What is 5G?", text:"5G uses radio waves (non-ionising EM waves) at frequencies of 0.6–100 GHz. Non-ionising means they do NOT have enough energy to break chemical bonds or damage DNA." },
+        { icon:"⚡", title:"Energy & Frequency", text:"Higher frequency → higher energy per photon. But 5G's power levels are far below the threshold for biological harm set by international safety standards (ICNIRP)." },
+        { icon:"📏", title:"Wavelength Matters", text:"5G uses shorter wavelengths (millimetre waves) that are absorbed by buildings and air quickly — which is why towers need to be placed closer to users." }
+      ],
+      questions: [
+        "What type of electromagnetic wave does 5G use, and is it ionising or non-ionising?",
+        "How does distance from the tower affect the intensity of the electromagnetic field?",
+        "What evidence would you need to decide if the tower is safe to build near a school?",
+        "Which stakeholders benefit and which stakeholders are at risk?"
+      ],
+      perspectives: [
+        { role:"🎒 Student", view:"Wants fast internet for research, but worries about daily radiation exposure during school hours." },
+        { role:"📡 Engineer", view:"States the tower meets all ICNIRP safety standards. Power levels are thousands of times below harmful thresholds." },
+        { role:"🏛️ Government", view:"Wants to improve city connectivity and attract economic investment, but must protect public welfare." },
+        { role:"🌱 Environmentalist", view:"Concerned about effects on local wildlife (birds, bees) that may be sensitive to EM fields." }
+      ]
+    },
+    "ultrasound": {
+      badge: "🏥 Medical Technology",
+      title: "Ultrasound for Rural Hospital",
+      color: "#7c3aed",
+      scenario: `A rural hospital serving 50,000 people wants to purchase ultrasound equipment. The machine costs 
+        $80,000 USD and requires a trained sonographer to operate. Currently, pregnant women must travel 3 hours 
+        to the nearest city for prenatal scans — some choose not to go at all.`,
+      science: [
+        { icon:"🔊", title:"How Ultrasound Works", text:"Ultrasound uses sound waves at frequencies above 20,000 Hz (typically 1–20 MHz for medical use). These waves are emitted into the body and reflected back by different tissues, creating an image." },
+        { icon:"📐", title:"Wave Equation in Action", text:"In human tissue, sound travels at ~1,500 m/s. At 2 MHz: λ = v/f = 1500 ÷ 2,000,000 = 0.00075 m (0.75 mm). This tiny wavelength gives very detailed images!" },
+        { icon:"✅", title:"Safety Profile", text:"Unlike X-rays, ultrasound uses mechanical waves (NOT ionising radiation). It does not damage DNA and is safe for foetuses, making it ideal for pregnancy monitoring." }
+      ],
+      questions: [
+        "How does ultrasound produce an image using wave reflection?",
+        "Why is ultrasound safer than X-rays for monitoring pregnancies?",
+        "What would happen to image quality if the frequency was lowered?",
+        "How do you weigh the cost of equipment against the number of lives it could improve?"
+      ],
+      perspectives: [
+        { role:"🩺 Doctor", view:"Strongly supports the purchase — early detection of complications can save lives and reduce emergency cases." },
+        { role:"🏛️ Government", view:"Concerned about budget — $80,000 is a significant investment. Could the money help more people if spent differently?" },
+        { role:"🤱 Patient", view:"A pregnant woman in the village: 'I missed my last two checkups because the journey is too far and too expensive.'" },
+        { role:"📚 Health Educator", view:"Wants to train local staff to operate the machine sustainably, not rely on outside experts." }
+      ]
+    }
+  };
+
+  const d = content[type];
+  if(!d) return;
+
+  body.innerHTML = `
+    <div class="modal-badge" style="background:${d.color}20;color:${d.color}">${d.badge}</div>
+    <h2 class="modal-title">${d.title}</h2>
+
+    <div class="modal-scenario">
+      <div class="modal-scenario-icon">📋</div>
+      <p>${d.scenario}</p>
+    </div>
+
+    <h4 class="modal-section-title">🔬 The Science Behind It</h4>
+    <div class="modal-science-grid">
+      ${d.science.map(s=>`
+        <div class="modal-science-card">
+          <div class="modal-science-icon">${s.icon}</div>
+          <div>
+            <strong>${s.title}</strong>
+            <p>${s.text}</p>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+
+    <h4 class="modal-section-title">❓ Guided Investigation Questions</h4>
+    <ol class="modal-questions">
+      ${d.questions.map(q=>`<li>${q}</li>`).join('')}
+    </ol>
+
+    <h4 class="modal-section-title">👥 Stakeholder Perspectives</h4>
+    <div class="modal-perspectives">
+      ${d.perspectives.map(p=>`
+        <div class="modal-perspective-card">
+          <div class="modal-perspective-role">${p.role}</div>
+          <p>${p.view}</p>
+        </div>
+      `).join('')}
+    </div>
+
+    <div class="modal-cta">
+      💡 <strong>Your Mission:</strong> Discuss with your group and write a recommendation 
+      in the Stakeholder Worksheet below!
+    </div>
+  `;
 
   modal.style.display = "flex";
 
@@ -907,14 +1067,20 @@ function submitWorksheet(){
 }
 
 function scrollToTop(){
+  window.scrollTo({ top:0, behavior:"smooth" });
+}
 
-  window.scrollTo({
+// ── BLUE & GREEN CURRICULUM TAB SWITCH ─────
+function switchBGTab(tab, btn){
+  document.querySelectorAll('.bg-tab').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.bg-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('bg-' + tab).classList.add('active');
+}
 
-    top:0,
-    behavior:"smooth"
-
-  });
-
+// ── FLIP CARD TOGGLE ────────────────────────
+function toggleBGCard(card){
+  card.classList.toggle('flipped');
 }
 /* ═══════════════════════════════════════
    BLUE & GREEN CURRICULUM CAMPAIGN
