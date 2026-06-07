@@ -8,9 +8,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-<body>
-
-<button id="backTop" onclick="scrollToTop()">⬆</button>
+<button id="backTop" onclick="scrollToTop()">
+  ⬆
+</button>
+  <body>
 
 <!-- MODAL -->
 <div class="modal" id="modal">
@@ -93,6 +94,8 @@
     <span class="float-emoji" style="--d:0.8s;--x:75%;--y:80%">🔬</span>
     <span class="float-emoji" style="--d:0.3s;--x:45%;--y:10%">⚡</span>
   </div>
+</section>
+
 <!-- ░░ ABOUT TEACHER ░░ -->
 <section class="teacher-section" id="teacher">
   <div class="container">
@@ -610,41 +613,41 @@ alt="5G Tower">
 
   <div class="container">
 
-    <div class="section-header light">
+    <div class="section-header">
 
-      <h2>🔬 Interactive Simulations</h2>
+      <h2>🔬 Interactive Wave Laboratory</h2>
 
       <p>
-        Play, explore, and understand waves in action!
+        Explore wave behavior through simulations,
+        experiments, and virtual investigations!
       </p>
 
     </div>
 
-    <!-- PHET -->
+    <!-- ░░ PHET SECTION ░░ -->
     <div class="phet-card">
 
       <div class="phet-text">
 
         <div class="mini-tag">
-          🌊 Interactive PhET Simulation
+          🌊 Main Investigation Lab
         </div>
 
-        <h3>Wave on a String</h3>
+        <h3>
+          PhET: Wave on a String
+        </h3>
 
         <p>
-          Explore how waves behave by changing frequency,
-          amplitude, and tension.
+          Explore how frequency, amplitude,
+          and tension affect wave motion.
         </p>
 
         <ul>
 
           <li>📏 Observe wavelength changes</li>
-
-          <li>⚡ Explore wave energy</li>
-
-          <li>🎵 Change frequency and amplitude</li>
-
-          <li>🌊 Understand standing waves</li>
+          <li>⚡ Investigate energy transfer</li>
+          <li>🎵 Change frequency & amplitude</li>
+          <li>🌊 Explore standing waves</li>
 
         </ul>
 
@@ -653,7 +656,7 @@ alt="5G Tower">
           target="_blank"
           class="open-btn">
 
-          🔗 Open Full Simulation
+          🚀 Open Full Simulation
 
         </a>
 
@@ -670,28 +673,27 @@ alt="5G Tower">
 
     </div>
 
-    <!-- SIMULATION TABS -->
-    <div class="sim-tabs">
-
-      <button
-        class="sim-tab active"
-        onclick="showSim('ripple', this)">
+    <!-- ░░ MINI SIMULATION TABS ░░ -->
+  <div class="sim-panel active"
+     id="sim-ripple">
+      <button class="sim-tab active"
+              onclick="showSim('ripple', this)"
 
         🌊 Ripple Tank
 
       </button>
-
-      <button
-        class="sim-tab"
-        onclick="showSim('spectrum', this)">
+<div class="sim-panel"
+     id="sim-spectrum">
+      <button class="sim-tab"
+              onclick="showSim('spectrum', this)">
 
         🌈 EM Spectrum
 
       </button>
-
-      <button
-        class="sim-tab"
-        onclick="showSim('equation', this)">
+<div class="sim-panel"
+     id="sim-equation">
+      <button class="sim-tab"
+              onclick="showSim('equation', this)">
 
         🧮 Wave Calculator
 
@@ -711,10 +713,9 @@ alt="5G Tower">
           Observe how waves move through water.
         </p>
 
-        <canvas
-          id="rippleCanvas"
-          width="700"
-          height="300">
+        <canvas id="rippleCanvas"
+                width="700"
+                height="300">
         </canvas>
 
       </div>
@@ -732,27 +733,27 @@ alt="5G Tower">
         <div class="spectrum-grid">
 
           <div class="wave-box red">
-            📻 Radio
+            Radio
           </div>
 
           <div class="wave-box orange">
-            📡 Microwave
+            Microwave
           </div>
 
           <div class="wave-box yellow">
-            🌡️ Infrared
+            Infrared
           </div>
 
           <div class="wave-box green">
-            🌈 Visible
+            Visible
           </div>
 
           <div class="wave-box blue">
-            ☀️ UV
+            UV
           </div>
 
           <div class="wave-box purple">
-            🩻 X-Ray
+            X-Ray
           </div>
 
         </div>
@@ -777,34 +778,29 @@ alt="5G Tower">
 
         <div class="calc-grid">
 
-          <input
-            type="number"
-            id="calcV"
-            placeholder="Wave Speed">
+          <input type="number"
+                 id="calcV"
+                 placeholder="Wave Speed">
 
-          <input
-            type="number"
-            id="calcF"
-            placeholder="Frequency">
+          <input type="number"
+                 id="calcF"
+                 placeholder="Frequency">
 
-          <input
-            type="number"
-            id="calcL"
-            placeholder="Wavelength">
+          <input type="number"
+                 id="calcL"
+                 placeholder="Wavelength">
 
         </div>
 
-        <button
-          class="btn-sim"
-          onclick="calculateWave()">
+        <button class="btn-sim"
+                onclick="calculateWave()">
 
           Calculate
 
         </button>
 
-        <div
-          class="calc-result"
-          id="calcResult">
+        <div class="calc-result"
+             id="calcResult">
 
           Result will appear here.
 
@@ -817,7 +813,6 @@ alt="5G Tower">
   </div>
 
 </section>
-    
 <!-- ░░ SDGS CARDS SECTION ░░ -->
 <section class="sdgs-section" id="sdgs">
 
@@ -928,164 +923,44 @@ alt="5G Tower">
 
     </div>
 
-<section class="curriculum-section">
+    <!-- BLUE & GREEN -->
+    <div class="blue-green-wrapper">
 
-  <h2 class="curriculum-title">
-    🌊 Blue & Green Curriculum
-  </h2>
+      <div class="curriculum-card blue-card">
 
-  <p class="curriculum-subtitle">
-    Explore how wave science supports sustainability,
-    renewable energy, environmental protection,
-    and future technology.
-  </p>
+        <h2>🌊 Blue Curriculum</h2>
 
-  <div class="curriculum-grid">
+        <p>
+          Learn about ocean waves, marine ecosystems,
+          and environmental awareness.
+        </p>
 
-    <!-- BLUE -->
-    <div class="curriculum-card blue-card">
-      <div class="curriculum-icon">🌊</div>
-      <h3>Ocean Waves</h3>
-      <p>
-        Learn how ocean waves transfer energy
-        and affect coastal ecosystems.
-      </p>
-      <div class="curriculum-tag blue-tag">
-        Blue Curriculum
-      </div>
-    </div>
+        <ul>
 
-    <div class="curriculum-card blue-card">
-      <div class="curriculum-icon">🚨</div>
-      <h3>Tsunami Detection</h3>
-      <p>
-        Scientists use wave technology to detect
-        earthquakes and tsunami risks.
-      </p>
-      <div class="curriculum-tag blue-tag">
-        Blue Curriculum
-      </div>
-    </div>
+          <li>Ocean wave behavior</li>
+          <li>Marine sustainability</li>
+          <li>Climate systems</li>
 
-    <div class="curriculum-card blue-card">
-      <div class="curriculum-icon">⚡</div>
-      <h3>Wave Energy</h3>
-      <p>
-        Ocean waves can generate renewable electricity.
-      </p>
-      <div class="curriculum-tag blue-tag">
-        Blue Curriculum
-      </div>
-    </div>
-
-    <!-- GREEN -->
-    <div class="curriculum-card green-card">
-      <div class="curriculum-icon">☀️</div>
-      <h3>Solar Energy</h3>
-      <p>
-        Solar panels use electromagnetic waves
-        from sunlight to generate electricity.
-      </p>
-      <div class="curriculum-tag green-tag">
-        Green Curriculum
-      </div>
-    </div>
-
-    <div class="curriculum-card green-card">
-      <div class="curriculum-icon">🌱</div>
-      <h3>Smart Technology</h3>
-      <p>
-        Modern communication systems help reduce
-        waste and improve efficiency.
-      </p>
-      <div class="curriculum-tag green-tag">
-        Green Curriculum
-      </div>
-    </div>
-
-    <div class="curriculum-card green-card">
-      <div class="curriculum-icon">🌍</div>
-      <h3>Sustainable Innovation</h3>
-      <p>
-        Scientists develop environmentally friendly
-        technologies using wave science.
-      </p>
-      <div class="curriculum-tag green-tag">
-        Green Curriculum
-      </div>
-    </div>
-
-  </div>
-
-<!-- ═══════════════════════════════
-     BLUE & GREEN MISSION
-═══════════════════════════════ -->
-
-<section class="mission-section">
-
-  <div class="mission-header">
-
-    <h2>
-      🌍 Blue & Green Mission
-    </h2>
-
-    <p>
-      Science is not only about formulas and theories.
-      It is also about solving real-world problems,
-      protecting the environment,
-      and building a sustainable future.
-    </p>
-
-  </div>
-
-  <div class="mission-grid">
-
-    <!-- BLUE -->
-    <div class="mission-card blue-mission">
-
-      <div class="mission-icon">🌊</div>
-
-      <h3>Blue Curriculum Mission</h3>
-
-      <p>
-        Blue Curriculum encourages students to understand
-        ocean systems, wave behavior, and marine sustainability.
-        Through wave science, students learn how oceans influence
-        weather, climate, ecosystems, and natural disasters.
-      </p>
-
-      <div class="mission-points">
-
-        <div>🌊 Ocean wave investigation</div>
-        <div>🚨 Tsunami early warning systems</div>
-        <div>⚡ Renewable wave energy</div>
-        <div>🐠 Marine ecosystem protection</div>
+        </ul>
 
       </div>
 
-    </div>
+      <div class="curriculum-card green-card">
 
-    <!-- GREEN -->
-    <div class="mission-card green-mission">
+        <h2>🌱 Green Curriculum</h2>
 
-      <div class="mission-icon">🌱</div>
+        <p>
+          Explore sustainable innovation,
+          renewable energy, and environmental responsibility.
+        </p>
 
-      <h3>Green Curriculum Mission</h3>
+        <ul>
 
-      <p>
-        Green Curriculum helps students understand how
-        science and technology can support environmental sustainability.
-        Students explore renewable energy,
-        eco-friendly innovation,
-        and responsible technology development.
-      </p>
+          <li>Eco-friendly technology</li>
+          <li>Renewable energy</li>
+          <li>Environmental protection</li>
 
-      <div class="mission-points">
-
-        <div>☀️ Solar energy technology</div>
-        <div>📡 Smart communication systems</div>
-        <div>🌍 Climate monitoring</div>
-        <div>♻️ Sustainable innovation</div>
+        </ul>
 
       </div>
 
@@ -1094,131 +969,6 @@ alt="5G Tower">
   </div>
 
 </section>
-<!-- ═══════════════════════════════
-     STUDENT CHALLENGE
-═══════════════════════════════ -->
-
-<section class="challenge-section">
-
-  <div class="challenge-content">
-
-    <div class="challenge-text">
-
-      <h2>
-        🎯 Student Innovation Challenge
-      </h2>
-
-      <p>
-        Imagine you are a young scientist,
-        engineer, or environmental activist.
-        Your mission is to create a solution using wave science
-        that can improve human life while protecting the environment.
-      </p>
-
-      <div class="challenge-list">
-
-        <div>📡 Design safer communication technology</div>
-
-        <div>🌊 Create renewable wave energy ideas</div>
-
-        <div>🏥 Improve healthcare using wave technology</div>
-
-        <div>🌍 Develop eco-friendly innovations</div>
-
-      </div>
-
-    </div>
-
-    <div class="challenge-box">
-
-      <h3>
-        🚀 Mini Project
-      </h3>
-
-      <p>
-        Work in groups and create:
-      </p>
-
-      <ul>
-
-        <li>Poster or infographic</li>
-
-        <li>Prototype design</li>
-
-        <li>Campaign video</li>
-
-        <li>Stakeholder presentation</li>
-
-      </ul>
-
-      <button class="challenge-btn">
-        🌟 Start Your Mission
-      </button>
-
-    </div>
-
-  </div>
-
-</section>
-<!-- ═══════════════════════════════
-     SDGs INTEGRATION
-═══════════════════════════════ -->
-
-<section class="sdg-modern">
-
-  <div class="sdg-modern-header">
-
-    <h2>
-      🌍 Science for Sustainable Development
-    </h2>
-
-    <p>
-      Waves and light technologies contribute to global sustainability,
-      innovation, education, and human well-being.
-    </p>
-
-  </div>
-
-  <div class="sdg-modern-grid">
-
-    <div class="sdg-modern-card">
-      <div class="sdg-num">3</div>
-      <h3>Good Health</h3>
-      <p>
-        Ultrasound, laser surgery,
-        and medical imaging improve healthcare quality worldwide.
-      </p>
-    </div>
-
-    <div class="sdg-modern-card">
-      <div class="sdg-num">4</div>
-      <h3>Quality Education</h3>
-      <p>
-        Internet and digital communication provide access
-        to global learning opportunities.
-      </p>
-    </div>
-
-    <div class="sdg-modern-card">
-      <div class="sdg-num">7</div>
-      <h3>Clean Energy</h3>
-      <p>
-        Solar panels and wave energy support renewable energy systems.
-      </p>
-    </div>
-
-    <div class="sdg-modern-card">
-      <div class="sdg-num">9</div>
-      <h3>Innovation</h3>
-      <p>
-        Communication technology connects communities and industries.
-      </p>
-    </div>
-
-  </div>
-
-</section>
-  
 <!-- ░░ QUIZ SECTION ░░ -->
 <section class="quiz-section" id="quiz">
   <div class="container">
