@@ -391,32 +391,35 @@ document.addEventListener("DOMContentLoaded", () => {
   // ═══════════════════════════════
   // SIMULATION TAB
   // ═══════════════════════════════
+window.showSim = function(id, button){
 
-  window.showSim = function(id, button){
+  // hide semua panel
+  document.querySelectorAll(".sim-panel")
+    .forEach(panel => {
+      panel.style.display = "none";
+      panel.classList.remove("active");
+    });
 
-    document
-      .querySelectorAll(".sim-panel")
-      .forEach(panel=>{
+  // reset semua tab
+  document.querySelectorAll(".sim-tab")
+    .forEach(tab => {
+      tab.classList.remove("active");
+    });
 
-        panel.classList.remove("active");
+  // tampilkan panel target
+  const target =
+    document.getElementById("sim-" + id);
 
-      });
-
-    document
-      .querySelectorAll(".sim-tab")
-      .forEach(tab=>{
-
-        tab.classList.remove("active");
-
-      });
-
-    document
-      .getElementById("sim-" + id)
-      .classList.add("active");
-
-    button.classList.add("active");
-
+  if(target){
+    target.style.display = "block";
+    target.classList.add("active");
   }
+
+  // active button
+  if(button){
+    button.classList.add("active");
+  }
+}
 
   // ═══════════════════════════════
   // RIPPLE TANK — Interactive
