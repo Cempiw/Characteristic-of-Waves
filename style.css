@@ -2798,3 +2798,9 @@ input[type="range"]{
   transform: translateY(-4px);
   box-shadow: 0 14px 32px rgba(0,0,0,0.25);
 }
+
+/* ── SIM SECTION HEADER FIX ───────────────── */
+.section-header.light h2,
+.section-header.light p {
+  color: var(--navy) !important;
+}
