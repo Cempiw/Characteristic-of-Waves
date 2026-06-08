@@ -2802,5 +2802,5 @@ input[type="range"]{
 /* ── SIM SECTION HEADER FIX ───────────────── */
 .section-header.light h2,
 .section-header.light p {
-  color: var(--navy) !important;
+  color: #1A1A2E !important;
 }
